@@ -3244,116 +3244,118 @@
                                             }
                                         }
                                     }
+                                ],
+                                "examples": [
+                                    {
+                                        "URL Custom Field": {
+                                            "value": {
+                                                "value": "https://clickup.com/api"
+                                            }
+                                        },
+                                        "Dropdown Custom Field": {
+                                            "value": {
+                                                "value": "uuid1234"
+                                            }
+                                        },
+                                        "Email Custom Field": {
+                                            "value": {
+                                                "value": "user@company.com"
+                                            }
+                                        },
+                                        "Phone Custom Field": {
+                                            "value": {
+                                                "value": "+1 201 555 0123"
+                                            }
+                                        },
+                                        "Date Custom Field": {
+                                            "value": {
+                                                "value": 1667367645000,
+                                                "value_options": {
+                                                    "time": true
+                                                }
+                                            }
+                                        },
+                                        "Short or Long Text Custom Field": {
+                                            "value": {
+                                                "value": "This is short or long text in a Custom Field."
+                                            }
+                                        },
+                                        "Number Custom Field": {
+                                            "value": {
+                                                "value": -28
+                                            }
+                                        },
+                                        "Money Custom Field": {
+                                            "value": {
+                                                "value": 8000
+                                            }
+                                        },
+                                        "Task Relationship Custom Field": {
+                                            "value": {
+                                                "value": {
+                                                    "add": [
+                                                        "abcd1234",
+                                                        "efghi5678"
+                                                    ],
+                                                    "rem": [
+                                                        "jklm9876",
+                                                        "yuiop5678"
+                                                    ]
+                                                }
+                                            }
+                                        },
+                                        "People Custom Field": {
+                                            "value": {
+                                                "value": {
+                                                    "add": [
+                                                        123,
+                                                        456
+                                                    ],
+                                                    "rem": [
+                                                        987,
+                                                        765
+                                                    ]
+                                                }
+                                            }
+                                        },
+                                        "Emoji (Rating) Custom Field": {
+                                            "value": {
+                                                "value": 4
+                                            }
+                                        },
+                                        "Manual Progress Custom Field": {
+                                            "value": {
+                                                "value": {
+                                                    "current": 20
+                                                }
+                                            }
+                                        },
+                                        "Label Custom Field": {
+                                            "value": {
+                                                "value": [
+                                                    "uuid1234",
+                                                    "uuid9876"
+                                                ]
+                                            }
+                                        },
+                                        "Location Custom Field": {
+                                            "value": {
+                                                "value": {
+                                                    "location": {
+                                                        "lat": -28.016667,
+                                                        "lng": 153.4
+                                                    },
+                                                    "formatted_address": "Gold Coast QLD, Australia"
+                                                }
+                                            }
+                                        },
+                                        "Button Custom Field": {
+                                            "value": {
+                                                "value": true
+                                            }
+                                        }
+                                    }
                                 ]
-                            },
-                            "examples": {
-                                "URL Custom Field": {
-                                    "value": {
-                                        "value": "https://clickup.com/api"
-                                    }
-                                },
-                                "Dropdown Custom Field": {
-                                    "value": {
-                                        "value": "uuid1234"
-                                    }
-                                },
-                                "Email Custom Field": {
-                                    "value": {
-                                        "value": "user@company.com"
-                                    }
-                                },
-                                "Phone Custom Field": {
-                                    "value": {
-                                        "value": "+1 201 555 0123"
-                                    }
-                                },
-                                "Date Custom Field": {
-                                    "value": {
-                                        "value": 1667367645000,
-                                        "value_options": {
-                                            "time": true
-                                        }
-                                    }
-                                },
-                                "Short or Long Text Custom Field": {
-                                    "value": {
-                                        "value": "This is short or long text in a Custom Field."
-                                    }
-                                },
-                                "Number Custom Field": {
-                                    "value": {
-                                        "value": -28
-                                    }
-                                },
-                                "Money Custom Field": {
-                                    "value": {
-                                        "value": 8000
-                                    }
-                                },
-                                "Task Relationship Custom Field": {
-                                    "value": {
-                                        "value": {
-                                            "add": [
-                                                "abcd1234",
-                                                "efghi5678"
-                                            ],
-                                            "rem": [
-                                                "jklm9876",
-                                                "yuiop5678"
-                                            ]
-                                        }
-                                    }
-                                },
-                                "People Custom Field": {
-                                    "value": {
-                                        "value": {
-                                            "add": [
-                                                123,
-                                                456
-                                            ],
-                                            "rem": [
-                                                987,
-                                                765
-                                            ]
-                                        }
-                                    }
-                                },
-                                "Emoji (Rating) Custom Field": {
-                                    "value": {
-                                        "value": 4
-                                    }
-                                },
-                                "Manual Progress Custom Field": {
-                                    "value": {
-                                        "value": {
-                                            "current": 20
-                                        }
-                                    }
-                                },
-                                "Label Custom Field": {
-                                    "value": {
-                                        "value": [
-                                            "uuid1234",
-                                            "uuid9876"
-                                        ]
-                                    }
-                                },
-                                "Location Custom Field": {
-                                    "value": {
-                                        "value": {
-                                            "location": {
-                                                "lat": -28.016667,
-                                                "lng": 153.4
-                                            },
-                                            "formatted_address": "Gold Coast QLD, Australia"
-                                        }
-                                    }
-                                },
-                                "Button Custom Field": {
-                                    "value": {
-                                        "value": true
-                                    }
-                                }
                             }
                         }
                     },
