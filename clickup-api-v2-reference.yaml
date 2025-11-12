@@ -67,7 +67,7 @@ paths:
           content:
             application/json:
               schema:
-                title: CreateTaskAttachmentresponse
+                title: CreateTaskAttachmentResponse
                 required:
                   - id
                   - version
@@ -118,7 +118,7 @@ paths:
         content:
           application/json:
             schema:
-              title: GetAccessTokenrequest
+              title: GetAccessTokenRequest
               required:
                 - client_id
                 - client_secret
@@ -149,7 +149,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetAccessTokenresponse
+                title: GetAccessTokenResponse
                 required:
                   - access_token
                 type: object
@@ -178,7 +178,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetAuthorizedUserresponse
+                title: GetAuthorizedUserResponse
                 type: object
                 properties:
                   user:
@@ -245,7 +245,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetAuthorizedTeamsresponse
+                title: GetAuthorizedTeamsResponse
                 required:
                   - teams
                 type: object
@@ -354,7 +354,7 @@ paths:
         content:
           application/json:
             schema:
-              title: CreateChecklistrequest
+              title: CreateChecklistRequest
               required:
                 - name
               type: object
@@ -372,7 +372,7 @@ paths:
           content:
             application/json:
               schema:
-                title: CreateChecklistresponse
+                title: CreateChecklistResponse
                 required:
                   - checklist
                 type: object
@@ -450,7 +450,7 @@ paths:
         content:
           application/json:
             schema:
-              title: EditChecklistrequest
+              title: EditChecklistRequest
               type: object
               properties:
                 name:
@@ -526,7 +526,7 @@ paths:
         content:
           application/json:
             schema:
-              title: CreateChecklistItemrequest
+              title: CreateChecklistItemRequest
               type: object
               properties:
                 name:
@@ -546,7 +546,7 @@ paths:
           content:
             application/json:
               schema:
-                title: CreateChecklistItemresponse
+                title: CreateChecklistItemResponse
                 required:
                   - checklist
                 type: object
@@ -714,7 +714,7 @@ paths:
         content:
           application/json:
             schema:
-              title: EditChecklistItemrequest
+              title: EditChecklistItemRequest
               type: object
               properties:
                 name:
@@ -744,7 +744,7 @@ paths:
           content:
             application/json:
               schema:
-                title: EditChecklistItemresponse
+                title: EditChecklistItemResponse
                 required:
                   - checklist
                 type: object
@@ -962,7 +962,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetTaskCommentsresponse
+                title: GetTaskCommentsResponse
                 required:
                   - comments
                 type: object
@@ -1179,7 +1179,7 @@ paths:
         content:
           application/json:
             schema:
-              title: CreateTaskCommentrequest
+              title: CreateTaskCommentRequest
               required:
                 - comment_text
                 - notify_all
@@ -1211,7 +1211,7 @@ paths:
           content:
             application/json:
               schema:
-                title: CreateTaskCommentresponse
+                title: CreateTaskCommentResponse
                 required:
                   - id
                   - hist_id
@@ -1271,7 +1271,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetChatViewCommentsresponse
+                title: GetChatViewCommentsResponse
                 required:
                   - comments
                 type: object
@@ -1382,7 +1382,7 @@ paths:
         content:
           application/json:
             schema:
-              title: CreateChatViewCommentrequest
+              title: CreateChatViewCommentRequest
               required:
                 - comment_text
                 - notify_all
@@ -1405,7 +1405,7 @@ paths:
           content:
             application/json:
               schema:
-                title: CreateChatViewCommentresponse
+                title: CreateChatViewCommentResponse
                 required:
                   - id
                   - hist_id
@@ -1466,7 +1466,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetListCommentsresponse
+                title: GetListCommentsResponse
                 required:
                   - comments
                 type: object
@@ -1530,7 +1530,7 @@ paths:
         content:
           application/json:
             schema:
-              title: CreateListCommentrequest
+              title: CreateListCommentRequest
               required:
                 - comment_text
                 - assignee
@@ -1558,7 +1558,7 @@ paths:
           content:
             application/json:
               schema:
-                title: CreateListCommentresponse
+                title: CreateListCommentResponse
                 required:
                   - id
                   - hist_id
@@ -1601,7 +1601,7 @@ paths:
         content:
           application/json:
             schema:
-              title: UpdateCommentrequest
+              title: UpdateCommentRequest
               required:
                 - comment_text
                 - assignee
@@ -1770,7 +1770,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetAccessibleCustomFieldsresponse
+                title: GetAccessibleCustomFieldsResponse
                 required:
                   - fields
                 type: object
@@ -1932,7 +1932,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetFolderAvailableFieldsresponse
+                title: GetFolderAvailableFieldsResponse
                 required:
                   - fields
                 type: object
@@ -1980,7 +1980,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetSpaceAvailableFieldsresponse
+                title: GetSpaceAvailableFieldsResponse
                 required:
                   - fields
                 type: object
@@ -2028,7 +2028,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetTeamAvailableFieldsresponse
+                title: GetTeamAvailableFieldsResponse
                 required:
                   - fields
                 type: object
@@ -2090,7 +2090,7 @@ paths:
         content:
           application/json:
             schema:
-              title: SetCustomFieldValuerequest
+              title: SetCustomFieldValueRequest
               anyOf:
                 - type: object
                   title: "URL Custom Field"
@@ -2449,7 +2449,7 @@ paths:
         content:
           application/json:
             schema:
-              title: AddDependencyrequest
+              title: AddDependencyRequest
               type: object
               properties:
                 depends_on:
@@ -2594,7 +2594,7 @@ paths:
           content:
             application/json:
               schema:
-                title: AddTaskLinkresponse
+                title: AddTaskLinkResponse
                 required:
                   - task
                 type: object
@@ -2846,7 +2846,7 @@ paths:
           content:
             application/json:
               schema:
-                title: DeleteTaskLinkresponse
+                title: DeleteTaskLinkResponse
                 required:
                   - task
                 type: object
@@ -3080,7 +3080,7 @@ paths:
                         task_count: "0"
                         lists: []
                 contentMediaType: application/json
-                title: GetFoldersresponse
+                title: GetFoldersResponse
                 required:
                   - folders
                 type: object
@@ -3152,7 +3152,7 @@ paths:
         content:
           application/json:
             schema:
-              title: CreateFolderrequest
+              title: CreateFolderRequest
               required:
                 - name
               type: object
@@ -3170,7 +3170,7 @@ paths:
           content:
             application/json:
               schema:
-                title: CreateFolderresponse
+                title: CreateFolderResponse
                 required:
                   - id
                   - name
@@ -3235,7 +3235,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetFolderresponse
+                title: GetFolderResponse
                 required:
                   - id
                   - name
@@ -3302,7 +3302,7 @@ paths:
         content:
           application/json:
             schema:
-              title: UpdateFolderrequest
+              title: UpdateFolderRequest
               required:
                 - name
               type: object
@@ -3320,7 +3320,7 @@ paths:
           content:
             application/json:
               schema:
-                title: UpdateFolderresponse
+                title: UpdateFolderResponse
                 required:
                   - id
                   - name
@@ -3424,7 +3424,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetGoalsresponse
+                title: GetGoalsResponse
                 required:
                   - goals
                   - folders
@@ -3973,7 +3973,7 @@ paths:
         content:
           application/json:
             schema:
-              title: CreateGoalrequest
+              title: CreateGoalRequest
               required:
                 - name
                 - due_date
@@ -4017,7 +4017,7 @@ paths:
           content:
             application/json:
               schema:
-                title: CreateGoalresponse
+                title: CreateGoalResponse
                 required:
                   - goal
                 type: object
@@ -4079,7 +4079,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetGoalresponse
+                title: GetGoalResponse
                 required:
                   - goal
                 type: object
@@ -4273,7 +4273,7 @@ paths:
         content:
           application/json:
             schema:
-              title: UpdateGoalrequest
+              title: UpdateGoalRequest
               required:
                 - name
                 - due_date
@@ -4322,7 +4322,7 @@ paths:
           content:
             application/json:
               schema:
-                title: UpdateGoalresponse
+                title: UpdateGoalResponse
                 required:
                   - goal
                 type: object
@@ -4420,7 +4420,7 @@ paths:
         content:
           application/json:
             schema:
-              title: CreateKeyResultrequest
+              title: CreateKeyResultRequest
               required:
                 - name
                 - owners
@@ -4480,7 +4480,7 @@ paths:
           content:
             application/json:
               schema:
-                title: CreateKeyResultresponse
+                title: CreateKeyResultResponse
                 required:
                   - key_result
                 type: object
@@ -4670,7 +4670,7 @@ paths:
         content:
           application/json:
             schema:
-              title: EditKeyResultrequest
+              title: EditKeyResultRequest
               required:
                 - steps_current
                 - note
@@ -4693,7 +4693,7 @@ paths:
           content:
             application/json:
               schema:
-                title: EditKeyResultresponse
+                title: EditKeyResultResponse
                 required:
                   - key_result
                 type: object
@@ -4935,7 +4935,7 @@ paths:
         content:
           application/json:
             schema:
-              title: InviteGuestToWorkspacerequest
+              title: InviteGuestToWorkspaceRequest
               required:
                 - email
               type: object
@@ -4972,7 +4972,7 @@ paths:
           content:
             application/json:
               schema:
-                title: InviteGuestToWorkspaceresponse
+                title: InviteGuestToWorkspaceResponse
                 required:
                   - team
                 type: object
@@ -5246,7 +5246,7 @@ paths:
         content:
           application/json:
             schema:
-              title: EditGuestOnWorkspacerequest
+              title: EditGuestOnWorkspaceRequest
               type: object
               properties:
                 can_see_points_estimated:
@@ -5278,7 +5278,7 @@ paths:
           content:
             application/json:
               schema:
-                title: EditGuestOnWorkspaceresponse
+                title: EditGuestOnWorkspaceResponse
                 required:
                   - guest
                 type: object
@@ -5463,7 +5463,7 @@ paths:
           content:
             application/json:
               schema:
-                title: RemoveGuestFromWorkspaceresponse
+                title: RemoveGuestFromWorkspaceResponse
                 required:
                   - team
                 type: object
@@ -5540,7 +5540,7 @@ paths:
         content:
           application/json:
             schema:
-              title: AddGuestToTaskrequest
+              title: AddGuestToTaskRequest
               required:
                 - permission_level
               type: object
@@ -5559,7 +5559,7 @@ paths:
           content:
             application/json:
               schema:
-                title: AddGuestToTaskresponse
+                title: AddGuestToTaskResponse
                 required:
                   - guest
                 type: object
@@ -6076,7 +6076,7 @@ paths:
           content:
             application/json:
               schema:
-                title: RemoveGuestFromTaskresponse
+                title: RemoveGuestFromTaskResponse
                 required:
                   - guest
                 type: object
@@ -6202,7 +6202,7 @@ paths:
         content:
           application/json:
             schema:
-              title: AddGuestToListrequest
+              title: AddGuestToListRequest
               required:
                 - permission_level
               type: object
@@ -6221,7 +6221,7 @@ paths:
           content:
             application/json:
               schema:
-                title: AddGuestToListresponse
+                title: AddGuestToListResponse
                 required:
                   - guest
                 type: object
@@ -6514,7 +6514,7 @@ paths:
           content:
             application/json:
               schema:
-                title: RemoveGuestFromListresponse
+                title: RemoveGuestFromListResponse
                 required:
                   - guest
                 type: object
@@ -6593,7 +6593,7 @@ paths:
         content:
           application/json:
             schema:
-              title: AddGuestToFolderrequest
+              title: AddGuestToFolderRequest
               required:
                 - permission_level
               type: object
@@ -6612,7 +6612,7 @@ paths:
           content:
             application/json:
               schema:
-                title: AddGuestToFolderresponse
+                title: AddGuestToFolderResponse
                 required:
                   - guest
                 type: object
@@ -6877,7 +6877,7 @@ paths:
           content:
             application/json:
               schema:
-                title: RemoveGuestFromFolderresponse
+                title: RemoveGuestFromFolderResponse
                 required:
                   - guest
                 type: object
@@ -6948,7 +6948,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetListsresponse
+                title: GetListsResponse
                 required:
                   - lists
                 type: object
@@ -6981,7 +6981,7 @@ paths:
         content:
           application/json:
             schema:
-              title: CreateListrequest
+              title: CreateListRequest
               required:
                 - name
               type: object
@@ -7026,7 +7026,7 @@ paths:
           content:
             application/json:
               schema:
-                title: CreateListresponse
+                title: CreateListResponse
                 type: object
                 properties:
                   id:
@@ -7412,7 +7412,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetFolderlessListsresponse
+                title: GetFolderlessListsResponse
                 required:
                   - lists
                 type: object
@@ -7568,7 +7568,7 @@ paths:
         content:
           application/json:
             schema:
-              title: CreateFolderlessListrequest
+              title: CreateFolderlessListRequest
               required:
                 - name
               type: object
@@ -7612,7 +7612,7 @@ paths:
           content:
             application/json:
               schema:
-                title: CreateFolderlessListresponse
+                title: CreateFolderlessListResponse
                 type: object
                 properties:
                   id:
@@ -7752,7 +7752,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetListresponse
+                title: GetListResponse
                 type: object
                 properties:
                   id:
@@ -7930,7 +7930,7 @@ paths:
         content:
           application/json:
             schema:
-              title: UpdateListrequest
+              title: UpdateListRequest
               required:
                 - name
               type: object
@@ -7977,7 +7977,7 @@ paths:
           content:
             application/json:
               schema:
-                title: UpdateListresponse
+                title: UpdateListResponse
                 type: object
                 properties:
                   id:
@@ -8208,7 +8208,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetTaskMembersresponse
+                title: GetTaskMembersResponse
                 required:
                   - members
                 type: object
@@ -8364,7 +8364,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetListMembersresponse
+                title: GetListMembersResponse
                 required:
                   - members
                 type: object
@@ -8441,7 +8441,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetCustomRolesresponse
+                title: GetCustomRolesResponse
                 required:
                   - custom_roles
                 type: object
@@ -8541,7 +8541,7 @@ paths:
           content:
             application/json:
               schema:
-                title: SharedHierarchyresponse
+                title: SharedHierarchyResponse
                 required:
                   - shared
                 type: object
@@ -8749,7 +8749,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetSpacesresponse
+                title: GetSpacesResponse
                 required:
                   - spaces
                 type: object
@@ -9000,7 +9000,7 @@ paths:
         content:
           application/json:
             schema:
-              title: CreateSpacerequest
+              title: CreateSpaceRequest
               required:
                 - name
                 - multiple_assignees
@@ -9047,7 +9047,7 @@ paths:
           content:
             application/json:
               schema:
-                title: CreateSpaceresponse
+                title: CreateSpaceResponse
                 required:
                   - id
                   - name
@@ -9317,7 +9317,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetSpaceresponse
+                title: GetSpaceResponse
                 required:
                   - id
                   - name
@@ -9401,7 +9401,7 @@ paths:
         content:
           application/json:
             schema:
-              title: UpdateSpacerequest
+              title: UpdateSpaceRequest
               required:
                 - name
                 - color
@@ -9597,7 +9597,7 @@ paths:
           content:
             application/json:
               schema:
-                title: UpdateSpaceresponse
+                title: UpdateSpaceResponse
                 required:
                   - id
                   - name
@@ -9726,7 +9726,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetSpaceTagsresponse
+                title: GetSpaceTagsResponse
                 required:
                   - tags
                 type: object
@@ -9764,7 +9764,7 @@ paths:
         content:
           application/json:
             schema:
-              title: CreateSpaceTagrequest
+              title: CreateSpaceTagRequest
               required:
                 - tag
               type: object
@@ -9839,7 +9839,7 @@ paths:
         content:
           application/json:
             schema:
-              title: EditSpaceTagrequest
+              title: EditSpaceTagRequest
               required:
                 - tag
               type: object
@@ -9876,7 +9876,7 @@ paths:
           content:
             application/json:
               schema:
-                title: EditSpaceTagresponse
+                title: EditSpaceTagResponse
                 required:
                   - tag
                 type: object
@@ -9920,7 +9920,7 @@ paths:
         content:
           application/json:
             schema:
-              title: DeleteSpaceTagrequest
+              title: DeleteSpaceTagRequest
               required:
                 - tag
               type: object
@@ -10370,7 +10370,7 @@ paths:
                         space:
                           id: "789"
                         url: https://app.clickup.com/t/9hz
-                title: GetTasksresponse
+                title: GetTasksResponse
                 type: object
                 properties:
                   tasks:
@@ -10648,7 +10648,7 @@ paths:
         content:
           application/json:
             schema:
-              title: CreateTaskrequest
+              title: CreateTaskRequest
               required:
                 - name
               type: object
@@ -10720,7 +10720,7 @@ paths:
                 custom_fields:
                   type: array
                   items:
-                    title: SetCustomFieldValueOnCreateTaskrequest
+                    title: SetCustomFieldValueOnCreateTaskRequest
                     anyOf:
                       - type: object
                         title: "URL Custom Field"
@@ -11004,7 +11004,7 @@ paths:
           content:
             application/json:
               schema:
-                title: CreateTaskresponse.yaml
+                title: CreateTaskResponse.yaml
                 type: object
                 properties:
                   id:
@@ -11171,7 +11171,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetTaskresponse
+                title: GetTaskResponse
                 type: object
                 properties:
                   id:
@@ -11583,7 +11583,7 @@ paths:
         content:
           application/json:
             schema:
-              title: UpdateTaskrequest
+              title: UpdateTaskRequest
               type: object
               properties:
                 custom_item_id:
@@ -11727,7 +11727,7 @@ paths:
           content:
             application/json:
               schema:
-                title: UpdateTaskresponse
+                title: UpdateTaskResponse
                 type: object
                 properties:
                   id:
@@ -12201,7 +12201,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetFilteredTeamTasksresponse
+                title: GetFilteredTeamTasksResponse
                 required:
                   - tasks
                 type: object
@@ -12823,7 +12823,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetTasksTimeinStatusresponse
+                title: GetTasksTimeinStatusResponse
                 required:
                   - current_status
                   - status_history
@@ -12971,7 +12971,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetBulkTasksTimeinStatusresponse
+                title: GetBulkTasksTimeinStatusResponse
                 required:
                   - 27075wz
                   - 20bbn28
@@ -13143,7 +13143,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetTaskTemplatesresponse
+                title: GetTaskTemplatesResponse
                 required:
                   - templates
                 type: object
@@ -13189,7 +13189,7 @@ paths:
         content:
           application/json:
             schema:
-              title: CreateTaskFromTemplaterequest
+              title: CreateTaskFromTemplateRequest
               required:
                 - name
               type: object
@@ -13571,7 +13571,7 @@ paths:
       tags:
         - Workspaces
       description: "View the used, total, and available member and guest seats for a Workspace."
-      operationId: GetWorkspaceseats
+      operationId: GetWorkspaceSeats
       parameters:
         - name: team_id
           in: path
@@ -13588,7 +13588,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetWorkspaceseatsresponse
+                title: GetWorkspaceSeatsResponse
                 required:
                   - members
                   - guests
@@ -13689,7 +13689,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetWorkspaceplanresponse
+                title: GetWorkspaceplanResponse
                 type: object
                 properties:
                   plan_name:
@@ -13724,7 +13724,7 @@ paths:
         content:
           application/json:
             schema:
-              title: CreateTeamrequest
+              title: CreateTeamRequest
               required:
                 - name
                 - members
@@ -13755,7 +13755,7 @@ paths:
           content:
             application/json:
               schema:
-                title: CreateTeamresponse
+                title: CreateTeamResponse
                 required:
                   - id
                   - team_id
@@ -13930,7 +13930,7 @@ paths:
         content:
           application/json:
             schema:
-              title: UpdateTeamrequest
+              title: UpdateTeamRequest
               type: object
               properties:
                 name:
@@ -13980,7 +13980,7 @@ paths:
           content:
             application/json:
               schema:
-                title: UpdateTeamresponse
+                title: UpdateTeamResponse
                 required:
                   - id
                   - team_id
@@ -14167,7 +14167,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetTeamsresponse
+                title: GetTeamsResponse
                 required:
                   - groups
                 type: object
@@ -14291,7 +14291,7 @@ paths:
       tags:
         - "Time Tracking (Legacy)"
       description: "***Note:** This is a legacy time tracking endpoint. We recommend using the Time Tracking API endpoints to manage time entries.*"
-      operationId: Gettrackedtime
+      operationId: GetTrackedTime
       parameters:
         - name: task_id
           in: path
@@ -14339,7 +14339,7 @@ paths:
           content:
             application/json:
               schema:
-                title: Gettrackedtimeresponse
+                title: GetTrackedTimeResponse
                 required:
                   - data
                 type: object
@@ -14467,7 +14467,7 @@ paths:
       tags:
         - "Time Tracking (Legacy)"
       description: "***Note:** This is a legacy time tracking endpoint. We recommend using the Time Tracking API endpoints to manage time entries.*"
-      operationId: Tracktime
+      operationId: TrackTime
       parameters:
         - name: task_id
           in: path
@@ -14502,7 +14502,7 @@ paths:
         content:
           application/json:
             schema:
-              title: Tracktimerequest
+              title: TrackTimeRequest
               required:
                 - start
                 - end
@@ -14531,7 +14531,7 @@ paths:
           content:
             application/json:
               schema:
-                title: Tracktimeresponse
+                title: TrackTimeResponse
                 required:
                   - id
                 type: object
@@ -14548,7 +14548,7 @@ paths:
       tags:
         - "Time Tracking (Legacy)"
       description: "***Note:** This is a legacy time tracking endpoint. We recommend using the Time Tracking API endpoints to manage time entries.*"
-      operationId: Edittimetracked
+      operationId: EditTimeTracked
       parameters:
         - name: task_id
           in: path
@@ -14592,7 +14592,7 @@ paths:
         content:
           application/json:
             schema:
-              title: Edittimetrackedrequest
+              title: EditTimeTrackedRequest
               required:
                 - start
                 - end
@@ -14631,7 +14631,7 @@ paths:
       tags:
         - "Time Tracking (Legacy)"
       description: "***Note:** This is a legacy time tracking endpoint. We recommend using the Time Tracking API endpoints to manage time entries.*"
-      operationId: Deletetimetracked
+      operationId: DeleteTimeTracked
       parameters:
         - name: task_id
           in: path
@@ -14700,7 +14700,7 @@ paths:
       tags:
         - "Time Tracking"
       description: "View time entries filtered by start and end date. \\\n \\\nBy default, this endpoint returns time entries from the last 30 days created by the authenticated user. \\\n \\\nTo retrieve time entries for other users, you must include the `assignee` query parameter. \\\n \\\nOnly one of the following location filters can be included at a time: `space_id`, `folder_id`, `list_id`, or `task_id`. \\\n \\\n***Note:** A time entry that has a negative duration means that timer is currently running for that user.*"
-      operationId: Gettimeentrieswithinadaterange
+      operationId: GetTimeEntriesWithinADateRange
       parameters:
         - name: team_Id
           in: path
@@ -14841,7 +14841,7 @@ paths:
           content:
             application/json:
               schema:
-                title: Gettimeentrieswithinadaterangeresponse
+                title: GetTimeEntriesWithinADateRangeResponse
                 required:
                   - data
                 type: object
@@ -15139,7 +15139,7 @@ paths:
       tags:
         - "Time Tracking"
       description: "Create a time entry. \\\n \\\n***Note:** A time entry that has a negative duration means that timer is currently running for that user.*"
-      operationId: Createatimeentry
+      operationId: CreateTimeEntry
       parameters:
         - name: team_Id
           in: path
@@ -15175,7 +15175,7 @@ paths:
         content:
           application/json:
             schema:
-              title: Createatimeentryrequest
+              title: CreateTimeEntryRequest
               required:
                 - start
                 - duration
@@ -15247,7 +15247,7 @@ paths:
           content:
             application/json:
               schema:
-                title: Createatimeentryresponse
+                title: CreateTimeEntryResponse
                 required:
                   - description
                   - tags
@@ -15297,7 +15297,7 @@ paths:
       tags:
         - "Time Tracking"
       description: "View a single time entry. \\\n \\\n***Note:** A time entry that has a negative duration means that timer is currently running for that user.*"
-      operationId: Getsingulartimeentry
+      operationId: GetSingularTimeEntry
       parameters:
         - name: team_id
           in: path
@@ -15364,7 +15364,7 @@ paths:
           content:
             application/json:
               schema:
-                title: Getsingulartimeentryresponse
+                title: GetSingularTimeEntryResponse
                 required:
                   - data
                 type: object
@@ -15563,7 +15563,7 @@ paths:
       tags:
         - "Time Tracking"
       description: "Delete a time entry from a Workspace."
-      operationId: DeleteatimeEntry
+      operationId: DeleteTimeEntry
       parameters:
         - name: team_id
           in: path
@@ -15601,7 +15601,7 @@ paths:
           content:
             application/json:
               schema:
-                title: DeleteatimeEntryresponse
+                title: DeleteTimeEntryResponse
                 required:
                   - data
                 type: object
@@ -15642,7 +15642,7 @@ paths:
       tags:
         - "Time Tracking"
       description: "Update the details of a time entry."
-      operationId: UpdateatimeEntry
+      operationId: UpdateTimeEntry
       parameters:
         - name: team_id
           in: path
@@ -15688,7 +15688,7 @@ paths:
         content:
           application/json:
             schema:
-              title: UpdateatimeEntryrequest
+              title: UpdateTimeEntryRequest
               required:
                 - tags
                 - tid
@@ -15749,7 +15749,7 @@ paths:
       tags:
         - "Time Tracking"
       description: "View a list of changes made to a time entry."
-      operationId: Gettimeentryhistory
+      operationId: GetTimeEntryHistory
       parameters:
         - name: team_id
           in: path
@@ -15798,7 +15798,7 @@ paths:
       tags:
         - "Time Tracking"
       description: "View a time entry that's currently tracking time for the authenticated user. \\\n \\\n***Note:** A time entry that has a negative duration means that timer is currently running for that user.*"
-      operationId: Getrunningtimeentry
+      operationId: GetRunningTimeEntry
       parameters:
         - name: team_id
           in: path
@@ -15836,7 +15836,7 @@ paths:
           content:
             application/json:
               schema:
-                title: Getrunningtimeentryresponse
+                title: GetRunningTimeEntryResponse
                 required:
                   - data
                 type: object
@@ -15957,7 +15957,7 @@ paths:
       tags:
         - "Time Tracking"
       description: "Remove labels from time entries. This does not remove the label from a Workspace."
-      operationId: Removetagsfromtimeentries
+      operationId: RemoveTagsFromTimeEntries
       parameters:
         - name: team_id
           in: path
@@ -15974,7 +15974,7 @@ paths:
         content:
           application/json:
             schema:
-              title: Removetagsfromtimeentriesrequest
+              title: RemoveTagsFromTimeEntriesRequest
               required:
                 - time_entry_ids
                 - tags
@@ -16014,7 +16014,7 @@ paths:
       tags:
         - "Time Tracking"
       description: "View all the labels that have been applied to time entries in a Workspace."
-      operationId: Getalltagsfromtimeentries
+      operationId: GetAllTagsFromTimeEntries
       parameters:
         - name: team_id
           in: path
@@ -16044,7 +16044,7 @@ paths:
           content:
             application/json:
               schema:
-                title: Getalltagsfromtimeentriesresponse
+                title: GetAllTagsFromTimeEntriesResponse
                 required:
                   - data
                 type: object
@@ -16087,7 +16087,7 @@ paths:
       tags:
         - "Time Tracking"
       description: "Add a label to a time entry."
-      operationId: Addtagsfromtimeentries
+      operationId: AddTagsFromTimeEntries
       parameters:
         - name: team_id
           in: path
@@ -16104,7 +16104,7 @@ paths:
         content:
           application/json:
             schema:
-              title: Addtagsfromtimeentriesrequest
+              title: AddTagsFromTimeEntries
               required:
                 - time_entry_ids
                 - tags
@@ -16146,7 +16146,7 @@ paths:
       tags:
         - "Time Tracking"
       description: "Rename an time entry label."
-      operationId: Changetagnamesfromtimeentries
+      operationId: ChangeTagNamesFromTimeEntries
       parameters:
         - name: team_id
           in: path
@@ -16163,7 +16163,7 @@ paths:
         content:
           application/json:
             schema:
-              title: Changetagnamesfromtimeentriesrequest
+              title: ChangeTagNamesFromTimeEntriesRequest
               required:
                 - name
                 - new_name
@@ -16205,7 +16205,7 @@ paths:
       tags:
         - "Time Tracking"
       description: "Start a timer for the authenticated user."
-      operationId: StartatimeEntry
+      operationId: StartATimeEntry
       parameters:
         - name: team_Id
           in: path
@@ -16241,7 +16241,7 @@ paths:
         content:
           application/json:
             schema:
-              title: StartatimeEntryrequest
+              title: StartATimeEntryRequest
               type: object
               properties:
                 description:
@@ -16278,7 +16278,7 @@ paths:
           content:
             application/json:
               schema:
-                title: StartatimeEntryresponse
+                title: StartatimeEntryResponse
                 required:
                   - data
                 type: object
@@ -16382,7 +16382,7 @@ paths:
       tags:
         - "Time Tracking"
       description: "Stop a timer that's currently running for the authenticated user."
-      operationId: StopatimeEntry
+      operationId: StopATimeEntry
       parameters:
         - name: team_id
           in: path
@@ -16412,7 +16412,7 @@ paths:
           content:
             application/json:
               schema:
-                title: StopatimeEntryresponse
+                title: StopATimeEntryResponse
                 required:
                   - data
                 type: object
@@ -16599,7 +16599,7 @@ paths:
         content:
           application/json:
             schema:
-              title: InviteUserToWorkspacerequest
+              title: InviteUserToWorkspaceRequest
               required:
                 - email
                 - admin
@@ -16625,7 +16625,7 @@ paths:
           content:
             application/json:
               schema:
-                title: InviteUserToWorkspaceresponse
+                title: InviteUserToWorkspaceResponse
                 required:
                   - team
                 type: object
@@ -16865,7 +16865,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetUserresponse
+                title: GetUserResponse
                 type: object
                 properties:
                   member:
@@ -17069,7 +17069,7 @@ paths:
         content:
           application/json:
             schema:
-              title: EditUserOnWorkspacerequest
+              title: EditUserOnWorkspaceRequest
               required:
                 - username
                 - admin
@@ -17096,7 +17096,7 @@ paths:
           content:
             application/json:
               schema:
-                title: EditUserOnWorkspaceresponse
+                title: EditUserOnWorkspaceResponse
                 required:
                   - member
                 type: object
@@ -17166,7 +17166,7 @@ paths:
           content:
             application/json:
               schema:
-                title: RemoveUserFromWorkspaceresponse
+                title: RemoveUserFromWorkspaceResponse
                 required:
                   - team
                 type: object
@@ -17237,7 +17237,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetTeamViewsresponse
+                title: GetTeamViewsResponse
                 required:
                   - views
                 type: object
@@ -17311,7 +17311,7 @@ paths:
         content:
           application/json:
             schema:
-              title: CreateTeamViewrequest
+              title: CreateTeamViewRequest
               required:
                 - name
                 - type
@@ -17388,7 +17388,7 @@ paths:
           content:
             application/json:
               schema:
-                title: CreateTeamViewresponse
+                title: CreateTeamViewResponse
                 required:
                   - view
                 type: object
@@ -17464,7 +17464,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetSpaceViewsresponse
+                title: GetSpaceViewsResponse
                 required:
                   - views
                 type: object
@@ -17538,7 +17538,7 @@ paths:
         content:
           application/json:
             schema:
-              title: CreateSpaceViewrequest
+              title: CreateSpaceViewRequest
               required:
                 - name
                 - type
@@ -17615,7 +17615,7 @@ paths:
           content:
             application/json:
               schema:
-                title: CreateSpaceViewresponse
+                title: CreateSpaceViewResponse
                 required:
                   - view
                 type: object
@@ -17694,7 +17694,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetFolderViewsresponse
+                title: GetFolderViewsResponse
                 required:
                   - views
                 type: object
@@ -17768,7 +17768,7 @@ paths:
         content:
           application/json:
             schema:
-              title: CreateFolderViewrequest
+              title: CreateFolderViewRequest
               required:
                 - name
                 - type
@@ -17845,7 +17845,7 @@ paths:
           content:
             application/json:
               schema:
-                title: CreateFolderViewresponse
+                title: CreateFolderViewResponse
                 required:
                   - view
                 type: object
@@ -17921,7 +17921,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetListViewsresponse
+                title: GetListViewsResponse
                 required:
                   - views
                 type: object
@@ -17995,7 +17995,7 @@ paths:
         content:
           application/json:
             schema:
-              title: CreateListViewrequest
+              title: CreateListViewRequest
               required:
                 - name
                 - type
@@ -18072,7 +18072,7 @@ paths:
           content:
             application/json:
               schema:
-                title: CreateListViewresponse
+                title: CreateListViewResponse
                 required:
                   - view
                 type: object
@@ -18147,7 +18147,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetViewresponse
+                title: GetViewResponse
                 required:
                   - view
                 type: object
@@ -18296,7 +18296,7 @@ paths:
         content:
           application/json:
             schema:
-              title: UpdateViewrequest
+              title: UpdateViewRequest
               required:
                 - name
                 - type
@@ -18554,7 +18554,7 @@ paths:
           content:
             application/json:
               schema:
-                title: UpdateViewresponse
+                title: UpdateViewResponse
                 required:
                   - view
                 type: object
@@ -18668,7 +18668,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetViewTasksresponse
+                title: GetViewTasksResponse
                 required:
                   - tasks
                   - last_page
@@ -18931,7 +18931,7 @@ paths:
           content:
             application/json:
               schema:
-                title: GetWebhooksresponse
+                title: GetWebhooksResponse
                 required:
                   - webhooks
                 type: object
@@ -19008,7 +19008,7 @@ paths:
         content:
           application/json:
             schema:
-              title: CreateWebhookrequest
+              title: CreateWebhookRequest
               required:
                 - endpoint
                 - events
@@ -19073,7 +19073,7 @@ paths:
           content:
             application/json:
               schema:
-                title: CreateWebhookresponse
+                title: CreateWebhookResponse
                 required:
                   - id
                   - webhook
@@ -19152,7 +19152,7 @@ paths:
         content:
           application/json:
             schema:
-              title: UpdateWebhookrequest
+              title: UpdateWebhookRequest
               required:
                 - endpoint
                 - events
@@ -19178,7 +19178,7 @@ paths:
           content:
             application/json:
               schema:
-                title: UpdateWebhookresponse
+                title: UpdateWebhookResponse
                 required:
                   - id
                   - webhook
@@ -19407,4 +19407,3 @@ tags:
   - name: Users
   - name: Views
   - name: Webhooks
-
