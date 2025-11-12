@@ -17596,11 +17596,9 @@
                                                 "null"
                                             ]
                                         },
-                                        "priority": [
-                                            {
-                                                "$ref": "#/paths/~1v2~1task~1%7Btask_id%7D/get/responses/200/content/application~1json/schema/properties/priority"
-                                            }
-                                        ],
+                                        "priority": {
+                                            "$ref": "#/paths/~1v2~1task~1%7Btask_id%7D/get/responses/200/content/application~1json/schema/properties/priority"
+                                        },
                                         "due_date": {
                                             "type": [
                                                 "string",
