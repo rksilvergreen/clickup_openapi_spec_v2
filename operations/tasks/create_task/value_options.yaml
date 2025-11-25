@@ -1,0 +1,5 @@
+type: object
+properties:
+  time:
+    type: boolean
+    example: true

@@ -1,0 +1,41 @@
+description: ""
+content:
+  application/json:
+    schema:
+      title: CreateGoalRequest
+      required:
+        - name
+        - due_date
+        - description
+        - multiple_owners
+        - owners
+        - color
+      type: object
+      properties:
+        name:
+          type: string
+        due_date:
+          type: integer
+          contentEncoding: int64
+        description:
+          type: string
+        multiple_owners:
+          type: boolean
+        owners:
+          type: array
+          items:
+            type: integer
+            contentEncoding: int32
+          description: "Array of user IDs."
+        color:
+          type: string
+      examples:
+        -
+          name: "Goal Name"
+          due_date: 1568036964079
+          description: "Goal Description"
+          multiple_owners: true
+          owners:
+            - 183
+          color: "#32a852"
+required: true

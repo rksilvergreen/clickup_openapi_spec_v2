@@ -1,0 +1,16 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: GetSpaceAvailableFieldsResponse
+      required:
+        - fields
+      type: object
+      properties:
+        fields:
+          type: array
+          items:
+            $ref: "../../../shared/field.yaml"
+          description: ""

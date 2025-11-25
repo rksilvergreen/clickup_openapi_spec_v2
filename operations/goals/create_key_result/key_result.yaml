@@ -1,0 +1,135 @@
+title: KeyResult
+required:
+  - id
+  - goal_id
+  - name
+  - type
+  - unit
+  - creator
+  - date_created
+  - goal_pretty_id
+  - percent_completed
+  - completed
+  - task_ids
+  - subcategory_ids
+  - owners
+  - last_action
+type: object
+properties:
+  id:
+    type: string
+  goal_id:
+    type: string
+  name:
+    type: string
+  type:
+    type: string
+  unit:
+    type: string
+  creator:
+    type: integer
+    contentEncoding: int32
+  date_created:
+    type: string
+  goal_pretty_id:
+    type: string
+  percent_completed:
+    type:
+      - string
+      - null
+  completed:
+    type: boolean
+  task_ids:
+    type: array
+    items:
+      type: string
+    description: ""
+  subcategory_ids:
+    type: array
+    items:
+      type: string
+    description: ""
+  owners:
+    type: array
+    items:
+      $ref: "../../../shared/owner.yaml"
+    description: ""
+  last_action:
+    title: LastAction
+    required:
+      - id
+      - key_result_id
+      - userid
+      - date_modified
+      - steps_taken
+      - note
+      - steps_before
+      - steps_current
+    type: object
+    properties:
+      id:
+        type: string
+      key_result_id:
+        type: string
+      userid:
+        type: integer
+        contentEncoding: int32
+      date_modified:
+        type: string
+      steps_taken:
+        type:
+          - string
+          - null
+      note:
+        type: string
+      steps_before:
+        type:
+          - string
+          - null
+      steps_current:
+        type:
+          - string
+          - null
+    examples:
+      -
+        id: d3183d0f-5cbd-4158-b015-71465f1df269
+        key_result_id: 947d46ed-8480-49bc-8c57-e569747efe93
+        userid: 183
+        date_modified: "1568062902048"
+        steps_taken: null
+        note: "Created Key Result"
+        steps_before: null
+        steps_current: null
+examples:
+  -
+    id: 947d46ed-8480-49bc-8c57-e569747efe93
+    goal_id: e53a033c-900e-462d-a849-4a216b06d930
+    name: "New Key Result Name"
+    type: number
+    unit: km
+    creator: 183
+    date_created: "1568062902048"
+    goal_pretty_id: "6"
+    percent_completed: null
+    completed: false
+    task_ids:
+      []
+    subcategory_ids:
+      []
+    owners:
+      -
+        id: 183
+        username: "John Doe"
+        email: "example@email.com"
+        color: "#827718"
+        profilePicture: https://attachments.clickup.com/profilePictures/183_nx1.jpg
+        initials: JK
+    last_action:
+      id: d3183d0f-5cbd-4158-b015-71465f1df269
+      key_result_id: 947d46ed-8480-49bc-8c57-e569747efe93
+      userid: 183
+      date_modified: "1568062902048"
+      steps_taken: null
+      note: "Created Key Result"
+      steps_before: null
+      steps_current: null

@@ -1,0 +1,14 @@
+get:
+  summary: Get Space Custom Fields
+  tags:
+    - Custom Fields
+  description: View the Custom Fields you have access to in a specific Space. Get Space Custom Fields only returns Custom Fields created at the Space level. Custom Fields created at the Folder and List level are not included.
+  operationId: getSpaceAvailableFields
+  parameters:
+    - $ref: "../operations/custom_fields/get_space_available_fields/get_space_available_fields_parameterspace_id_path.yaml"
+    -
+      $ref: "../operations/custom_fields/get_space_available_fields/get_space_available_fields_parametercontent_type_header.yaml"
+  responses:
+    200:
+      $ref: "../operations/custom_fields/get_space_available_fields/get_space_available_fields_response_200.yaml"
+  deprecated: false

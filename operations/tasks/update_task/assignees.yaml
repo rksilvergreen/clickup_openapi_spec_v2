@@ -1,0 +1,24 @@
+title: Assignees
+required:
+  - add
+  - rem
+type: object
+properties:
+  add:
+    type: array
+    items:
+      type: integer
+      contentEncoding: int32
+    description: ""
+  rem:
+    type: array
+    items:
+      type: integer
+      contentEncoding: int32
+    description: ""
+examples:
+  -
+    add:
+      - 182
+    rem:
+      - 183

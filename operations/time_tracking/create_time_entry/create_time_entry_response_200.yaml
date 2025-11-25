@@ -1,0 +1,50 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: CreateTimeEntryResponse
+      required:
+        - description
+        - tags
+        - start
+        - billable
+        - duration
+        - assignee
+        - tid
+      type: object
+      properties:
+        description:
+          type: string
+        tags:
+          type: array
+          items:
+            $ref: "../../../shared/tags6.yaml"
+          description: ""
+        start:
+          type: integer
+          contentEncoding: int64
+        billable:
+          type: boolean
+        duration:
+          type: integer
+          contentEncoding: int32
+        assignee:
+          type: integer
+          contentEncoding: int32
+        tid:
+          type: string
+      examples:
+        -
+          description: "from api"
+          tags:
+            -
+              name: "name of tag"
+              tag_bg: "#BF55EC"
+              tag_fg: "#BF55EC"
+          start: 1595282645000
+          billable: true
+          duration: 50000
+          assignee: 1
+          tid: task_id

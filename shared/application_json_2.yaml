@@ -1,0 +1,132 @@
+type: object
+description: "Response object returned when a new List is created from a template in a Folder or Space."
+properties:
+  id:
+    type: string
+    description: "Unique identifier of the newly created List"
+    example: "901107394085"
+  list:
+    type: object
+    description: "Detailed information about the created List"
+    properties:
+      id:
+        type: string
+        description: "Unique identifier of the List (matches parent id)"
+        example: "901107394085"
+      name:
+        type: string
+        description: "Display name of the List"
+        example: "API Folder in Space"
+      deleted:
+        type: boolean
+        description: "Indicates if the List has been marked as deleted"
+        example: true
+      orderindex:
+        type: integer
+        description: "Position of the List relative to other Lists in the same container"
+        example: 0
+      priority:
+        type: string
+        description: "Priority level of the List, if applicable"
+        nullable: true
+        example: null
+      assignee:
+        type: string
+        description: "Default assignee for the List, if applicable"
+        nullable: true
+        example: null
+      due_date:
+        type: string
+        format: date-time
+        description: "Default due date for tasks in the List"
+        nullable: true
+        example: null
+      start_date:
+        type: string
+        format: date-time
+        description: "Default start date for tasks in the List"
+        nullable: true
+        example: null
+      folder:
+        type: object
+        description: "Information about the parent Folder containing this List, if applicable"
+        properties:
+          id:
+            type: string
+            description: "Unique identifier of the parent Folder"
+            example: "90114317916"
+          name:
+            type: string
+            description: "Display name of the parent Folder"
+            example: hidden
+          hidden:
+            type: boolean
+            description: "Indicates if the Folder is hidden from standard views"
+            example: true
+          access:
+            type: boolean
+            description: "Indicates if the current user has access to this Folder"
+            example: true
+      space:
+        type: object
+        description: "Information about the Workspace Space containing this List"
+        properties:
+          id:
+            type: string
+            description: "Unique identifier of the Space"
+            example: "90112667046"
+          name:
+            type: string
+            description: "Display name of the Space"
+            example: "API Test Space"
+          access:
+            type: boolean
+            description: "Indicates if the current user has access to this Space"
+            example: true
+      inbound_address:
+        type: string
+        description: "Email address that can be used to create tasks in this List via email"
+        example: "abc-list@tasks.clickup.com"
+      archived:
+        type: boolean
+        description: "Indicates if the List is archived"
+        example: false
+      override_statuses:
+        type: boolean
+        description: "Indicates if this List uses custom statuses instead of Space default statuses"
+        example: true
+      statuses:
+        type: array
+        description: "List of available statuses for tasks in this List"
+        items:
+          type: object
+          description: "Status configuration object"
+          properties:
+            id:
+              type: string
+              description: "Unique identifier for the status"
+              example: sc901107394085_DCnaeiSB
+            status:
+              type: string
+              description: "Display name of the status"
+              example: "to do"
+            orderindex:
+              type: integer
+              description: "Position of this status in the status list"
+              example: 0
+            color:
+              type: string
+              description: "Color code associated with this status"
+              example: "#87909e"
+            type:
+              type: string
+              description: "Category of the status (e.g., open, closed, in progress)"
+              example: open
+            status_group:
+              type: string
+              description: "TODO - Identifier for grouping related statuses"
+              example: subcat_901107394085
+      permission_level:
+        type: string
+        description: "Access level the current user has for this List (e.g., create, edit, view)"
+        example: create

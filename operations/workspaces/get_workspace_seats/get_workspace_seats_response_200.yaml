@@ -1,0 +1,35 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: GetWorkspaceSeatsResponse
+      required:
+        - members
+        - guests
+      type: object
+      properties:
+        members:
+          $ref: "./members.yaml"
+        guests:
+          $ref: "./guests.yaml"
+      examples:
+        -
+          members:
+            filled_members_seats: 9
+            total_member_seats: 9
+            empty_member_seats: 0
+          guests:
+            filled_guest_seats: 2
+            total_guest_seats: 50
+            empty_guest_seats: 48
+        -
+          members:
+            filled_members_seats: 9
+            total_member_seats: 9
+            empty_member_seats: 0
+          guests:
+            filled_guest_seats: 2
+            total_guest_seats: "Infinity"
+            empty_guest_seats: "Infinity"

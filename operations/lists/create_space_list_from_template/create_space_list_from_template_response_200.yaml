@@ -1,0 +1,13 @@
+description: "List created successfully"
+content:
+  application/json:
+    schema:
+      type: object
+      description: "Response object returned when a new List is created from a template in a Folder or Space."
+      properties:
+        id:
+          type: string
+          description: "Unique identifier of the newly created List"
+          example: "901107394085"
+        list:
+          $ref: "./list.yaml"

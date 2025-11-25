@@ -1,0 +1,34 @@
+get:
+  summary: Get Task Comments
+  description: "View task comments. \\\n \\\nIf you do not include the `start` and `start_id` parameters, this endpoint will return the most recent 25 comments.\\\n \\\nUse the `start` and `start id` parameters of the oldest comment to retrieve the next 25 comments."
+  tags:
+    - Comments
+  operationId: GetTaskComments
+  parameters:
+    - $ref: "../operations/comments/get_task_comments/get_task_comments_parametertask_id_path.yaml"
+    - $ref: "../operations/comments/get_task_comments/get_task_comments_parametercustom_task_ids_query.yaml"
+    - $ref: "../operations/comments/get_task_comments/get_task_comments_parameterteam_id_query.yaml"
+    - $ref: "../operations/comments/get_task_comments/get_task_comments_parameterstart_query.yaml"
+    -
+      $ref: "../operations/comments/get_task_comments/get_task_comments_parameterstart_id_query.yaml"
+  responses:
+    200:
+      $ref: "../operations/comments/get_task_comments/get_task_comments_response_200.yaml"
+  deprecated: false
+post:
+  summary: Create Task Comment
+  tags:
+    - Comments
+  description: Add a new comment to a task.
+  operationId: CreateTaskComment
+  parameters:
+    - $ref: "../operations/comments/create_task_comment/create_task_comment_parametertask_id_path.yaml"
+    - $ref: "../operations/comments/create_task_comment/create_task_comment_parametercustom_task_ids_query.yaml"
+    -
+      $ref: "../operations/comments/create_task_comment/create_task_comment_parameterteam_id_query.yaml"
+  requestBody:
+    $ref: "../operations/comments/create_task_comment/create_task_comment_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/comments/create_task_comment/create_task_comment_response_200.yaml"
+  deprecated: false

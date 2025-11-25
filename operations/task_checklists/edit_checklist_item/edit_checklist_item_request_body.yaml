@@ -1,0 +1,27 @@
+description: ""
+content:
+  application/json:
+    schema:
+      title: EditChecklistItemRequest
+      type: object
+      properties:
+        name:
+          type: string
+        assignee:
+          type:
+            - string
+            - null
+        resolved:
+          type: boolean
+        parent:
+          description: "To nest a checklist item under another checklist item, include the other item's `checklist_item_id`."
+          type:
+            - string
+            - null
+      examples:
+        -
+          name: "Updated Checklist Item"
+          assignee: null
+          resolved: true
+          parent: null
+required: true

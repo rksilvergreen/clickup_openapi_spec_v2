@@ -1,0 +1,9 @@
+name: field_id
+in: path
+description: "b8a8-48d8-a0c6-b4200788a683 (uuid)"
+required: true
+style: simple
+schema:
+  type: string
+  examples:
+    - b955c4dc

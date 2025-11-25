@@ -1,0 +1,14 @@
+get:
+  summary: Get View Tasks
+  tags:
+    - Views
+  description: See all visible tasks in a view in ClickUp.
+  operationId: GetViewTasks
+  parameters:
+    - $ref: "../operations/views/get_view_tasks/get_view_tasks_parameterview_id_path.yaml"
+    -
+      $ref: "../operations/views/get_view_tasks/get_view_tasks_parameterpage_query.yaml"
+  responses:
+    200:
+      $ref: "../operations/views/get_view_tasks/get_view_tasks_response_200.yaml"
+  deprecated: false

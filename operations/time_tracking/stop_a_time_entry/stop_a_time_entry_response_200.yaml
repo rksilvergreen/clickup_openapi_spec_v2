@@ -1,0 +1,43 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: StopATimeEntryResponse
+      required:
+        - data
+      type: object
+      properties:
+        data:
+          $ref: "../../../shared/data3.yaml"
+      examples:
+        -
+          data:
+            id: timer_id
+            task:
+              id: task_id
+              name: "test task"
+              status:
+                status: "to do"
+                color: "#d3d3d3"
+                type: open
+                orderindex: 0
+              custom_type: null
+            wid: workspace_id
+            user:
+              id: 1
+              username: "first_name last_name"
+              email: "test@gmail.com"
+              color: "#08c7e0"
+              initials: JK
+              profilePicture: https://attachments-public.clickup.com/profilePictures/1_HHk.jpg
+            billable: false
+            start: "1595289395842"
+            end: 1595289452790
+            duration: 56948
+            description: ""
+            tags:
+              []
+            source: clickup
+            at: 1595289452790

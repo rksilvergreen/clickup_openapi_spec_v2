@@ -1,0 +1,42 @@
+get:
+  summary: Get List
+  tags:
+    - Lists
+  description: View information about a List.
+  operationId: GetList
+  parameters:
+    -
+      $ref: "../operations/lists/get_list/get_list_parameterlist_id_path.yaml"
+  responses:
+    200:
+      $ref: "../operations/lists/get_list/get_list_response_200.yaml"
+  deprecated: false
+put:
+  summary: Update List
+  tags:
+    - Lists
+  description: 'Rename a List, update the List Info description, set a due date/time, set the List''s priority, set an assignee, set or remove the List color.'
+  operationId: UpdateList
+  parameters:
+    -
+      $ref: "../operations/lists/update_list/update_list_parameterlist_id_path.yaml"
+  requestBody:
+    $ref: "../operations/lists/update_list/update_list_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/lists/update_list/update_list_response_200.yaml"
+  deprecated: false
+delete:
+  summary: Delete List
+  tags:
+    - Lists
+  description: Delete a List from your Workspace.
+  operationId: DeleteList
+  parameters:
+    - $ref: "../operations/lists/delete_list/delete_list_parameterlist_id_path.yaml"
+    -
+      $ref: "../operations/lists/delete_list/delete_list_parametercontent_type_header.yaml"
+  responses:
+    200:
+      $ref: "../operations/lists/delete_list/delete_list_response_200.yaml"
+  deprecated: false

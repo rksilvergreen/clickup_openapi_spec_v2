@@ -1,0 +1,144 @@
+title: Goal
+required:
+  - id
+  - name
+  - team_id
+  - date_created
+  - start_date
+  - due_date
+  - description
+  - private
+  - archived
+  - creator
+  - color
+  - pretty_id
+  - multiple_owners
+  - folder_id
+  - members
+  - owners
+  - key_results
+  - percent_completed
+  - history
+  - pretty_url
+type: object
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  team_id:
+    type: string
+  date_created:
+    type: string
+  start_date:
+    type:
+      - string
+      - null
+  due_date:
+    type: string
+  description:
+    type: string
+  private:
+    type: boolean
+  archived:
+    type: boolean
+  creator:
+    type: integer
+    contentEncoding: int32
+  color:
+    type: string
+  pretty_id:
+    type: string
+  multiple_owners:
+    type: boolean
+  folder_id:
+    type:
+      - string
+      - null
+  members:
+    type: array
+    items:
+      type: string
+    description: ""
+  owners:
+    type: array
+    items:
+      title: Owner
+      required:
+        - id
+        - username
+        - initials
+        - email
+        - color
+        - profilePicture
+      type: object
+      properties:
+        id:
+          type: integer
+          contentEncoding: int32
+        username:
+          type: string
+        initials:
+          type: string
+        email:
+          type: string
+        color:
+          type: string
+        profilePicture:
+          type: string
+      examples:
+        -
+          id: 183
+          username: "John Doe"
+          initials: JD
+          email: "johndoe@gmail.com"
+          color: "#827718"
+          profilePicture: https://attachments-public.clickup.com/profilePictures/183_abc.jpg
+    description: ""
+  key_results:
+    type: array
+    items:
+      type: string
+    description: ""
+  percent_completed:
+    type: integer
+    contentEncoding: int32
+  history:
+    type: array
+    items:
+      type: string
+    description: ""
+  pretty_url:
+    type: string
+examples:
+  -
+    id: e53a033c-900e-462d-a849-4a216b06d930
+    name: "Goal Name"
+    team_id: "512"
+    date_created: "1568044355026"
+    start_date: null
+    due_date: "1568036964079"
+    description: "Goal Description"
+    private: false
+    archived: false
+    creator: 183
+    color: "#32a852"
+    pretty_id: "6"
+    multiple_owners: true
+    folder_id: null
+    members:
+      []
+    owners:
+      -
+        id: 183
+        username: "John Doe"
+        initials: JD
+        email: "johndoe@gmail.com"
+        color: "#827718"
+        profilePicture: https://attachments-public.clickup.com/profilePictures/183_abc.jpg
+    key_results:
+      []
+    percent_completed: 0
+    history:
+      []
+    pretty_url: https://app.clickup.com/512/goals/6

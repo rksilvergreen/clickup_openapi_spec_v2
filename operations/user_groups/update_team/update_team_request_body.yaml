@@ -1,0 +1,24 @@
+description: "The group handle can be updated, which is used to @mention a User Group within the Workspace.\\\n \\\nModify Group members by using the \"add\" and \"rem\" parameters with an array of user IDs to include or exclude members."
+content:
+  application/json:
+    schema:
+      title: UpdateTeamRequest
+      type: object
+      properties:
+        name:
+          type: string
+        handle:
+          type: string
+        members:
+          $ref: "./members2.yaml"
+      examples:
+        -
+          name: "New User Group Name"
+          handle: newusergroupname
+          members:
+            add:
+              - 123456
+              - 987654
+            rem:
+              - 159753
+required: true

@@ -1,0 +1,16 @@
+description: ""
+content:
+  application/json:
+    schema:
+      title: AddGuestToFolderRequest
+      required:
+        - permission_level
+      type: object
+      properties:
+        permission_level:
+          description: "Can be `read` (view only), `comment`, `edit`, or `create` (full)."
+          type: string
+      examples:
+        -
+          permission_level: read
+required: true

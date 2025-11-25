@@ -1,0 +1,29 @@
+title: StatusHistory
+required:
+  - status
+  - color
+  - type
+  - total_time
+  - orderindex
+type: object
+properties:
+  status:
+    type: string
+  color:
+    type: string
+  type:
+    type: string
+  total_time:
+    $ref: "./total_time.yaml"
+  orderindex:
+    type: integer
+    contentEncoding: int32
+examples:
+  -
+    status: open
+    color: "#d3d3d3"
+    type: open
+    total_time:
+      by_minute: 21707
+      since: "1604004423494"
+    orderindex: 0

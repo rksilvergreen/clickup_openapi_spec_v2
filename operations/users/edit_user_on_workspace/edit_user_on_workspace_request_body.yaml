@@ -1,0 +1,24 @@
+description: ""
+content:
+  application/json:
+    schema:
+      title: EditUserOnWorkspaceRequest
+      required:
+        - username
+        - admin
+        - custom_role_id
+      type: object
+      properties:
+        username:
+          type: string
+        admin:
+          type: boolean
+        custom_role_id:
+          type: integer
+          contentEncoding: int32
+      examples:
+        -
+          username: "User Name"
+          admin: false
+          custom_role_id: 998877
+required: true

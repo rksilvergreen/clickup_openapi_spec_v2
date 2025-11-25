@@ -1,0 +1,16 @@
+get:
+  summary: 'Get Bulk Tasks'' Time in Status'
+  tags:
+    - Tasks
+  description: View how long two or more tasks have been in each status. The Total time in Status ClickApp must first be enabled by the Workspace owner or an admin.
+  operationId: 'GetBulkTasks''TimeinStatus'
+  parameters:
+    - $ref: "../operations/tasks/get_bulk_tasks_timein_status/get_bulk_tasks_timein_status_parametertask_ids_query.yaml"
+    - $ref: "../operations/tasks/get_bulk_tasks_timein_status/get_bulk_tasks_timein_status_parametercustom_task_ids_query.yaml"
+    - $ref: "../operations/tasks/get_bulk_tasks_timein_status/get_bulk_tasks_timein_status_parameterteam_id_query.yaml"
+    -
+      $ref: "../operations/tasks/get_bulk_tasks_timein_status/get_bulk_tasks_timein_status_parametercontent_type_header.yaml"
+  responses:
+    200:
+      $ref: "../operations/tasks/get_bulk_tasks_timein_status/get_bulk_tasks_timein_status_response_200.yaml"
+  deprecated: false

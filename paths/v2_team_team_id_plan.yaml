@@ -1,0 +1,13 @@
+get:
+  summary: Get Workspace Plan
+  tags:
+    - Workspaces
+  description: 'View the current [Plan](https://clickup.com/pricing) for the specified Workspace.'
+  operationId: GetWorkspaceplan
+  parameters:
+    -
+      $ref: "../operations/workspaces/get_workspaceplan/get_workspaceplan_parameterteam_id_path.yaml"
+  responses:
+    200:
+      $ref: "../operations/workspaces/get_workspaceplan/get_workspaceplan_response_200.yaml"
+  deprecated: false

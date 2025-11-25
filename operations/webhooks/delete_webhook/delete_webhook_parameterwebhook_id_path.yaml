@@ -1,0 +1,9 @@
+name: webhook_id
+in: path
+description: "e506-4a29-9d42-26e504e3435e (uuid)"
+required: true
+style: simple
+schema:
+  type: string
+  examples:
+    - 4b67ac88

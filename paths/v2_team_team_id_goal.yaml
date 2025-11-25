@@ -1,0 +1,29 @@
+get:
+  summary: Get Goals
+  tags:
+    - Goals
+  description: View the Goals available in a Workspace.
+  operationId: GetGoals
+  parameters:
+    - $ref: "../operations/goals/get_goals/get_goals_parameterteam_id_path.yaml"
+    -
+      $ref: "../operations/goals/get_goals/get_goals_parameterinclude_completed_query.yaml"
+  responses:
+    200:
+      $ref: "../operations/goals/get_goals/get_goals_response_200.yaml"
+  deprecated: false
+post:
+  summary: Create Goal
+  tags:
+    - Goals
+  description: Add a new Goal to a Workspace.
+  operationId: CreateGoal
+  parameters:
+    -
+      $ref: "../operations/goals/create_goal/create_goal_parameterteam_id_path.yaml"
+  requestBody:
+    $ref: "../operations/goals/create_goal/create_goal_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/goals/create_goal/create_goal_response_200.yaml"
+  deprecated: false

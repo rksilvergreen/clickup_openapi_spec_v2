@@ -1,0 +1,10 @@
+name: list_id
+in: path
+description: "The List ID. To find the List ID, right-click the List in your Sidebar, select Copy link, and paste the link in your URL. The last string in the URL is your List ID."
+required: true
+style: simple
+schema:
+  type: number
+  contentEncoding: double
+  examples:
+    - 124

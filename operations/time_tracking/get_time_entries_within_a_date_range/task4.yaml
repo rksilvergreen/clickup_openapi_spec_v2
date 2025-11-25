@@ -1,0 +1,32 @@
+title: Task4
+required:
+  - id
+  - custom_id
+  - name
+  - status
+  - custom_type
+type: object
+properties:
+  id:
+    type: string
+  custom_id:
+    type: string
+  name:
+    type: string
+  status:
+    $ref: "../../../shared/status.yaml"
+  custom_type:
+    type:
+      - string
+      - null
+examples:
+  -
+    id: 1vwwavv
+    custom_id: JOSH-917
+    name: woof
+    status:
+      status: "open yes"
+      color: "#d3d3d3"
+      type: open
+      orderindex: 0
+    custom_type: null

@@ -1,0 +1,14 @@
+get:
+  summary: Get Folder Custom Fields
+  tags:
+    - Custom Fields
+  description: View the Custom Fields you have access to in a Folder. Get Folder Custom Fields only returns Custom Fields created at the Folder level. Custom Fields created at the List level are not included.
+  operationId: getFolderAvailableFields
+  parameters:
+    - $ref: "../operations/custom_fields/get_folder_available_fields/get_folder_available_fields_parameterfolder_id_path.yaml"
+    -
+      $ref: "../operations/custom_fields/get_folder_available_fields/get_folder_available_fields_parametercontent_type_header.yaml"
+  responses:
+    200:
+      $ref: "../operations/custom_fields/get_folder_available_fields/get_folder_available_fields_response_200.yaml"
+  deprecated: false

@@ -1,0 +1,30 @@
+description: ""
+content:
+  application/json:
+    schema:
+      title: AddTagsFromTimeEntries
+      required:
+        - time_entry_ids
+        - tags
+      type: object
+      properties:
+        time_entry_ids:
+          type: array
+          items:
+            type: string
+          description: ""
+        tags:
+          type: array
+          items:
+            $ref: "../../../shared/tags6.yaml"
+          description: ""
+      examples:
+        -
+          time_entry_ids:
+            - timer_id
+          tags:
+            -
+              name: "name of tag"
+              tag_bg: "#BF55EC"
+              tag_fg: "#FFFFFF"
+required: true

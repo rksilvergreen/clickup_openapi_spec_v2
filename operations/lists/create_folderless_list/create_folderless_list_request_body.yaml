@@ -1,0 +1,41 @@
+description: ""
+content:
+  application/json:
+    schema:
+      title: CreateFolderlessListRequest
+      required:
+        - name
+      type: object
+      properties:
+        name:
+          type: string
+        content:
+          type: string
+        markdown_content:
+          type: string
+          description: "Use `markdown_content` instead of `content` to format your List description."
+        due_date:
+          type: integer
+          contentEncoding: int64
+        due_date_time:
+          type: boolean
+        priority:
+          type: integer
+          contentEncoding: int32
+        assignee:
+          description: "Include a `user_id` to add a List owner."
+          type: integer
+          contentEncoding: int32
+        status:
+          description: "**Status** refers to the List color rather than the task Statuses available in the List."
+          type: string
+      examples:
+        -
+          name: "New List Name"
+          content: "New List Content"
+          due_date: 1567780450202
+          due_date_time: false
+          priority: 1
+          assignee: 183
+          status: red
+required: true

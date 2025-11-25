@@ -1,0 +1,9 @@
+name: "space_ids[]"
+in: query
+description: "Filter by Spaces. For example: \\\n \\\n`?space_ids[]=1234&space_ids[]=6789`"
+style: form
+explode: true
+schema:
+  type: array
+  items:
+    type: string

@@ -1,0 +1,34 @@
+title: CurrentStatus
+required:
+  - status
+  - color
+  - total_time
+type: object
+properties:
+  status:
+    type: string
+  color:
+    type: string
+  total_time:
+    title: TotalTime
+    required:
+      - by_minute
+      - since
+    type: object
+    properties:
+      by_minute:
+        type: integer
+        contentEncoding: int32
+      since:
+        type: string
+    examples:
+      -
+        by_minute: 21708
+        since: "1604004423494"
+examples:
+  -
+    status: open
+    color: "#d3d3d3"
+    total_time:
+      by_minute: 21708
+      since: "1604004423494"

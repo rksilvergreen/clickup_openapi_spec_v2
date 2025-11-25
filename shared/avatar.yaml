@@ -1,0 +1,30 @@
+title: Avatar
+required:
+  - attachment_id
+  - color
+  - source
+  - icon
+type: object
+properties:
+  attachment_id:
+    type:
+      - string
+      - null
+  color:
+    type:
+      - string
+      - null
+  source:
+    type:
+      - string
+      - null
+  icon:
+    type:
+      - string
+      - null
+examples:
+  -
+    attachment_id: null
+    color: null
+    source: null
+    icon: null

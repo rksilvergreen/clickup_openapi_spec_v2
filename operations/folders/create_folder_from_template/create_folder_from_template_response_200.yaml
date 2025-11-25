@@ -1,0 +1,47 @@
+description: "Folder created successfully"
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: "ID of the created Folder"
+        folder:
+          $ref: "./folder.yaml"
+      example:
+        id: 90114316773
+        folder:
+          id: "90114316773"
+          name: Projects
+          orderindex: 0
+          override_statuses: true
+          hidden: false
+          space:
+            id: "90112667046"
+            name: "Client Facing"
+            access: true
+          task_count: "0"
+          archived: false
+          statuses:
+            -
+              id: c90114316773_syqLtYOY
+              status: complete
+              orderindex: 2
+              color: "#008844"
+              type: closed
+            -
+              id: c90114316773_g9uxhsQM
+              status: "in progress"
+              orderindex: 1
+              color: "#1090e0"
+              type: custom
+            -
+              id: c90114316773_DCnaeiSB
+              status: "to do"
+              orderindex: 0
+              color: "#87909e"
+              type: open
+          lists:
+            []
+          permission_level: create

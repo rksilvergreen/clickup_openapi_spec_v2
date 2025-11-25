@@ -1,0 +1,45 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: CreateTaskAttachmentResponse
+      required:
+        - id
+        - version
+        - date
+        - title
+        - extension
+        - thumbnail_small
+        - thumbnail_large
+        - url
+      type: object
+      properties:
+        id:
+          type: string
+        version:
+          type: string
+        date:
+          type: integer
+          contentEncoding: int64
+        title:
+          type: string
+        extension:
+          type: string
+        thumbnail_small:
+          type: string
+        thumbnail_large:
+          type: string
+        url:
+          type: string
+      examples:
+        -
+          id: ac434d4e-8b1c-4571-951b-866b6d9f2ee6.png
+          version: "0"
+          date: 1569988578766
+          title: image.png
+          extension: png
+          thumbnail_small: https://attachments-public.clickup.com/ac434d4e-8b1c-4571-951b-866b6d9f2ee6/logo_small.png
+          thumbnail_large: https://attachments-public.clickup.com/ac434d4e-8b1c-4571-951b-866b6d9f2ee6/logo_small.png
+          url: https://attachments-public.clickup.com/ac434d4e-8b1c-4571-951b-866b6d9f2ee6/logo_small.png

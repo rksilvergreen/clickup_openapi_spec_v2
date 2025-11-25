@@ -1,0 +1,17 @@
+description: ""
+content:
+  application/json:
+    schema:
+      title: CreateChecklistItemRequest
+      type: object
+      properties:
+        name:
+          type: string
+        assignee:
+          type: integer
+          contentEncoding: int32
+      examples:
+        -
+          name: "Checklist Item"
+          assignee: 183
+required: true

@@ -1,0 +1,28 @@
+put:
+  summary: Update Comment
+  tags:
+    - Comments
+  description: Replace the content of a task commment, assign a comment, and mark a comment as resolved.
+  operationId: UpdateComment
+  parameters:
+    -
+      $ref: "../operations/comments/update_comment/update_comment_parametercomment_id_path.yaml"
+  requestBody:
+    $ref: "../operations/comments/update_comment/update_comment_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/comments/update_comment/update_comment_response_200.yaml"
+  deprecated: false
+delete:
+  summary: Delete Comment
+  tags:
+    - Comments
+  description: Delete a task comment.
+  operationId: DeleteComment
+  parameters:
+    -
+      $ref: "../operations/comments/delete_comment/delete_comment_parametercomment_id_path.yaml"
+  responses:
+    200:
+      $ref: "../operations/comments/delete_comment/delete_comment_response_200.yaml"
+  deprecated: false

@@ -1,0 +1,9 @@
+name: key_result_id
+in: path
+description: "8480-49bc-8c57-e569747efe93 (uuid)"
+required: true
+style: simple
+schema:
+  type: string
+  examples:
+    - 947d46ed

@@ -1,0 +1,14 @@
+post:
+  summary: Stop a time Entry
+  tags:
+    - Time Tracking
+  description: 'Stop a timer that''s currently running for the authenticated user.'
+  operationId: StopATimeEntry
+  parameters:
+    - $ref: "../operations/time_tracking/stop_a_time_entry/stop_a_time_entry_parameterteam_id_path.yaml"
+    -
+      $ref: "../operations/time_tracking/stop_a_time_entry/stop_a_time_entry_parametercontent_type_header.yaml"
+  responses:
+    200:
+      $ref: "../operations/time_tracking/stop_a_time_entry/stop_a_time_entry_response_200.yaml"
+  deprecated: false

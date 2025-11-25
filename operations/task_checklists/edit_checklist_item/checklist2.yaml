@@ -1,0 +1,100 @@
+title: Checklist2
+required:
+  - id
+  - task_id
+  - name
+  - date_created
+  - orderindex
+  - resolved
+  - unresolved
+  - items
+type: object
+properties:
+  id:
+    type: string
+  task_id:
+    type: string
+  name:
+    type: string
+  date_created:
+    type: string
+  orderindex:
+    type: integer
+    contentEncoding: int32
+  resolved:
+    type: integer
+    contentEncoding: int32
+  unresolved:
+    type: integer
+    contentEncoding: int32
+  items:
+    type: array
+    items:
+      title: Item1
+      required:
+        - id
+        - name
+        - orderindex
+        - assignee
+        - resolved
+        - parent
+        - date_created
+        - children
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        orderindex:
+          type: integer
+          contentEncoding: int32
+        assignee:
+          type:
+            - string
+            - null
+        resolved:
+          type: boolean
+        parent:
+          type:
+            - string
+            - null
+        date_created:
+          type: string
+        children:
+          type: array
+          items:
+            type: string
+          description: ""
+      examples:
+        -
+          id: 21e08dc8-e491-47f5-9fd8-d1dc4cedcc6f
+          name: "Updated Checklist Item"
+          orderindex: 0
+          assignee: null
+          resolved: true
+          parent: null
+          date_created: "1567711566859"
+          children:
+            []
+    description: ""
+examples:
+  -
+    id: b955c4dc-b8a8-48d8-a0c6-b4200788a683
+    task_id: 9hv
+    name: Checklist
+    date_created: "1567711563204"
+    orderindex: 0
+    resolved: 1
+    unresolved: 0
+    items:
+      -
+        id: 21e08dc8-e491-47f5-9fd8-d1dc4cedcc6f
+        name: "Updated Checklist Item"
+        orderindex: 0
+        assignee: null
+        resolved: true
+        parent: null
+        date_created: "1567711566859"
+        children:
+          []

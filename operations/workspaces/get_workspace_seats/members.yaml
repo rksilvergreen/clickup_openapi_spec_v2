@@ -1,0 +1,21 @@
+title: Members
+required:
+  - filled_members_seats
+  - total_member_seats
+  - empty_member_seats
+type: object
+properties:
+  filled_members_seats:
+    type: integer
+    contentEncoding: int32
+  total_member_seats:
+    type: integer
+    contentEncoding: int32
+  empty_member_seats:
+    type: integer
+    contentEncoding: int32
+examples:
+  -
+    filled_members_seats: 9
+    total_member_seats: 9
+    empty_member_seats: 0

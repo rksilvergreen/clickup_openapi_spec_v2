@@ -1,0 +1,10 @@
+name: list_id
+in: path
+description: "To find the list_id: \\ 1. In the Sidebar, hover over the List and click the **ellipsis ...** menu. \\ 2. Select **Copy link.** \\ 3. Use the copied URL to find the list_id. The list_id is the number that follows /li in the URL."
+required: true
+style: simple
+schema:
+  type: number
+  contentEncoding: double
+  examples:
+    - 123

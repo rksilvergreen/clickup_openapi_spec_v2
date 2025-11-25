@@ -1,0 +1,28 @@
+get:
+  summary: Get Threaded Comments
+  description: View threaded comments. The parent comment is not included in the response.
+  tags:
+    - Comments
+  operationId: GetThreadedComments
+  parameters:
+    -
+      $ref: "../operations/comments/get_threaded_comments/get_threaded_comments_parametercomment_id_path.yaml"
+  responses:
+    200:
+      $ref: "../operations/comments/get_threaded_comments/get_threaded_comments_response_200.yaml"
+  deprecated: false
+post:
+  summary: Create Threaded Comment
+  tags:
+    - Comments
+  description: Create a threaded comment.
+  operationId: CreateThreadedComment
+  parameters:
+    -
+      $ref: "../operations/comments/create_threaded_comment/create_threaded_comment_parametercomment_id_path.yaml"
+  requestBody:
+    $ref: "../operations/comments/create_threaded_comment/create_threaded_comment_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/comments/create_threaded_comment/create_threaded_comment_response_200.yaml"
+  deprecated: false

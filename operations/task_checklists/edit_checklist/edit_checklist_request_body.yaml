@@ -1,0 +1,18 @@
+description: ""
+content:
+  application/json:
+    schema:
+      title: EditChecklistRequest
+      type: object
+      properties:
+        name:
+          type: string
+        position:
+          description: "Position refers to the order of appearance of checklists on a task.\\\n \\\nTo set a checklist to appear at the top of the checklists section of a task, use `\"position\": 0`."
+          type: integer
+          contentEncoding: int32
+      examples:
+        -
+          name: "Updated Checklist"
+          position: 1
+required: true

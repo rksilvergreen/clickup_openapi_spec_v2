@@ -1,0 +1,25 @@
+description: ""
+content:
+  application/json:
+    schema:
+      title: CreateListCommentRequest
+      required:
+        - comment_text
+        - assignee
+        - notify_all
+      type: object
+      properties:
+        comment_text:
+          type: string
+        assignee:
+          type: integer
+          contentEncoding: int32
+        notify_all:
+          description: "If `notify_all` is true, notifications will be sent to everyone including the creator of the comment."
+          type: boolean
+      examples:
+        -
+          comment_text: "List comment content"
+          assignee: 183
+          notify_all: true
+required: true

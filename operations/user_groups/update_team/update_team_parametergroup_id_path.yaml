@@ -1,0 +1,9 @@
+name: group_id
+in: path
+description: "User Group ID"
+required: true
+style: simple
+schema:
+  type: string
+  examples:
+    - C9C58BE9

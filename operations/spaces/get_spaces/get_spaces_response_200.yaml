@@ -1,0 +1,198 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: GetSpacesResponse
+      required:
+        - spaces
+      type: object
+      properties:
+        spaces:
+          type: array
+          items:
+            title: Space13
+            required:
+              - id
+              - name
+              - private
+              - statuses
+              - multiple_assignees
+              - features
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+              private:
+                type: boolean
+              color:
+                type: string
+              avatar:
+                type: string
+              admin_can_manage:
+                type: boolean
+              archived:
+                type: boolean
+              members:
+                type: array
+                items:
+                  $ref: "../../../shared/member.yaml"
+                description: ""
+                user:
+                  id:
+                    type: string
+                  username:
+                    type: string
+                  color:
+                    type: string
+                  profilePicture:
+                    type: string
+                  initials:
+                    type: string
+              statuses:
+                type: array
+                items:
+                  $ref: "../../../shared/status.yaml"
+                description: ""
+              multiple_assignees:
+                type: boolean
+              features:
+                $ref: "./features4.yaml"
+            examples:
+              -
+                id: "790"
+                name: "Updated Space Name"
+                private: false
+                color: null
+                avatar: https://attachments.clickup.com/profilePictures/12312312_HoB.jpg
+                admin_can_manage: true
+                archived: false
+                members:
+                  -
+                    user:
+                      id: 12312312
+                      username: "John Jones"
+                      color: null
+                      profilePicture: https://attachments.clickup.com/profilePictures/12312312_HoB.jpg
+                      initials: JJ
+                statuses:
+                  -
+                    status: "to do"
+                    type: open
+                    orderindex: 0
+                    color: "#d3d3d3"
+                  -
+                    status: complete
+                    type: closed
+                    orderindex: 1
+                    color: "#6bc950"
+                multiple_assignees: false
+                features:
+                  due_dates:
+                    enabled: false
+                    start_date: false
+                    remap_due_dates: false
+                    remap_closed_due_date: false
+                  time_tracking:
+                    enabled: false
+                  tags:
+                    enabled: false
+                  time_estimates:
+                    enabled: false
+                  checklists:
+                    enabled: true
+                  custom_fields:
+                    enabled: true
+                  remap_dependencies:
+                    enabled: false
+                  dependency_warning:
+                    enabled: false
+                  portfolios:
+                    enabled: false
+          description: ""
+      examples:
+        -
+          spaces:
+            -
+              id: "790"
+              name: "Updated Space Name"
+              private: false
+              color: null
+              avatar: https://attachments.clickup.com/profilePictures/12312312_HoB.jpg
+              admin_can_manage: true
+              archived: false
+              members:
+                -
+                  user:
+                    id: "12312312,"
+                    username: "John Jones,"
+                    color: null
+                    profilePicture: "https://attachments.clickup.com/profilePictures/12312312_HoB.jpg,"
+                    initials: JJ
+              statuses:
+                -
+                  status: "to do"
+                  type: open
+                  orderindex: 0
+                  color: "#d3d3d3"
+                -
+                  status: complete
+                  type: closed
+                  orderindex: 1
+                  color: "#6bc950"
+              multiple_assignees: false
+              features:
+                due_dates:
+                  enabled: false
+                  start_date: false
+                  remap_due_dates: false
+                  remap_closed_due_date: false
+                time_tracking:
+                  enabled: false
+                tags:
+                  enabled: false
+                time_estimates:
+                  enabled: false
+                checklists:
+                  enabled: true
+                custom_fields:
+                  enabled: true
+                remap_dependencies:
+                  enabled: false
+                dependency_warning:
+                  enabled: false
+                portfolios:
+                  enabled: false
+            -
+              id: "791"
+              name: "Second Space Name"
+              private: false
+              statuses:
+                -
+                  status: Open
+                  type: open
+                  orderindex: 0
+                  color: "#d3d3d3"
+                -
+                  status: Closed
+                  type: closed
+                  orderindex: 1
+                  color: "#6bc950"
+              multiple_assignees: true
+              features:
+                due_dates:
+                  enabled: true
+                  start_date: false
+                  remap_due_dates: false
+                  remap_closed_due_date: false
+                time_tracking:
+                  enabled: true
+                tags:
+                  enabled: true
+                time_estimates:
+                  enabled: true
+                checklists:
+                  enabled: true

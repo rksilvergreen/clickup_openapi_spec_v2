@@ -1,0 +1,49 @@
+description: "Accessible tag actions are `[\"replace\", \"add\", \"remove\"]`"
+content:
+  application/json:
+    schema:
+      title: UpdateTimeEntryRequest
+      required:
+        - tags
+        - tid
+      type: object
+      properties:
+        description:
+          type: string
+        tags:
+          description: "Users on the Business Plan and above can include a time tracking label."
+          type: array
+          items:
+            $ref: "../../../shared/tags6.yaml"
+        tag_action:
+          type: string
+        start:
+          type: integer
+          contentEncoding: int64
+          description: "When providing `start`, you must also provide `end`."
+        end:
+          type: integer
+          contentEncoding: int64
+          description: "When providing `end`, you must also provide `start`."
+        tid:
+          type: string
+        billable:
+          type: boolean
+        duration:
+          type: integer
+          contentEncoding: int32
+      examples:
+        -
+          description: ""
+          tags:
+            -
+              name: "name of tag"
+              tag_bg: "#BF55EC"
+              tag_fg: "#FFFFFF"
+          tag_action: add
+          start: 1595289395842
+          end: 1595289495842
+          tid: task_id
+          billable: true
+          duration: 100000
+required: true

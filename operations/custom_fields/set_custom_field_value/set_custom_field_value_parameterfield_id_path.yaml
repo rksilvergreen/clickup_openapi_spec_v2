@@ -1,0 +1,9 @@
+name: field_id
+in: path
+description: "Enter the universal unique identifier (UUID) of the Custom Field you want to set."
+required: true
+style: simple
+schema:
+  type: string
+  examples:
+    - b955c4dc

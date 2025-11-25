@@ -1,0 +1,25 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: CreateListCommentResponse
+      required:
+        - id
+        - hist_id
+        - date
+      type: object
+      properties:
+        id:
+          type: string
+        hist_id:
+          type: string
+        date:
+          type: integer
+          contentEncoding: int64
+      examples:
+        -
+          id: "462"
+          hist_id: 5bbea9ad-7cc3-4038-a8bb-a89ac1337c08
+          date: 1568037341249

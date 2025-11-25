@@ -1,0 +1,47 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: CreateKeyResultResponse
+      required:
+        - key_result
+      type: object
+      properties:
+        key_result:
+          $ref: "./key_result.yaml"
+      examples:
+        -
+          key_result:
+            id: 947d46ed-8480-49bc-8c57-e569747efe93
+            goal_id: e53a033c-900e-462d-a849-4a216b06d930
+            name: "New Key Result Name"
+            type: number
+            unit: km
+            creator: 183
+            date_created: "1568062902048"
+            goal_pretty_id: "6"
+            percent_completed: null
+            completed: false
+            task_ids:
+              []
+            subcategory_ids:
+              []
+            owners:
+              -
+                id: 183
+                username: "John Doe"
+                email: "example@email.com"
+                color: "#827718"
+                profilePicture: https://attachments.clickup.com/profilePictures/183_nx1.jpg
+                initials: JK
+            last_action:
+              id: d3183d0f-5cbd-4158-b015-71465f1df269
+              key_result_id: 947d46ed-8480-49bc-8c57-e569747efe93
+              userid: 183
+              date_modified: "1568062902048"
+              steps_taken: null
+              note: "Created Key Result"
+              steps_before: null
+              steps_current: null

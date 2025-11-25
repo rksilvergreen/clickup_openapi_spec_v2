@@ -1,0 +1,10 @@
+name: Content-Type
+in: header
+description: ""
+required: true
+style: simple
+schema:
+  const: application/json
+  type: string
+  examples:
+    - application/json

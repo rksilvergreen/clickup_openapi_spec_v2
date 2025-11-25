@@ -1,0 +1,255 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: GetViewTasksResponse
+      required:
+        - tasks
+        - last_page
+      type: object
+      properties:
+        tasks:
+          type: array
+          items:
+            title: Task9
+            type: object
+            properties:
+              id:
+                type: string
+              custom_item_id:
+                type:
+                  - number
+                  - null
+              name:
+                type: string
+              status:
+                $ref: "../../../shared/status.yaml"
+              markdown_description:
+                type: string
+              orderindex:
+                type: string
+              date_created:
+                type: string
+              date_updated:
+                type: string
+              date_closed:
+                type:
+                  - string
+                  - null
+              date_done:
+                type:
+                  - string
+                  - null
+              creator:
+                $ref: "../../../shared/creator.yaml"
+              assignees:
+                type: array
+                items:
+                  type: string
+                description: ""
+              watchers:
+                type: array
+                items:
+                  type: string
+                description: ""
+              checklists:
+                type: array
+                items:
+                  type: string
+                description: ""
+              tags:
+                type: array
+                items:
+                  type: string
+                description: ""
+              parent:
+                type:
+                  - string
+                  - null
+              priority:
+                $ref: "../../../shared/priority.yaml"
+              due_date:
+                type:
+                  - string
+                  - null
+              start_date:
+                type:
+                  - string
+                  - null
+              points:
+                type:
+                  - number
+              time_estimate:
+                type:
+                  - string
+                  - null
+              time_spent:
+                type:
+                  - string
+              custom_fields:
+                $ref: "../../../shared/custom_fields8.yaml"
+              list:
+                $ref: "../../../shared/list.yaml"
+              folder:
+                $ref: "../../../shared/folder.yaml"
+              space:
+                $ref: "../../../shared/space.yaml"
+              url:
+                type: string
+            examples:
+              -
+                id: 9hx
+                name: "New Task Name"
+                custom_item_id: null
+                status:
+                  status: Open
+                  color: "#d3d3d3"
+                  orderindex: 0
+                  type: open
+                markdown_description: "Task description"
+                orderindex: "1.00000000000000000000000000000000"
+                date_created: "1567780450202"
+                date_updated: "1567780450202"
+                date_closed: null
+                date_done: null
+                creator:
+                  id: 183
+                  username: "John Doe"
+                  color: "#827718"
+                  profilePicture: https://attachments-public.clickup.com/profilePictures/183_abc.jpg
+                assignees:
+                  []
+                watchers:
+                  []
+                checklists:
+                  []
+                tags:
+                  []
+                parent: null
+                priority:
+                  color: "#f8ae00"
+                  id: "3"
+                  orderindex: "3"
+                  priority: normal
+                due_date: null
+                start_date: null
+                time_estimate: null
+                time_spent: 7200000
+                list:
+                  id: "123"
+                folder:
+                  id: "456"
+                space:
+                  id: "789"
+                url: https://app.clickup.com/t/9hx
+          description: ""
+        last_page:
+          type: boolean
+      examples:
+        -
+          tasks:
+            -
+              id: 9hx
+              name: "New Task Name"
+              status:
+                status: Open
+                color: "#d3d3d3"
+                orderindex: 0
+                type: open
+              orderindex: "1.00000000000000000000000000000000"
+              date_created: "1567780450202"
+              date_updated: "1567780450202"
+              date_closed: null
+              date_done: null
+              creator:
+                id: 183
+                username: "John Doe"
+                color: "#827718"
+                profilePicture: https://attachments-public.clickup.com/profilePictures/183_abc.jpg
+              assignees:
+                []
+              checklists:
+                []
+              tags:
+                []
+              parent: null
+              priority:
+                color: "#f8ae00"
+                id: "3"
+                orderindex: "3"
+                priority: normal
+              due_date: null
+              start_date: null
+              points: 3
+              time_estimate: null
+              time_spent: null
+              custom_fields:
+                id: 0a52c486-5f05-403b-b4fd-c512ff05131c
+                name: "My Text Custom field"
+                type: text
+                type_config:
+                  {}
+                date_created: "1622176979540"
+                hide_from_guests: false
+                value:
+                  value: "This is a string of text added to a Custom Field."
+                required: true
+              list:
+                id: "123"
+              folder:
+                id: "456"
+              space:
+                id: "789"
+              url: https://app.clickup.com/t/9hx
+            -
+              id: 9hz
+              name: "Second task"
+              status:
+                status: Open
+                color: "#d3d3d3"
+                orderindex: 0
+                type: open
+              orderindex: "2.00000000000000000000000000000000"
+              date_created: "1567780450202"
+              date_updated: "1567780450202"
+              date_closed: null
+              date_done: null
+              creator:
+                id: 183
+                username: "John Doe"
+                color: "#827718"
+                profilePicture: https://attachments-public.clickup.com/profilePictures/183_abc.jpg
+              assignees:
+                []
+              checklists:
+                []
+              tags:
+                []
+              parent: null
+              priority: null
+              due_date: null
+              start_date: null
+              points: 3
+              time_estimate: null
+              time_spent: null
+              custom_fields:
+                id: 0a52c486-5f05-403b-b4fd-c512ff05131c
+                name: "My Text Custom field"
+                type: text
+                type_config:
+                  {}
+                date_created: "1622176979540"
+                hide_from_guests: false
+                value:
+                  value: "This is a string of text added to a Custom Field."
+                required: true
+              list:
+                id: "123"
+              folder:
+                id: "456"
+              space:
+                id: "789"
+              url: https://app.clickup.com/t/9hz
+          last_page: true

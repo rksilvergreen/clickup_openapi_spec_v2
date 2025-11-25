@@ -1,0 +1,14 @@
+get:
+  summary: Get Groups
+  tags:
+    - User Groups
+  description: "This endpoint is used to view [User Groups](https://docs.clickup.com/en/articles/4010016-teams-how-to-create-user-groups) in your Workspace.\\\n \\\nIn our API documentation, `team_id` refers to the ID of a Workspace, and `group_id` refers to the ID of a User Group."
+  operationId: GetTeams1
+  parameters:
+    - $ref: "../operations/user_groups/get_teams1/get_teams1_parameterteam_id_query.yaml"
+    -
+      $ref: "../operations/user_groups/get_teams1/get_teams1_parametergroup_ids_query.yaml"
+  responses:
+    200:
+      $ref: "../operations/user_groups/get_teams1/get_teams1_response_200.yaml"
+  deprecated: false

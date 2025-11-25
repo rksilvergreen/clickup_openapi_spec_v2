@@ -1,0 +1,9 @@
+name: assignees
+in: query
+description: "Filter by Assignees. For example: \\\n \\\n`?assignees[]=1234&assignees[]=5678`"
+style: form
+explode: true
+schema:
+  type: array
+  items:
+    type: string

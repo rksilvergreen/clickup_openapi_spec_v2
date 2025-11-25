@@ -1,0 +1,23 @@
+title: TaskTag
+required:
+  - name
+  - tag_fg
+  - tag_bg
+  - creator
+type: object
+properties:
+  name:
+    type: string
+  tag_fg:
+    type: string
+  tag_bg:
+    type: string
+  creator:
+    type: integer
+    contentEncoding: int32
+examples:
+  -
+    name: content-request
+    tag_fg: "#800000"
+    tag_bg: "#2ecd6f"
+    creator: 301828

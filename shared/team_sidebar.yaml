@@ -1,0 +1,22 @@
+title: TeamSidebar
+required:
+  - assignees
+  - assigned_comments
+  - unassigned_tasks
+type: object
+properties:
+  assignees:
+    type: array
+    items:
+      type: string
+    description: ""
+  assigned_comments:
+    type: boolean
+  unassigned_tasks:
+    type: boolean
+examples:
+  -
+    assignees:
+      []
+    assigned_comments: false
+    unassigned_tasks: false

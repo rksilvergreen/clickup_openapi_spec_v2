@@ -1,0 +1,8 @@
+name: date_done_gt
+in: query
+description: "Filter by date done greater than Unix time in milliseconds."
+style: form
+explode: true
+schema:
+  type: integer
+  contentEncoding: int32

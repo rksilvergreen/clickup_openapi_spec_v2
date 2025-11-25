@@ -1,0 +1,29 @@
+description: ""
+content:
+  application/json:
+    schema:
+      title: UpdateCommentRequest
+      required:
+        - comment_text
+        - assignee
+        - resolved
+      type: object
+      properties:
+        comment_text:
+          type: string
+        assignee:
+          type: integer
+          contentEncoding: int32
+        group_assignee:
+          type: integer
+          contentEncoding: int32
+          description: ""
+        resolved:
+          description: ""
+          type: boolean
+      examples:
+        -
+          comment_text: "Updated comment content"
+          assignee: 183
+          resolved: true
+required: true

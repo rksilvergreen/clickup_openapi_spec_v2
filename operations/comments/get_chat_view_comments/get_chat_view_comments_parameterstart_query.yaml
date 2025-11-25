@@ -1,0 +1,8 @@
+name: start
+in: query
+description: "Enter the `date` of a Chat view comment using Unix time in milliseconds."
+style: form
+explode: true
+schema:
+  type: integer
+  contentEncoding: int32

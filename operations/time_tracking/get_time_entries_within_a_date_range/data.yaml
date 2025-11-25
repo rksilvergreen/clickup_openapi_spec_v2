@@ -1,0 +1,8 @@
+type: object
+properties:
+  end_of_week:
+    type: integer
+    description: Timestamp for the end of the week
+  start_of_week:
+    type: integer
+    description: Timestamp for the start of the week

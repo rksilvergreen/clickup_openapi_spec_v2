@@ -1,0 +1,9 @@
+name: task_id
+in: path
+description: ""
+required: true
+style: simple
+schema:
+  type: string
+  examples:
+    - abc

@@ -1,0 +1,29 @@
+description: ""
+content:
+  application/json:
+    schema:
+      title: EditGuestOnWorkspaceRequest
+      type: object
+      properties:
+        can_see_points_estimated:
+          type: boolean
+        can_edit_tags:
+          type: boolean
+        can_see_time_spent:
+          type: boolean
+        can_see_time_estimated:
+          type: boolean
+        can_create_views:
+          type: boolean
+        custom_role_id:
+          type: integer
+          contentEncoding: int32
+      examples:
+        -
+          can_see_points_estimated: true
+          can_edit_tags: true
+          can_see_time_spent: true
+          can_see_time_estimated: true
+          can_create_views: true
+          custom_role_id: 12345
+required: false

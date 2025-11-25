@@ -1,0 +1,20 @@
+description: "All properties available in the Create Key Result endpoint may also be used along with the additional properties below."
+content:
+  application/json:
+    schema:
+      title: EditKeyResultRequest
+      required:
+        - steps_current
+        - note
+      type: object
+      properties:
+        steps_current:
+          type: integer
+          contentEncoding: int32
+        note:
+          type: string
+      examples:
+        -
+          steps_current: 5
+          note: "Target achieved"
+required: true

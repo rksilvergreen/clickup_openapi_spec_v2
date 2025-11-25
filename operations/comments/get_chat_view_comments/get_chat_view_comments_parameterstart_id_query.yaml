@@ -1,0 +1,7 @@
+name: start_id
+in: query
+description: "Enter the Comment `id` of a Chat view comment."
+style: form
+explode: true
+schema:
+  type: string

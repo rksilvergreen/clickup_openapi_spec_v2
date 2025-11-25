@@ -1,0 +1,29 @@
+title: Grouping
+required:
+  - field
+  - dir
+  - collapsed
+  - ignore
+type: object
+properties:
+  field:
+    type: string
+    description: "Set the field to group by.\\\n \\\nOptions include: `none`, `status`, `priority`, `assignee`, `tag`, or `dueDate`."
+  dir:
+    description: "Set a group sort order using `1` or `-1`.\\\n \\\nFor example, use `1`show tasks with urgent priority at the top of your view, and tasks with no priority at the bottom.\\\n \\\nUse `-1` to reverse the order to show tasks with no priority at the top of your view."
+    type: integer
+    contentEncoding: int32
+  collapsed:
+    type: array
+    items:
+      type: string
+    description: ""
+  ignore:
+    type: boolean
+examples:
+  -
+    field: status
+    dir: 1
+    collapsed:
+      []
+    ignore: false

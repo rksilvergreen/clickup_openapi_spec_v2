@@ -1,0 +1,50 @@
+title: Settings
+required:
+  - show_task_locations
+  - show_subtasks
+  - show_subtask_parent_names
+  - show_closed_subtasks
+  - show_assignees
+  - show_images
+  - collapse_empty_columns
+  - me_comments
+  - me_subtasks
+  - me_checklists
+type: object
+properties:
+  show_task_locations:
+    type: boolean
+  show_subtasks:
+    description: "Acceptable values are `1`, `2`, or `3`, which show subtasks separate, expanded, or collapsed."
+    type: integer
+    contentEncoding: int32
+  show_subtask_parent_names:
+    type: boolean
+  show_closed_subtasks:
+    type: boolean
+  show_assignees:
+    type: boolean
+  show_images:
+    type: boolean
+  collapse_empty_columns:
+    type:
+      - string
+      - null
+  me_comments:
+    type: boolean
+  me_subtasks:
+    type: boolean
+  me_checklists:
+    type: boolean
+examples:
+  -
+    show_task_locations: false
+    show_subtasks: 3
+    show_subtask_parent_names: false
+    show_closed_subtasks: false
+    show_assignees: true
+    show_images: true
+    collapse_empty_columns: null
+    me_comments: true
+    me_subtasks: true
+    me_checklists: true

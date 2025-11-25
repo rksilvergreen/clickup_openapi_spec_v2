@@ -1,0 +1,8 @@
+name: assignee
+in: query
+description: "Filter by `user_id`. For multiple assignees, separate `user_id` using commas.\\\n \\\n **Example:** `assignee=1234,9876`\\\n \\\n***Note:** Only Workspace Owners/Admins have access to do this.*"
+style: form
+explode: true
+schema:
+  type: number
+  contentEncoding: double

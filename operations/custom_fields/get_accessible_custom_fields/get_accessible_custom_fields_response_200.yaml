@@ -1,0 +1,46 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: GetAccessibleCustomFieldsResponse
+      required:
+        - fields
+      type: object
+      properties:
+        fields:
+          type: array
+          items:
+            title: Field
+            required:
+              - id
+              - name
+              - type
+              - type_config
+              - date_created
+              - hide_from_guests
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+              type:
+                type: string
+              type_config:
+                $ref: "./type_config.yaml"
+              date_created:
+                type: string
+              hide_from_guests:
+                type: boolean
+            examples:
+              -
+                id: 03efda77-c7a0-42d3-8afd-fd546353c2f5
+                name: "Text Field"
+                type: text
+                type_config:
+                  {}
+                date_created: "1566400407303"
+                hide_from_guests: false
+          description: ""

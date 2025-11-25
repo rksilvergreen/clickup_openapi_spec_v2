@@ -1,0 +1,16 @@
+post:
+  summary: Create Task From Template
+  description: "Create a new task using a task template defined in your workspace. Publicly shared templates must be [added to your Workspace](https://help.clickup.com/hc/en-us/articles/6326023965591-Add-a-template-to-your-library) before you can use them with the public API.\n"
+  operationId: CreateTaskFromTemplate
+  tags:
+    - Tasks
+  parameters:
+    - $ref: "../operations/tasks/create_task_from_template/create_task_from_template_parameterlist_id_path.yaml"
+    -
+      $ref: "../operations/tasks/create_task_from_template/create_task_from_template_parametertemplate_id_path.yaml"
+  requestBody:
+    $ref: "../operations/tasks/create_task_from_template/create_task_from_template_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/tasks/create_task_from_template/create_task_from_template_response_200.yaml"
+  deprecated: false

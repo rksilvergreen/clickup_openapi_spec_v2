@@ -1,0 +1,11 @@
+name: page
+in: query
+description: ""
+required: true
+style: form
+explode: true
+schema:
+  type: integer
+  contentEncoding: int32
+  examples:
+    - 0

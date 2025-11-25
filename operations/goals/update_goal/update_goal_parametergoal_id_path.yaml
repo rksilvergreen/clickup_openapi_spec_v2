@@ -1,0 +1,9 @@
+name: goal_id
+in: path
+description: "900e-462d-a849-4a216b06d930 (uuid)"
+required: true
+style: simple
+schema:
+  type: string
+  examples:
+    - e53a033c

@@ -1,0 +1,7 @@
+name: include_location_names
+in: query
+description: "Include the names of the List, Folder, and Space along with `list_id`,`folder_id`, and `space_id`."
+style: form
+explode: true
+schema:
+  type: boolean

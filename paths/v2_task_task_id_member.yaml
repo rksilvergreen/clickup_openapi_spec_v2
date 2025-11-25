@@ -1,0 +1,13 @@
+get:
+  summary: Get Task Members
+  tags:
+    - Members
+  description: View the people who have access to a task. Responses do not include people with inherited Hierarchy permission to the task.
+  operationId: GetTaskMembers
+  parameters:
+    -
+      $ref: "../operations/members/get_task_members/get_task_members_parametertask_id_path.yaml"
+  responses:
+    200:
+      $ref: "../operations/members/get_task_members/get_task_members_response_200.yaml"
+  deprecated: false

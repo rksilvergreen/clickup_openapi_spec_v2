@@ -1,0 +1,15 @@
+title: CustomRole
+required:
+  - id
+  - name
+type: object
+properties:
+  id:
+    type: integer
+    contentEncoding: int32
+  name:
+    type: string
+examples:
+  -
+    id: 12345
+    name: "guest custom"

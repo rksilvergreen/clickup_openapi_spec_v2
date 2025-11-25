@@ -1,0 +1,7 @@
+name: include_approval_history
+in: query
+description: "Include the history of the approval for the time entry."
+style: form
+explode: true
+schema:
+  type: boolean

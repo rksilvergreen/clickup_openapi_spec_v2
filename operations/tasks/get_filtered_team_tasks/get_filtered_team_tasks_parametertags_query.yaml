@@ -1,0 +1,9 @@
+name: "tags[]"
+in: query
+description: "Filter by tags. User `%20` to represent a space character. For example: \\\n \\\n`?tags[]=tag1&tags[]=this%20tag`"
+style: form
+explode: true
+schema:
+  type: array
+  items:
+    type: string

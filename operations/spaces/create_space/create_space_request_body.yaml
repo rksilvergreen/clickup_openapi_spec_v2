@@ -1,0 +1,44 @@
+description: ""
+content:
+  application/json:
+    schema:
+      title: CreateSpaceRequest
+      required:
+        - name
+        - multiple_assignees
+        - features
+      type: object
+      properties:
+        name:
+          type: string
+        multiple_assignees:
+          type: boolean
+        features:
+          $ref: "../../../shared/features.yaml"
+      examples:
+        -
+          name: "New Space Name"
+          multiple_assignees: true
+          features:
+            due_dates:
+              enabled: true
+              start_date: false
+              remap_due_dates: true
+              remap_closed_due_date: false
+            time_tracking:
+              enabled: false
+            tags:
+              enabled: true
+            time_estimates:
+              enabled: true
+            checklists:
+              enabled: true
+            custom_fields:
+              enabled: true
+            remap_dependencies:
+              enabled: true
+            dependency_warning:
+              enabled: true
+            portfolios:
+              enabled: true
+required: true

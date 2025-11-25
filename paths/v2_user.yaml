@@ -1,0 +1,12 @@
+get:
+  summary: Get Authorized User
+  tags:
+    - Authorization
+  description: 'View the details of the authenticated user''s ClickUp account.'
+  operationId: GetAuthorizedUser
+  parameters:
+    []
+  responses:
+    200:
+      $ref: "../operations/authorization/get_authorized_user/get_authorized_user_response_200.yaml"
+  deprecated: false

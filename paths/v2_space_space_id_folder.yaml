@@ -1,0 +1,29 @@
+get:
+  summary: Get Folders
+  tags:
+    - Folders
+  description: View the Folders in a Space.
+  operationId: GetFolders
+  parameters:
+    - $ref: "../operations/folders/get_folders/get_folders_parameterspace_id_path.yaml"
+    -
+      $ref: "../operations/folders/get_folders/get_folders_parameterarchived_query.yaml"
+  responses:
+    200:
+      $ref: "../operations/folders/get_folders/get_folders_response_200.yaml"
+  deprecated: false
+post:
+  summary: Create Folder
+  tags:
+    - Folders
+  description: Add a new Folder to a Space.
+  operationId: CreateFolder
+  parameters:
+    -
+      $ref: "../operations/folders/create_folder/create_folder_parameterspace_id_path.yaml"
+  requestBody:
+    $ref: "../operations/folders/create_folder/create_folder_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/folders/create_folder/create_folder_response_200.yaml"
+  deprecated: false

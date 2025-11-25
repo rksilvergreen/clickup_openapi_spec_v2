@@ -1,0 +1,44 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: RemoveGuestFromListResponse
+      required:
+        - guest
+      type: object
+      properties:
+        guest:
+          $ref: "../../../shared/guest2.yaml"
+      examples:
+        -
+          guest:
+            user:
+              id: 184
+              username: null
+              email: "guest@example.com"
+              color: null
+              profilePicture: null
+              initials: G
+              role: 4
+              last_active: null
+              date_joined: null
+              date_invited: "1583358383412"
+            invited_by:
+              id: 183
+              color: "#827718"
+              username: Jerry
+              email: "jerry@example.com"
+              initials: J
+              profilePicture: https://attachments.clickup.com/profilePictures/profile.jpg
+            can_see_time_spent: true
+            can_see_time_estimated: true
+            can_edit_tags: true
+            shared:
+              tasks:
+                []
+              lists:
+                []
+              folders:
+                []

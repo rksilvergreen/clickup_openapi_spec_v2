@@ -1,0 +1,15 @@
+post:
+  summary: Get Access Token
+  tags:
+    - Authorization
+  description: "These are the routes for authing the API and going through the [OAuth flow](doc:authentication).\\\n \\\nApplications utilizing a personal API token don't use this endpoint.\\\n \\\n***Note:** OAuth tokens are not supported when using the [**Try It** feature](doc:trytheapi) of our Reference docs. You can't try this endpoint from your web browser.*\n"
+  operationId: GetAccessToken
+  requestBody:
+    $ref: "../operations/authorization/get_access_token/get_access_token_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/authorization/get_access_token/get_access_token_response_200.yaml"
+  deprecated: false
+  security:
+    []
+  x-hideTryItPanel: true

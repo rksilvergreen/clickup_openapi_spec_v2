@@ -1,0 +1,5 @@
+description: "List created successfully"
+content:
+  application/json:
+    schema:
+      $ref: "../../../shared/application_json_2.yaml"

@@ -1,0 +1,28 @@
+required: true
+content:
+  application/json:
+    schema:
+      title: GetAccessTokenRequest
+      required:
+        - client_id
+        - client_secret
+        - code
+      type: object
+      properties:
+        client_id:
+          type: string
+          description: "OAuth app client id"
+        client_secret:
+          type: string
+          description: "OAuth app client secret"
+        code:
+          type: string
+          description: "Code given in redirect url"
+      examples:
+        -
+          client_id: your_client_id
+          client_secret: your_client_secret
+          code: authorization_code
+  application/x-www-form-urlencoded:
+    schema:
+      $ref: "../../../shared/get_access_token_request.yaml"

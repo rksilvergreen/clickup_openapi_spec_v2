@@ -1,0 +1,15 @@
+post:
+  summary: Invite Guest To Workspace
+  tags:
+    - Guests
+  description: "Invite a guest to join a Workspace. To invite a member to your Workspace, use the [Invite User to Workspace](ref:inviteusertoworkspace) endpoint. \\\n \\\nYou'll also need to grant the guest access to specific items using the following endpoints: [Add Guest to Folder](ref:addguesttofolder), [Add Guest to List](ref:addguesttolist), or [Add Guest to Task](ref:addguesttotask). \\\n \\\n***Note:** This endpoint is only available to Workspaces on our [Enterprise Plan](https://clickup.com/pricing).*"
+  operationId: InviteGuestToWorkspace
+  parameters:
+    -
+      $ref: "../operations/guests/invite_guest_to_workspace/invite_guest_to_workspace_parameterteam_id_path.yaml"
+  requestBody:
+    $ref: "../operations/guests/invite_guest_to_workspace/invite_guest_to_workspace_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/guests/invite_guest_to_workspace/invite_guest_to_workspace_response_200.yaml"
+  deprecated: false

@@ -1,0 +1,10 @@
+description: ""
+content:
+  multipart/form-data:
+    schema:
+      properties:
+        attachment:
+          type: array
+          items:
+            {}
+required: true

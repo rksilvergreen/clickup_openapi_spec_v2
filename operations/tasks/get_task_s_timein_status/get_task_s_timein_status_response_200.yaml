@@ -1,0 +1,72 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: GetTasksTimeinStatusResponse
+      required:
+        - current_status
+        - status_history
+      type: object
+      properties:
+        current_status:
+          $ref: "../../../shared/current_status.yaml"
+        status_history:
+          type: array
+          items:
+            title: StatusHistory
+            required:
+              - status
+              - color
+              - type
+              - total_time
+              - orderindex
+            type: object
+            properties:
+              status:
+                type: string
+              color:
+                type: string
+              type:
+                type: string
+              total_time:
+                $ref: "../../../shared/total_time.yaml"
+              orderindex:
+                type: integer
+                contentEncoding: int32
+            examples:
+              -
+                status: open
+                color: "#d3d3d3"
+                type: open
+                total_time:
+                  by_minute: 21707
+                  since: "1604004423494"
+                orderindex: 0
+          description: ""
+      examples:
+        -
+          current_status:
+            status: open
+            color: "#d3d3d3"
+            total_time:
+              by_minute: 21708
+              since: "1604004423494"
+          status_history:
+            -
+              status: open
+              color: "#d3d3d3"
+              type: open
+              total_time:
+                by_minute: 21707
+                since: "1604004423494"
+              orderindex: 0
+            -
+              status: "active status"
+              color: "#5CF1D4"
+              type: custom
+              total_time:
+                by_minute: 23274
+                since: "1602607941692"
+              orderindex: 4

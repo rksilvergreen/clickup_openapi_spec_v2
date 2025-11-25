@@ -1,0 +1,102 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: CreateTaskResponse.yaml
+      type: object
+      properties:
+        id:
+          type: string
+        custom_id:
+          type:
+            - string
+            - null
+        custom_item_id:
+          type:
+            - number
+            - null
+          description: "The custom task type ID for this task. A value of `null` (default) creates a standard task type \"Task\".\\\n \\\nTo get a list of available custom task type IDs for your Workspace, use the [Get Custom Task Types endpoint](ref:getcustomitems)."
+        name:
+          type: string
+        text_content:
+          type: string
+        description:
+          type: string
+        status:
+          $ref: "../../../shared/status.yaml"
+        orderindex:
+          type: string
+        date_created:
+          type: string
+        date_updated:
+          type: string
+        date_closed:
+          type:
+            - string
+            - null
+        creator:
+          $ref: "../../../shared/creator.yaml"
+        assignees:
+          type: array
+          items:
+            type: string
+          description: ""
+        archived:
+          type: boolean
+        group_assignees:
+          type: array
+          items:
+            type: string
+          description: ""
+        email_assignees:
+          type: string
+        checklists:
+          type: array
+          items:
+            type: string
+          description: ""
+        tags:
+          type: array
+          items:
+            type: string
+          description: ""
+        parent:
+          type:
+            - string
+            - null
+        priority:
+          $ref: "../../../shared/priority.yaml"
+        due_date:
+          type:
+            - string
+            - null
+        start_date:
+          type:
+            - string
+            - null
+        points:
+          type:
+            - number
+        time_estimate:
+          type:
+            - string
+            - null
+        time_spent:
+          type:
+            - string
+            - null
+        custom_fields:
+          type: array
+          items:
+            $ref: "../../../shared/custom_fields8.yaml"
+          description: ""
+        list:
+          $ref: "../../../shared/list.yaml"
+        folder:
+          $ref: "../../../shared/folder.yaml"
+        space:
+          $ref: "../../../shared/space.yaml"
+        url:
+          type: string

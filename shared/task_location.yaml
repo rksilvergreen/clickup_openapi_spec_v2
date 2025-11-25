@@ -1,0 +1,33 @@
+title: TaskLocation
+required:
+  - list_id
+  - folder_id
+  - space_id
+  - list_name
+  - folder_name
+  - space_name
+type: object
+properties:
+  list_id:
+    type: integer
+    contentEncoding: int32
+  folder_id:
+    type: integer
+    contentEncoding: int32
+  space_id:
+    type: integer
+    contentEncoding: int32
+  list_name:
+    type: string
+  folder_name:
+    type: string
+  space_name:
+    type: string
+examples:
+  -
+    list_id: 1560300071
+    folder_id: 468300080
+    space_id: 22800253
+    list_name: List
+    folder_name: Folder
+    space_name: Space

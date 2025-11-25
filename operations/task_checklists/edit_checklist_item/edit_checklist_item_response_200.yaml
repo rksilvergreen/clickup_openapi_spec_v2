@@ -1,0 +1,34 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: EditChecklistItemResponse
+      required:
+        - checklist
+      type: object
+      properties:
+        checklist:
+          $ref: "./checklist2.yaml"
+      examples:
+        -
+          checklist:
+            id: b955c4dc-b8a8-48d8-a0c6-b4200788a683
+            task_id: 9hv
+            name: Checklist
+            date_created: "1567711563204"
+            orderindex: 0
+            resolved: 1
+            unresolved: 0
+            items:
+              -
+                id: 21e08dc8-e491-47f5-9fd8-d1dc4cedcc6f
+                name: "Updated Checklist Item"
+                orderindex: 0
+                assignee: null
+                resolved: true
+                parent: null
+                date_created: "1567711566859"
+                children:
+                  []

@@ -1,0 +1,13 @@
+get:
+  summary: Get Custom Task Types
+  tags:
+    - Custom Task Types
+  description: View the custom task types available in a Workspace.
+  operationId: GetCustomItems
+  parameters:
+    -
+      $ref: "../operations/custom_task_types/get_custom_items/get_custom_items_parameterteam_id_path.yaml"
+  responses:
+    200:
+      $ref: "../operations/custom_task_types/get_custom_items/get_custom_items_response_200.yaml"
+  deprecated: false

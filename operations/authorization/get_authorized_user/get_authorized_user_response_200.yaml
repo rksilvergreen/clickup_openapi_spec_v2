@@ -1,0 +1,23 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: GetAuthorizedUserResponse
+      type: object
+      properties:
+        user:
+          $ref: "../../../shared/user.yaml"
+      examples:
+        -
+          user:
+            id: 123
+            username: "John Doe"
+            email: "user@company.com"
+            color: "#000000"
+            profilePicture: https://clickup.com/avatar.jpg
+            initials: JD
+            week_start_day: 0
+            global_font_support: false
+            timezone: America/Los_Angeles

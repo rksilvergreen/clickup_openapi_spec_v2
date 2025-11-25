@@ -1,0 +1,9 @@
+name: "list_ids[]"
+in: query
+description: "Filter by Lists. For example: \\\n \\\n`?list_ids[]=1234&list_ids[]=6789` "
+style: form
+explode: true
+schema:
+  type: array
+  items:
+    type: string

@@ -1,0 +1,13 @@
+get:
+  summary: Get Workspace seats
+  tags:
+    - Workspaces
+  description: View the used, total, and available member and guest seats for a Workspace.
+  operationId: GetWorkspaceSeats
+  parameters:
+    -
+      $ref: "../operations/workspaces/get_workspace_seats/get_workspace_seats_parameterteam_id_path.yaml"
+  responses:
+    200:
+      $ref: "../operations/workspaces/get_workspace_seats/get_workspace_seats_response_200.yaml"
+  deprecated: false

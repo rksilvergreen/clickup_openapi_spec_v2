@@ -1,0 +1,9 @@
+name: is_billable
+in: query
+description: "Include only billable time entries by using a value of `true` or only non-billable time entries by using a value of `false`.\\\n \\\nFor example: `?is_billable=true`."
+style: form
+explode: true
+schema:
+  type: boolean
+  examples:
+    - true

@@ -1,0 +1,9 @@
+title: Comment1
+required:
+  - text
+type: object
+properties:
+  text:
+    type: string
+examples:
+  - text: "Task comment content"

@@ -1,0 +1,109 @@
+title: CustomFields8
+type: object
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  type:
+    type: string
+  type_config:
+    title: TypeConfig1
+    type: object
+    properties:
+      single_user:
+        type: boolean
+      include_groups:
+        type: boolean
+      include_guests:
+        type: boolean
+      include_team_members:
+        type: boolean
+    examples:
+      -
+        {}
+  date_created:
+    type: string
+  hide_from_guests:
+    type: boolean
+  value:
+    oneOf:
+      -
+        title: Value
+        type: object
+        properties:
+          id:
+            type: integer
+            contentEncoding: int32
+          username:
+            type: string
+          email:
+            type: string
+          color:
+            type: string
+          initials:
+            type: string
+          profilePicture:
+            type:
+              - string
+              - null
+      -
+        title: Value1
+        required:
+          - id
+          - username
+          - email
+          - color
+          - initials
+          - profilePicture
+        type: object
+        properties:
+          id:
+            type: integer
+            contentEncoding: int32
+          username:
+            type: string
+          email:
+            type: string
+          color:
+            type: string
+          initials:
+            type: string
+          profilePicture:
+            type:
+              - string
+              - null
+        examples:
+          -
+            id: 183
+            username: "John Doe"
+            email: "john@example.com"
+            color: "#7b68ee"
+            initials: JD
+            profilePicture: null
+      -
+        title: Value2
+        required:
+          - value
+        type: object
+        properties:
+          value:
+            type: string
+        example:
+          - "This is a text CF"
+    examples:
+      -
+        id: 183
+        username: "John Doe"
+        email: "john@example.com"
+        color: "#7b68ee"
+        initials: JD
+        profilePicture: null
+      -
+        value: null
+  value_richtext:
+    type: string
+  value_markdown:
+    type: string
+  required:
+    type: boolean

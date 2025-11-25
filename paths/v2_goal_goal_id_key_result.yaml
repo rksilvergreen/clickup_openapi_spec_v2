@@ -1,0 +1,15 @@
+post:
+  summary: Create Key Result
+  tags:
+    - Goals
+  description: Add a Target to a Goal.
+  operationId: CreateKeyResult
+  parameters:
+    -
+      $ref: "../operations/goals/create_key_result/create_key_result_parametergoal_id_path.yaml"
+  requestBody:
+    $ref: "../operations/goals/create_key_result/create_key_result_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/goals/create_key_result/create_key_result_response_200.yaml"
+  deprecated: false

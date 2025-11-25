@@ -1,0 +1,14 @@
+title: TypeConfig1
+type: object
+properties:
+  single_user:
+    type: boolean
+  include_groups:
+    type: boolean
+  include_guests:
+    type: boolean
+  include_team_members:
+    type: boolean
+examples:
+  -
+    {}

@@ -1,0 +1,227 @@
+description: ""
+content:
+  application/json:
+    schema:
+      title: SetCustomFieldValueRequest
+      anyOf:
+        -
+          type: object
+          title: "URL Custom Field"
+          description: "The `value` must be a string with a valid URL."
+          required:
+            - value
+          properties:
+            value:
+              type: string
+              example: https://clickup.com/api
+        -
+          type: object
+          title: "Dropdown Custom Field"
+          description: "Enter the universal unique identifier (UUID) of the dropdown menu option you want to set. You can find the UUIDs available for each Dropdown Custom Field using [Get Accessible Custom Fields.](ref:getaccessiblecustomfields) New Dropdown Custom Field options cannot be created from this request."
+          required:
+            - value
+          properties:
+            value:
+              type: string
+              example: uuid1234
+        -
+          type: object
+          title: "Email Custom Field"
+          description: "The `value` must be a string with a valid email address."
+          required:
+            - value
+          properties:
+            value:
+              type: string
+              example: "user@company.com"
+        -
+          type: object
+          title: "Phone Custom Field"
+          description: "The `value` must be a string with a valid country code."
+          required:
+            - value
+          properties:
+            value:
+              type: string
+              example: "+1 123 456 7890"
+        -
+          type: object
+          title: "Date Custom Field"
+          description: "The `value` must be Unix time in milliseconds. To display the time in a Date Custom Field in ClickUp, you must include `time: true` in the `value_options` property."
+          properties:
+            value:
+              type: integer
+              format: int32
+              example: 1667367645000
+            value_options:
+              $ref: "./value_options.yaml"
+        -
+          type: object
+          title: "Short or Long Text Custom Field"
+          description: "Enter a string of text."
+          required:
+            - value
+          properties:
+            value:
+              type: string
+              example: "This is short or long text in a Custom Field."
+        -
+          type: object
+          title: "Number Custom Field"
+          description: "Enter a number."
+          required:
+            - value
+          properties:
+            value:
+              type: number
+              example: -28
+        -
+          type: object
+          title: "Money Custom Field"
+          description: "You can set an amount, but not the currency of a Money Custom Field via the API. You can check the currency of a Money Custom Field using [Get Accessible Custom Fields.](ref:getaccessiblecustomfields)"
+          required:
+            - value
+          properties:
+            value:
+              type: number
+              example: 8000
+        -
+          type: object
+          title: "Task Relationship Custom Field"
+          description: "Enter an array of task ids in the `add` property to add them to a Task Relationship Custom Field. Enter them into the `rem` property to remove tasks from the Relationship."
+          required:
+            - value
+          properties:
+            value:
+              $ref: "./value.yaml"
+        -
+          type: object
+          title: "People Custom Field"
+          description: "Enter an array of user ids or a Team id in the `add` property to add them to a People Custom Field. Enter them into the `rem` property to remove users from a People Custom Field. You can get a list of people in the Workspace using [Get Authorized Teams (Workspaces).](ref:getauthorizedteams)"
+          required:
+            - value
+          properties:
+            value:
+              $ref: "./value_2.yaml"
+        -
+          type: object
+          title: "Emoji (Rating) Custom Field"
+          description: "Enter an integer that is greater than or equal to zero and where the `count` property is greater than or equal to the `value`. You can find the `count` property for each Emoji (Rating) Custom Field using [Get Accessible Custom Fields.](ref:getaccessiblecustomfields)"
+          required:
+            - value
+          properties:
+            value:
+              type: integer
+              format: int32
+              example: 4
+        -
+          type: object
+          title: "Manual Progress Custom Field"
+          description: "Enter a number between the `start` and `end` values of each Manual Progress Custom Field. For example, for a field with `start: 10` and `end: 30`, sending `current: 20` will be displayed as 50% complete in ClickUp. You can find the `start` and `end` values for each Manual Progress Custom Field using [Get Accessible Custom Fields.](ref:getaccessiblecustomfields)"
+          required:
+            - value
+          properties:
+            value:
+              $ref: "./value_3.yaml"
+        -
+          type: object
+          title: "Label Custom Field"
+          description: "Enter an array of the universal unique identifiers (UUIDs) of the labels you want to apply. You can find the UUIDs available for each Label Custom Field using [Get Accessible Custom Fields.](ref:getaccessiblecustomfields)"
+          required:
+            - value
+          properties:
+            value:
+              type: array
+              items:
+                type: string
+                example:
+                  - uuid1234
+                  - uuid9876
+        -
+          type: object
+          title: "Location Custom Field"
+          description: "Include the latitude, longitude, and formatted address as defined in the [Google Maps Geocoding API.](https://developers.google.com/maps/documentation/geocoding/overview)"
+          required:
+            - value
+          properties:
+            value:
+              $ref: "./value_4.yaml"
+        -
+          type: object
+          title: "Button Custom Field"
+          description: "Set a button Custom Field to `true` to \"click\" it. This will trigger the button's action as if it was clicked in the UI."
+          required:
+            - value
+          properties:
+            value:
+              type: boolean
+              example: true
+      examples:
+        -
+          'URL Custom Field':
+            value:
+              value: https://clickup.com/api
+          'Dropdown Custom Field':
+            value:
+              value: uuid1234
+          'Email Custom Field':
+            value:
+              value: "user@company.com"
+          'Phone Custom Field':
+            value:
+              value: "+1 201 555 0123"
+          'Date Custom Field':
+            value:
+              value: 1667367645000
+              value_options:
+                time: true
+          'Short or Long Text Custom Field':
+            value:
+              value: "This is short or long text in a Custom Field."
+          'Number Custom Field':
+            value:
+              value: -28
+          'Money Custom Field':
+            value:
+              value: 8000
+          'Task Relationship Custom Field':
+            value:
+              value:
+                add:
+                  - abcd1234
+                  - efghi5678
+                rem:
+                  - jklm9876
+                  - yuiop5678
+          'People Custom Field':
+            value:
+              value:
+                add:
+                  - 123
+                  - 456
+                rem:
+                  - 987
+                  - 765
+          'Emoji (Rating) Custom Field':
+            value:
+              value: 4
+          'Manual Progress Custom Field':
+            value:
+              value:
+                current: 20
+          'Label Custom Field':
+            value:
+              value:
+                - uuid1234
+                - uuid9876
+          'Location Custom Field':
+            value:
+              value:
+                location:
+                  lat: -28.016667
+                  lng: 153.4
+                formatted_address: "Gold Coast QLD, Australia"
+          'Button Custom Field':
+            value:
+              value: true
+required: true

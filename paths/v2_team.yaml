@@ -1,0 +1,12 @@
+get:
+  summary: Get Authorized Workspaces
+  tags:
+    - Workspaces
+  description: View the Workspaces available to the authenticated user.
+  operationId: GetAuthorizedTeams
+  parameters:
+    []
+  responses:
+    200:
+      $ref: "../operations/workspaces/get_authorized_teams/get_authorized_teams_response_200.yaml"
+  deprecated: false

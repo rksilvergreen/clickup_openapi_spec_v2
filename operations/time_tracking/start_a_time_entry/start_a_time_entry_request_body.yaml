@@ -1,0 +1,35 @@
+description: "For Workspaces on the Free Forever or Unlimited Plan, either the `timer_id` parameter or the `\"tid\"` field in the body of the request are required fields."
+content:
+  application/json:
+    schema:
+      title: StartATimeEntryRequest
+      type: object
+      properties:
+        description:
+          type: string
+        tags:
+          description: "Users on the Business Plan and above can include a time tracking label."
+          type: array
+          items:
+            title: Tags10
+            required:
+              - name
+            type: object
+            properties:
+              name:
+                type: string
+            examples:
+              - name: "name of tag"
+        tid:
+          type: string
+        billable:
+          type: boolean
+      examples:
+        -
+          description: "from api"
+          tags:
+            -
+              name: tag1
+          tid: task_id
+          billable: false
+required: true

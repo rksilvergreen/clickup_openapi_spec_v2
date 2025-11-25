@@ -1,0 +1,39 @@
+title: Member1
+required:
+  - id
+  - username
+  - email
+  - color
+  - permission_level
+  - profilePicture
+  - initials
+  - isCreator
+type: object
+properties:
+  id:
+    type: integer
+    contentEncoding: int32
+  username:
+    type: string
+  email:
+    type: string
+  color:
+    type: string
+  permission_level:
+    type: string
+  profilePicture:
+    type: string
+  initials:
+    type: string
+  isCreator:
+    type: boolean
+examples:
+  -
+    id: 182
+    username: "Jane Doe"
+    email: "janedoe@gmail.com"
+    color: "#827718"
+    permission_level: edit
+    profilePicture: https://attachments-public.clickup.com/profilePictures/profile.jpg
+    initials: JD
+    isCreator: true

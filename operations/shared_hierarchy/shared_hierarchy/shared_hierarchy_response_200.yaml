@@ -1,0 +1,40 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: SharedHierarchyResponse
+      required:
+        - shared
+      type: object
+      properties:
+        shared:
+          $ref: "./shared7.yaml"
+      examples:
+        -
+          shared:
+            tasks:
+              []
+            lists:
+              -
+                id: "1421"
+                name: "Shared List"
+                orderindex: 0
+                content: null
+                status: null
+                priority: null
+                assignee: null
+                task_count: "0"
+                due_date: null
+                start_date: null
+                archived: false
+            folders:
+              -
+                id: "1058"
+                name: "Shared Folder"
+                orderindex: 0
+                content: null
+                task_count: "0"
+                due_date: null
+                archived: false

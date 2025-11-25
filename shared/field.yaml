@@ -1,0 +1,122 @@
+title: Field
+required:
+  - id
+  - name
+  - type
+  - type_config
+  - date_created
+  - hide_from_guests
+type: object
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  type:
+    type: string
+  type_config:
+    title: TypeConfig
+    type: object
+    properties:
+      options:
+        type: array
+        items:
+          title: Option
+          required:
+            - id
+            - color
+          type: object
+          properties:
+            id:
+              type: string
+            label:
+              type: string
+            color:
+              type:
+                - string
+                - null
+            name:
+              type: string
+            value:
+              type: integer
+              contentEncoding: int32
+            type:
+              type: string
+            orderindex:
+              type: integer
+              contentEncoding: int32
+          examples:
+            -
+              id: fb332c98-d7bc-4ee8-a3bd-b5ffaff98c3c
+              label: one
+              color: null
+        description: ""
+      default:
+        oneOf:
+          -
+            type:
+              - string
+              - null
+          -
+            type: integer
+            contentEncoding: int32
+          -
+            {}
+      precision:
+        type: integer
+        contentEncoding: int32
+      currency_type:
+        type: string
+      placeholder:
+        type:
+          - string
+          - null
+      end:
+        type: integer
+        contentEncoding: int32
+      start:
+        type: integer
+        contentEncoding: int32
+      count:
+        type: integer
+        contentEncoding: int32
+      code_point:
+        type: string
+      tracking:
+        title: Tracking
+        required:
+          - subtasks
+          - checklists
+          - assigned_comments
+        type: object
+        properties:
+          subtasks:
+            type: boolean
+          checklists:
+            type: boolean
+          assigned_comments:
+            type: boolean
+        examples:
+          -
+            subtasks: true
+            checklists: true
+            assigned_comments: true
+      complete_on:
+        type: integer
+        contentEncoding: int32
+    examples:
+      -
+        {}
+  date_created:
+    type: string
+  hide_from_guests:
+    type: boolean
+examples:
+  -
+    id: 03efda77-c7a0-42d3-8afd-fd546353c2f5
+    name: "Text Field"
+    type: text
+    type_config:
+      {}
+    date_created: "1566400407303"
+    hide_from_guests: false

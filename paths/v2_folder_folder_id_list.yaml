@@ -1,0 +1,29 @@
+get:
+  summary: Get Lists
+  tags:
+    - Lists
+  description: View the Lists within a Folder.
+  operationId: GetLists
+  parameters:
+    - $ref: "../operations/lists/get_lists/get_lists_parameterfolder_id_path.yaml"
+    -
+      $ref: "../operations/lists/get_lists/get_lists_parameterarchived_query.yaml"
+  responses:
+    200:
+      $ref: "../operations/lists/get_lists/get_lists_response_200.yaml"
+  deprecated: false
+post:
+  summary: Create List
+  tags:
+    - Lists
+  description: Add a new List to a Folder.
+  operationId: CreateList
+  parameters:
+    -
+      $ref: "../operations/lists/create_list/create_list_parameterfolder_id_path.yaml"
+  requestBody:
+    $ref: "../operations/lists/create_list/create_list_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/lists/create_list/create_list_response_200.yaml"
+  deprecated: false

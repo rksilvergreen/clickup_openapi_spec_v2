@@ -1,0 +1,51 @@
+get:
+  summary: Get Tasks
+  tags:
+    - Tasks
+  description: "View the tasks in a List. Responses are limited to 100 tasks per page. You can only view task information of tasks you can access. \\\n \\\nThis endpoint only includes tasks where the specified `list_id` is their home List. Tasks added to the `list_id` with a different home List are not included in the response by default. To include tasks that exist in multiple lists, use the `include_timl` parameter. \\\n \\\nThe `time_spent` field displays time tracked in milliseconds, and is only included in the response for tasks with time entries."
+  operationId: GetTasks
+  parameters:
+    - $ref: "../operations/tasks/get_tasks/get_tasks_parameterlist_id_path.yaml"
+    - $ref: "../operations/tasks/get_tasks/get_tasks_parameterarchived_query.yaml"
+    - $ref: "../operations/tasks/get_tasks/get_tasks_parameterinclude_markdown_description_query.yaml"
+    - $ref: "../operations/tasks/get_tasks/get_tasks_parameterpage_query.yaml"
+    - $ref: "../operations/tasks/get_tasks/get_tasks_parameterorder_by_query.yaml"
+    - $ref: "../operations/tasks/get_tasks/get_tasks_parameterreverse_query.yaml"
+    - $ref: "../operations/tasks/get_tasks/get_tasks_parametersubtasks_query.yaml"
+    - $ref: "../operations/tasks/get_tasks/get_tasks_parameterstatuses_query.yaml"
+    - $ref: "../operations/tasks/get_tasks/get_tasks_parameterinclude_closed_query.yaml"
+    - $ref: "../operations/tasks/get_tasks/get_tasks_parameterinclude_timl_query.yaml"
+    - $ref: "../operations/tasks/get_tasks/get_tasks_parameterassignees_query.yaml"
+    - $ref: "../operations/tasks/get_tasks/get_tasks_parameterwatchers_query.yaml"
+    - $ref: "../operations/tasks/get_tasks/get_tasks_parametertags_query.yaml"
+    - $ref: "../operations/tasks/get_tasks/get_tasks_parameterdue_date_gt_query.yaml"
+    - $ref: "../operations/tasks/get_tasks/get_tasks_parameterdue_date_lt_query.yaml"
+    - $ref: "../operations/tasks/get_tasks/get_tasks_parameterdate_created_gt_query.yaml"
+    - $ref: "../operations/tasks/get_tasks/get_tasks_parameterdate_created_lt_query.yaml"
+    - $ref: "../operations/tasks/get_tasks/get_tasks_parameterdate_updated_gt_query.yaml"
+    - $ref: "../operations/tasks/get_tasks/get_tasks_parameterdate_updated_lt_query.yaml"
+    - $ref: "../operations/tasks/get_tasks/get_tasks_parameterdate_done_gt_query.yaml"
+    - $ref: "../operations/tasks/get_tasks/get_tasks_parameterdate_done_lt_query.yaml"
+    - $ref: "../operations/tasks/get_tasks/get_tasks_parametercustom_fields_query.yaml"
+    - $ref: "../operations/tasks/get_tasks/get_tasks_parametercustom_field_query.yaml"
+    -
+      $ref: "../operations/tasks/get_tasks/get_tasks_parametercustom_items_query.yaml"
+  responses:
+    200:
+      $ref: "../operations/tasks/get_tasks/get_tasks_response_200.yaml"
+  deprecated: false
+post:
+  summary: Create Task
+  tags:
+    - Tasks
+  description: Create a new task.
+  operationId: CreateTask
+  parameters:
+    -
+      $ref: "../operations/tasks/create_task/create_task_parameterlist_id_path.yaml"
+  requestBody:
+    $ref: "../operations/tasks/create_task/create_task_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/tasks/create_task/create_task_response_200.yaml"
+  deprecated: false

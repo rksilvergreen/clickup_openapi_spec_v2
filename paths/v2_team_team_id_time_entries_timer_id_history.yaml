@@ -1,0 +1,15 @@
+get:
+  summary: Get time entry history
+  tags:
+    - Time Tracking
+  description: View a list of changes made to a time entry.
+  operationId: GetTimeEntryHistory
+  parameters:
+    - $ref: "../operations/time_tracking/get_time_entry_history/get_time_entry_history_parameterteam_id_path.yaml"
+    - $ref: "../operations/time_tracking/get_time_entry_history/get_time_entry_history_parametertimer_id_path.yaml"
+    -
+      $ref: "../operations/time_tracking/get_time_entry_history/get_time_entry_history_parametercontent_type_header.yaml"
+  responses:
+    200:
+      $ref: "../operations/time_tracking/get_time_entry_history/get_time_entry_history_response_200.yaml"
+  deprecated: false

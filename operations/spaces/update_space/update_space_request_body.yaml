@@ -1,0 +1,57 @@
+description: ""
+content:
+  application/json:
+    schema:
+      title: UpdateSpaceRequest
+      required:
+        - name
+        - color
+        - private
+        - admin_can_manage
+        - multiple_assignees
+        - features
+      type: object
+      properties:
+        name:
+          type: string
+        color:
+          type: string
+        private:
+          type: boolean
+        admin_can_manage:
+          description: "***Note:** Allowing or restricting admins from managing private Spaces using `\"admin_can_manage\"` is an [Enterprise Plan](https://clickup.com/pricing) feature.*"
+          type: boolean
+        multiple_assignees:
+          type: boolean
+        features:
+          $ref: "../../../shared/features.yaml"
+      examples:
+        -
+          name: "Updated Space Name"
+          color: "#7B68EE"
+          private: false
+          admin_can_manage: false
+          multiple_assignees: false
+          features:
+            due_dates:
+              enabled: false
+              start_date: false
+              remap_due_dates: false
+              remap_closed_due_date: false
+            time_tracking:
+              enabled: false
+            tags:
+              enabled: false
+            time_estimates:
+              enabled: false
+            checklists:
+              enabled: true
+            custom_fields:
+              enabled: true
+            remap_dependencies:
+              enabled: false
+            dependency_warning:
+              enabled: false
+            portfolios:
+              enabled: false
+required: true

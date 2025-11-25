@@ -1,0 +1,15 @@
+description: "Use the `depends_on` parameter in the request body to specify the task that must be completed before the task in the path parameter.\\\n \\\nUse the `dependency_of` parameter in the request body to specify the task that's waiting for the task in the path parameter to be completed.\\\n \\\nYou can only use one per request."
+content:
+  application/json:
+    schema:
+      title: AddDependencyRequest
+      type: object
+      properties:
+        depends_on:
+          type: string
+        depedency_of:
+          type: string
+      examples:
+        -
+          depends_on: 9hw
+required: true

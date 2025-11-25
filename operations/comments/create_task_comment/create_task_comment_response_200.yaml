@@ -1,0 +1,25 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: CreateTaskCommentResponse
+      required:
+        - id
+        - hist_id
+        - date
+      type: object
+      properties:
+        id:
+          type: string
+        hist_id:
+          type: string
+        date:
+          type: integer
+          contentEncoding: int64
+      examples:
+        -
+          id: "458"
+          hist_id: "26508"
+          date: 1568036964079

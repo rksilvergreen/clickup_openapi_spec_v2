@@ -1,0 +1,34 @@
+post:
+  summary: Add Dependency
+  tags:
+    - Task Relationships
+  description: Set a task as waiting on or blocking another task.
+  operationId: AddDependency
+  parameters:
+    - $ref: "../operations/task_relationships/add_dependency/add_dependency_parametertask_id_path.yaml"
+    - $ref: "../operations/task_relationships/add_dependency/add_dependency_parametercustom_task_ids_query.yaml"
+    -
+      $ref: "../operations/task_relationships/add_dependency/add_dependency_parameterteam_id_query.yaml"
+  requestBody:
+    $ref: "../operations/task_relationships/add_dependency/add_dependency_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/task_relationships/add_dependency/add_dependency_response_200.yaml"
+  deprecated: false
+delete:
+  summary: Delete Dependency
+  tags:
+    - Task Relationships
+  description: Remove the dependency relationship between two or more tasks.
+  operationId: DeleteDependency
+  parameters:
+    - $ref: "../operations/task_relationships/delete_dependency/delete_dependency_parametertask_id_path.yaml"
+    - $ref: "../operations/task_relationships/delete_dependency/delete_dependency_parameterdepends_on_query.yaml"
+    - $ref: "../operations/task_relationships/delete_dependency/delete_dependency_parameterdependency_of_query.yaml"
+    - $ref: "../operations/task_relationships/delete_dependency/delete_dependency_parametercustom_task_ids_query.yaml"
+    -
+      $ref: "../operations/task_relationships/delete_dependency/delete_dependency_parameterteam_id_query.yaml"
+  responses:
+    200:
+      $ref: "../operations/task_relationships/delete_dependency/delete_dependency_response_200.yaml"
+  deprecated: false

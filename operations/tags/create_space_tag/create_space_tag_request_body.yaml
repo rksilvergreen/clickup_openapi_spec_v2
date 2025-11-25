@@ -1,0 +1,18 @@
+description: ""
+content:
+  application/json:
+    schema:
+      title: CreateSpaceTagRequest
+      required:
+        - tag
+      type: object
+      properties:
+        tag:
+          $ref: "../../../shared/tag.yaml"
+      examples:
+        -
+          tag:
+            name: "Tag Name"
+            tag_fg: "#000000"
+            tag_bg: "#000000"
+required: true

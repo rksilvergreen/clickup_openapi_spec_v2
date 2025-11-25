@@ -1,0 +1,28 @@
+get:
+  summary: Get Workspace (Everything level) Views
+  tags:
+    - Views
+  description: View the task and page views available at the Everything Level of a Workspace.
+  operationId: GetTeamViews
+  parameters:
+    -
+      $ref: "../operations/views/get_team_views/get_team_views_parameterteam_id_path.yaml"
+  responses:
+    200:
+      $ref: "../operations/views/get_team_views/get_team_views_response_200.yaml"
+  deprecated: false
+post:
+  summary: Create Workspace (Everything level) View
+  tags:
+    - Views
+  description: Add a List, Board, Calendar, Table, Timeline, Workload, Activity, Map, Chat, or Gantt view at the Everything Level of a Workspace.
+  operationId: CreateTeamView
+  parameters:
+    -
+      $ref: "../operations/views/create_team_view/create_team_view_parameterteam_id_path.yaml"
+  requestBody:
+    $ref: "../operations/views/create_team_view/create_team_view_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/views/create_team_view/create_team_view_response_200.yaml"
+  deprecated: false

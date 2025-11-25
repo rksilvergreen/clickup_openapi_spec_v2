@@ -1,0 +1,44 @@
+get:
+  summary: Get Guest
+  tags:
+    - Guests
+  description: "View information about a guest. \\\n \\\n***Note:** This endpoint is only available to Workspaces on our [Enterprise Plan](https://clickup.com/pricing).*"
+  operationId: GetGuest
+  parameters:
+    - $ref: "../operations/guests/get_guest/get_guest_parameterteam_id_path.yaml"
+    -
+      $ref: "../operations/guests/get_guest/get_guest_parameterguest_id_path.yaml"
+  responses:
+    200:
+      $ref: "../operations/guests/get_guest/get_guest_response_200.yaml"
+  deprecated: false
+put:
+  summary: Edit Guest On Workspace
+  tags:
+    - Guests
+  description: "Configure options for a guest. \\\n \\\n***Note:** This endpoint is only available to Workspaces on our [Enterprise Plan](https://clickup.com/pricing).*"
+  operationId: EditGuestOnWorkspace
+  parameters:
+    - $ref: "../operations/guests/edit_guest_on_workspace/edit_guest_on_workspace_parameterteam_id_path.yaml"
+    -
+      $ref: "../operations/guests/edit_guest_on_workspace/edit_guest_on_workspace_parameterguest_id_path.yaml"
+  requestBody:
+    $ref: "../operations/guests/edit_guest_on_workspace/edit_guest_on_workspace_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/guests/edit_guest_on_workspace/edit_guest_on_workspace_response_200.yaml"
+  deprecated: false
+delete:
+  summary: Remove Guest From Workspace
+  tags:
+    - Guests
+  description: "Revoke a guest's access to a Workspace. \\\n \\\n***Note:** This endpoint is only available to Workspaces on our [Enterprise Plan](https://clickup.com/pricing).*"
+  operationId: RemoveGuestFromWorkspace
+  parameters:
+    - $ref: "../operations/guests/remove_guest_from_workspace/remove_guest_from_workspace_parameterteam_id_path.yaml"
+    -
+      $ref: "../operations/guests/remove_guest_from_workspace/remove_guest_from_workspace_parameterguest_id_path.yaml"
+  responses:
+    200:
+      $ref: "../operations/guests/remove_guest_from_workspace/remove_guest_from_workspace_response_200.yaml"
+  deprecated: false

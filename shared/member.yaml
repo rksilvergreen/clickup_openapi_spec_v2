@@ -1,0 +1,14 @@
+title: Member
+required:
+  - user
+type: object
+properties:
+  user:
+    $ref: "./user.yaml"
+examples:
+  -
+    user:
+      id: 123
+      username: "John Doe"
+      color: "#000000"
+      profilePicture: https://clickup.com/avatar.jpg

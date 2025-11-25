@@ -1,0 +1,17 @@
+required: true
+content:
+  application/json:
+    schema:
+      type: object
+      required:
+        - source_task_ids
+      properties:
+        source_task_ids:
+          type: array
+          description: "Array of task IDs to merge into the target task."
+          items:
+            type: string
+          examples:
+            -
+              - abc123
+              - def456

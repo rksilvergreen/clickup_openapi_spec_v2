@@ -1,0 +1,13 @@
+get:
+  summary: Shared Hierarchy
+  tags:
+    - Shared Hierarchy
+  description: View the tasks, Lists, and Folders that have been shared with the authenticated user.
+  operationId: SharedHierarchy
+  parameters:
+    -
+      $ref: "../operations/shared_hierarchy/shared_hierarchy/shared_hierarchy_parameterteam_id_path.yaml"
+  responses:
+    200:
+      $ref: "../operations/shared_hierarchy/shared_hierarchy/shared_hierarchy_response_200.yaml"
+  deprecated: false

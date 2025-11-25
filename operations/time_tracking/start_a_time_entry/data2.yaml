@@ -1,0 +1,66 @@
+title: Data2
+required:
+  - id
+  - task
+  - wid
+  - user
+  - billable
+  - start
+  - duration
+  - description
+  - tags
+  - at
+type: object
+properties:
+  id:
+    type: string
+  task:
+    $ref: "../../../shared/task6.yaml"
+  wid:
+    type: string
+  user:
+    $ref: "../../../shared/user2.yaml"
+  billable:
+    type: boolean
+  start:
+    type: string
+  duration:
+    type: integer
+    contentEncoding: int32
+  description:
+    type: string
+  tags:
+    type: array
+    items:
+      type: string
+    description: ""
+  at:
+    type: integer
+    contentEncoding: int64
+examples:
+  -
+    id: timer_id
+    task:
+      id: task_id
+      name: "test task"
+      status:
+        status: "to do"
+        color: "#d3d3d3"
+        type: open
+        orderindex: 0
+      custom_type: null
+    wid: workspace_id
+    user:
+      id: 1
+      username: "first_name last_name"
+      email: "test@gmail.com"
+      color: "#08c7e0"
+      initials: JK
+      profilePicture: https://attachments-public.clickup.com/profilePictures/1_HHk.jpg
+    billable: false
+    start: "1595289395842"
+    duration: -53
+    description: ""
+    tags:
+      []
+    at: 1595289452790

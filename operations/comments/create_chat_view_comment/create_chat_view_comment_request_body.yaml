@@ -1,0 +1,20 @@
+description: ""
+content:
+  application/json:
+    schema:
+      title: CreateChatViewCommentRequest
+      required:
+        - comment_text
+        - notify_all
+      type: object
+      properties:
+        comment_text:
+          type: string
+        notify_all:
+          description: "If `notify_all` is true, notifications will be sent to everyone including the creator of the comment."
+          type: boolean
+      examples:
+        -
+          comment_text: "View comment content"
+          notify_all: true
+required: true

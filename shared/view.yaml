@@ -1,0 +1,86 @@
+title: View
+required:
+  - id
+  - name
+  - type
+  - parent
+  - grouping
+  - divide
+  - sorting
+  - filters
+  - columns
+  - team_sidebar
+  - settings
+type: object
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  type:
+    type: string
+  parent:
+    $ref: "./parent.yaml"
+  grouping:
+    $ref: "./grouping.yaml"
+  divide:
+    $ref: "./divide.yaml"
+  sorting:
+    $ref: "./sorting.yaml"
+  filters:
+    $ref: "./filters.yaml"
+  columns:
+    $ref: "./columns.yaml"
+  team_sidebar:
+    $ref: "./team_sidebar.yaml"
+  settings:
+    $ref: "./settings.yaml"
+examples:
+  -
+    id: 3c-105
+    name: "New Team View Name"
+    type: list
+    parent:
+      id: "512"
+      type: 7
+    grouping:
+      field: status
+      dir: 1
+      collapsed:
+        []
+      ignore: false
+    divide:
+      field: null
+      dir: null
+      collapsed:
+        []
+    sorting:
+      fields:
+        field: cf_624a423a-c1d1-4467-99e2-63e225658cb2
+        dir: -1
+        idx: 0
+    filters:
+      op: AND
+      fields:
+        []
+      search: ""
+      show_closed: false
+    columns:
+      fields:
+        []
+    team_sidebar:
+      assignees:
+        []
+      assigned_comments: false
+      unassigned_tasks: false
+    settings:
+      show_task_locations: false
+      show_subtasks: 3
+      show_subtask_parent_names: false
+      show_closed_subtasks: false
+      show_assignees: true
+      show_images: true
+      collapse_empty_columns: null
+      me_comments: true
+      me_subtasks: true
+      me_checklists: true

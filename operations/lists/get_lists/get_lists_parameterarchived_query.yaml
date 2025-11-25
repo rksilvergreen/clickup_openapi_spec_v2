@@ -1,0 +1,9 @@
+name: archived
+in: query
+description: ""
+style: form
+explode: true
+schema:
+  type: boolean
+  examples:
+    - false

@@ -1,0 +1,10 @@
+name: include_shared
+in: query
+description: "Exclude details of items shared with the guest by setting this parameter to `false`. By default this parameter is set to `true`."
+required: false
+style: form
+explode: true
+schema:
+  type: boolean
+  examples:
+    - false

@@ -1,0 +1,78 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: GetAuthorizedTeamsResponse
+      required:
+        - teams
+      type: object
+      properties:
+        teams:
+          type: array
+          items:
+            title: Team
+            required:
+              - id
+              - name
+              - color
+              - avatar
+              - members
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+              color:
+                type: string
+              avatar:
+                type: string
+              members:
+                type: array
+                items:
+                  title: Member
+                  required:
+                    - user
+                  type: object
+                  properties:
+                    user:
+                      $ref: "../../../shared/user.yaml"
+                  examples:
+                    -
+                      user:
+                        id: 123
+                        username: "John Doe"
+                        color: "#000000"
+                        profilePicture: https://clickup.com/avatar.jpg
+                description: ""
+            examples:
+              -
+                id: "1234"
+                name: "My ClickUp Workspace"
+                color: "#000000"
+                avatar: https://clickup.com/avatar.jpg
+                members:
+                  -
+                    user:
+                      id: 123
+                      username: "John Doe"
+                      color: "#000000"
+                      profilePicture: https://clickup.com/avatar.jpg
+          description: ""
+      examples:
+        -
+          teams:
+            -
+              id: "1234"
+              name: "My ClickUp Workspace"
+              color: "#000000"
+              avatar: https://clickup.com/avatar.jpg
+              members:
+                -
+                  user:
+                    id: 123
+                    username: "John Doe"
+                    color: "#000000"
+                    profilePicture: https://clickup.com/avatar.jpg

@@ -1,0 +1,23 @@
+description: ""
+content:
+  application/json:
+    schema:
+      title: InviteUserToWorkspaceRequest
+      required:
+        - email
+        - admin
+      type: object
+      properties:
+        email:
+          type: string
+        admin:
+          type: boolean
+        custom_role_id:
+          type: integer
+          contentEncoding: int32
+      examples:
+        -
+          email: "user@example.com"
+          admin: true
+          custom_role_id: 112233
+required: true

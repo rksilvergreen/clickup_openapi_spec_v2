@@ -1,0 +1,25 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: CreateChatViewCommentResponse
+      required:
+        - id
+        - hist_id
+        - date
+      type: object
+      properties:
+        id:
+          type: string
+        hist_id:
+          type: string
+        date:
+          type: integer
+          contentEncoding: int64
+      examples:
+        -
+          id: "459"
+          hist_id: 0a45e16e-4e2f-4a9e-99ec-3cf520b87eae
+          date: 1568037065216

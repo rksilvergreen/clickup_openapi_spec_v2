@@ -1,0 +1,15 @@
+post:
+  summary: Create Group
+  tags:
+    - User Groups
+  description: "This endpoint creates a [User Group](https://docs.clickup.com/en/articles/4010016-teams-how-to-create-user-groups) within a Workspace.\\\n \\\nUser Groups are used to organize and manage users within a Workspace.\\\n \\\nIn the API documentation, `team_id` refers to the Workspace ID, and `group_id` refers to the User Group ID.\\\n \\\n**Note:** Adding a guest with view-only permissions to a Team automatically converts them to a paid guest.\\\n \\\nIf no paid guest seats are available, an additional member seat will be added, increasing the number of paid guest seats.\\\n \\\nThis change incurs a prorated charge based on the billing cycle."
+  operationId: CreateUserGroup
+  parameters:
+    -
+      $ref: "../operations/user_groups/create_user_group/create_user_group_parameterteam_id_path.yaml"
+  requestBody:
+    $ref: "../operations/user_groups/create_user_group/create_user_group_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/user_groups/create_user_group/create_user_group_response_200.yaml"
+  deprecated: false

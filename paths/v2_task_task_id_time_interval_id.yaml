@@ -1,0 +1,35 @@
+put:
+  summary: Edit time tracked
+  tags:
+    - Time Tracking (Legacy)
+  description: '***Note:** This is a legacy time tracking endpoint. We recommend using the Time Tracking API endpoints to manage time entries.*'
+  operationId: EditTimeTracked
+  parameters:
+    - $ref: "../operations/time_tracking_legacy/edit_time_tracked/edit_time_tracked_parametertask_id_path.yaml"
+    - $ref: "../operations/time_tracking_legacy/edit_time_tracked/edit_time_tracked_parameterinterval_id_path.yaml"
+    - $ref: "../operations/time_tracking_legacy/edit_time_tracked/edit_time_tracked_parametercustom_task_ids_query.yaml"
+    -
+      $ref: "../operations/time_tracking_legacy/edit_time_tracked/edit_time_tracked_parameterteam_id_query.yaml"
+  requestBody:
+    $ref: "../operations/time_tracking_legacy/edit_time_tracked/edit_time_tracked_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/time_tracking_legacy/edit_time_tracked/edit_time_tracked_response_200.yaml"
+  deprecated: false
+delete:
+  summary: Delete time tracked
+  tags:
+    - Time Tracking (Legacy)
+  description: '***Note:** This is a legacy time tracking endpoint. We recommend using the Time Tracking API endpoints to manage time entries.*'
+  operationId: DeleteTimeTracked
+  parameters:
+    - $ref: "../operations/time_tracking_legacy/delete_time_tracked/delete_time_tracked_parametertask_id_path.yaml"
+    - $ref: "../operations/time_tracking_legacy/delete_time_tracked/delete_time_tracked_parameterinterval_id_path.yaml"
+    - $ref: "../operations/time_tracking_legacy/delete_time_tracked/delete_time_tracked_parametercustom_task_ids_query.yaml"
+    - $ref: "../operations/time_tracking_legacy/delete_time_tracked/delete_time_tracked_parameterteam_id_query.yaml"
+    -
+      $ref: "../operations/time_tracking_legacy/delete_time_tracked/delete_time_tracked_parametercontent_type_header.yaml"
+  responses:
+    200:
+      $ref: "../operations/time_tracking_legacy/delete_time_tracked/delete_time_tracked_response_200.yaml"
+  deprecated: false

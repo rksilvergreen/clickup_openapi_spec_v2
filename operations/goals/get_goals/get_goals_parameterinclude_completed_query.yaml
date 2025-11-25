@@ -1,0 +1,9 @@
+name: include_completed
+in: query
+description: ""
+style: form
+explode: true
+schema:
+  type: boolean
+  examples:
+    - true

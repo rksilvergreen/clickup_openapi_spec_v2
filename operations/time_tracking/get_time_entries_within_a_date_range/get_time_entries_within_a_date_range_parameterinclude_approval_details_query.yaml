@@ -1,0 +1,7 @@
+name: include_approval_details
+in: query
+description: "Include the details of the approval for each time entry. Adds Approver ID, Approved Time, List of Approvers, and Approval Status."
+style: form
+explode: true
+schema:
+  type: boolean

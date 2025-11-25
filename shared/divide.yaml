@@ -1,0 +1,20 @@
+title: Divide
+required:
+  - collapsed
+type: object
+properties:
+  field:
+    type:
+      - null
+  dir:
+    type:
+      - null
+  collapsed:
+    type:
+      - boolean
+examples:
+  -
+    field: null
+    dir: null
+    collapsed:
+      []

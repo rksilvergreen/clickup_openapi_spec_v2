@@ -1,0 +1,8 @@
+name: timer_id
+in: path
+description: "Array of timer ids to delete separated by commas"
+required: true
+style: simple
+schema:
+  type: number
+  contentEncoding: double

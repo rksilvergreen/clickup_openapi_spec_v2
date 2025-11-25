@@ -1,0 +1,9 @@
+name: task_id
+in: path
+description: "The task to initiate the link from."
+required: true
+style: simple
+schema:
+  type: string
+  examples:
+    - 9hv

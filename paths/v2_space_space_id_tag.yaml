@@ -1,0 +1,29 @@
+get:
+  summary: Get Space Tags
+  tags:
+    - Tags
+  description: View the task Tags available in a Space.
+  operationId: GetSpaceTags
+  parameters:
+    - $ref: "../operations/tags/get_space_tags/get_space_tags_parameterspace_id_path.yaml"
+    -
+      $ref: "../operations/tags/get_space_tags/get_space_tags_parametercontent_type_header.yaml"
+  responses:
+    200:
+      $ref: "../operations/tags/get_space_tags/get_space_tags_response_200.yaml"
+  deprecated: false
+post:
+  summary: Create Space Tag
+  tags:
+    - Tags
+  description: Add a new task Tag to a Space.
+  operationId: CreateSpaceTag
+  parameters:
+    -
+      $ref: "../operations/tags/create_space_tag/create_space_tag_parameterspace_id_path.yaml"
+  requestBody:
+    $ref: "../operations/tags/create_space_tag/create_space_tag_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/tags/create_space_tag/create_space_tag_response_200.yaml"
+  deprecated: false

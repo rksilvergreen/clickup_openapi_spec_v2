@@ -1,0 +1,28 @@
+title: Task6
+required:
+  - id
+  - name
+  - status
+  - custom_type
+type: object
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  status:
+    $ref: "./status.yaml"
+  custom_type:
+    type:
+      - string
+      - null
+examples:
+  -
+    id: task_id
+    name: "test task"
+    status:
+      status: "to do"
+      color: "#d3d3d3"
+      type: open
+      orderindex: 0
+    custom_type: null

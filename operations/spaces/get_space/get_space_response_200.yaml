@@ -1,0 +1,70 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: GetSpaceResponse
+      required:
+        - id
+        - name
+        - private
+        - statuses
+        - multiple_assignees
+        - features
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        private:
+          type: boolean
+        statuses:
+          type: array
+          items:
+            $ref: "../../../shared/status.yaml"
+          description: ""
+        multiple_assignees:
+          type: boolean
+        features:
+          $ref: "../../../shared/features.yaml"
+      examples:
+        -
+          id: "790"
+          name: "Updated Space Name"
+          private: false
+          statuses:
+            -
+              status: "to do"
+              type: open
+              orderindex: 0
+              color: "#d3d3d3"
+            -
+              status: complete
+              type: closed
+              orderindex: 1
+              color: "#6bc950"
+          multiple_assignees: false
+          features:
+            due_dates:
+              enabled: false
+              start_date: false
+              remap_due_dates: false
+              remap_closed_due_date: false
+            time_tracking:
+              enabled: false
+            tags:
+              enabled: false
+            time_estimates:
+              enabled: false
+            checklists:
+              enabled: true
+            custom_fields:
+              enabled: true
+            remap_dependencies:
+              enabled: false
+            dependency_warning:
+              enabled: false
+            portfolios:
+              enabled: false

@@ -1,0 +1,9 @@
+name: view_id
+in: path
+description: "105 (string)"
+required: true
+style: simple
+schema:
+  type: string
+  examples:
+    - 3c

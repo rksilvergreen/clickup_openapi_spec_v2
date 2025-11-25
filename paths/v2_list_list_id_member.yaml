@@ -1,0 +1,13 @@
+get:
+  summary: Get List Members
+  tags:
+    - Members
+  description: Get Workspace members who have access to a List.
+  operationId: GetListMembers
+  parameters:
+    -
+      $ref: "../operations/members/get_list_members/get_list_members_parameterlist_id_path.yaml"
+  responses:
+    200:
+      $ref: "../operations/members/get_list_members/get_list_members_response_200.yaml"
+  deprecated: false

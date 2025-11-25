@@ -1,0 +1,15 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: GetAccessTokenResponse
+      required:
+        - access_token
+      type: object
+      properties:
+        access_token:
+          type: string
+      examples:
+        - access_token: "access token"

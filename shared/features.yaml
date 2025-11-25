@@ -1,0 +1,147 @@
+title: Features
+required:
+  - due_dates
+  - time_tracking
+  - tags
+  - time_estimates
+  - checklists
+  - custom_fields
+  - remap_dependencies
+  - dependency_warning
+  - portfolios
+type: object
+properties:
+  due_dates:
+    title: DueDates
+    required:
+      - enabled
+      - start_date
+      - remap_due_dates
+      - remap_closed_due_date
+    type: object
+    properties:
+      enabled:
+        type: boolean
+      start_date:
+        type: boolean
+      remap_due_dates:
+        type: boolean
+      remap_closed_due_date:
+        type: boolean
+    examples:
+      -
+        enabled: true
+        start_date: false
+        remap_due_dates: true
+        remap_closed_due_date: false
+  time_tracking:
+    title: TimeTracking
+    required:
+      - enabled
+    type: object
+    properties:
+      enabled:
+        type: boolean
+    examples:
+      -
+        enabled: false
+  tags:
+    title: Tags
+    required:
+      - enabled
+    type: object
+    properties:
+      enabled:
+        type: boolean
+    examples:
+      -
+        enabled: true
+  time_estimates:
+    title: TimeEstimates
+    required:
+      - enabled
+    type: object
+    properties:
+      enabled:
+        type: boolean
+    examples:
+      -
+        enabled: true
+  checklists:
+    title: Checklists
+    required:
+      - enabled
+    type: object
+    properties:
+      enabled:
+        type: boolean
+    examples:
+      -
+        enabled: true
+  custom_fields:
+    title: CustomFields
+    required:
+      - enabled
+    type: object
+    properties:
+      enabled:
+        type: boolean
+    examples:
+      -
+        enabled: true
+  remap_dependencies:
+    title: RemapDependencies
+    required:
+      - enabled
+    type: object
+    properties:
+      enabled:
+        type: boolean
+    examples:
+      -
+        enabled: true
+  dependency_warning:
+    title: DependencyWarning
+    required:
+      - enabled
+    type: object
+    properties:
+      enabled:
+        type: boolean
+    examples:
+      -
+        enabled: true
+  portfolios:
+    title: Portfolios
+    required:
+      - enabled
+    type: object
+    properties:
+      enabled:
+        type: boolean
+    examples:
+      -
+        enabled: true
+examples:
+  -
+    due_dates:
+      enabled: true
+      start_date: false
+      remap_due_dates: true
+      remap_closed_due_date: false
+    time_tracking:
+      enabled: false
+    tags:
+      enabled: true
+    time_estimates:
+      enabled: true
+    checklists:
+      enabled: true
+    custom_fields:
+      enabled: true
+    remap_dependencies:
+      enabled: true
+    dependency_warning:
+      enabled: true
+    portfolios:
+      enabled: true

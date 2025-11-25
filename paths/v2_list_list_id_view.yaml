@@ -1,0 +1,28 @@
+get:
+  summary: Get List Views
+  tags:
+    - Views
+  description: View the task and page views available for a List.<br> Views and required views are separate responses.
+  operationId: GetListViews
+  parameters:
+    -
+      $ref: "../operations/views/get_list_views/get_list_views_parameterlist_id_path.yaml"
+  responses:
+    200:
+      $ref: "../operations/views/get_list_views/get_list_views_response_200.yaml"
+  deprecated: false
+post:
+  summary: Create List View
+  tags:
+    - Views
+  description: Add a List, Board, Calendar, Table, Timeline, Workload, Activity, Map, Chat, or Gantt view to a List.
+  operationId: CreateListView
+  parameters:
+    -
+      $ref: "../operations/views/create_list_view/create_list_view_parameterlist_id_path.yaml"
+  requestBody:
+    $ref: "../operations/views/create_list_view/create_list_view_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/views/create_list_view/create_list_view_response_200.yaml"
+  deprecated: false

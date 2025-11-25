@@ -1,0 +1,22 @@
+title: DueDates
+required:
+  - enabled
+  - start_date
+  - remap_due_dates
+  - remap_closed_due_date
+type: object
+properties:
+  enabled:
+    type: boolean
+  start_date:
+    type: boolean
+  remap_due_dates:
+    type: boolean
+  remap_closed_due_date:
+    type: boolean
+examples:
+  -
+    enabled: true
+    start_date: false
+    remap_due_dates: true
+    remap_closed_due_date: false

@@ -1,0 +1,33 @@
+title: User13
+required:
+  - id
+  - username
+  - email
+  - color
+  - initials
+  - profilePicture
+type: object
+properties:
+  id:
+    type: integer
+    contentEncoding: int32
+  username:
+    type: string
+  email:
+    type: string
+  color:
+    type: string
+  initials:
+    type: string
+  profilePicture:
+    type:
+      - string
+      - null
+examples:
+  -
+    id: 1
+    username: "John Doe"
+    email: "johndoe@gmail.com"
+    color: "#795548"
+    initials: JD
+    profilePicture: null

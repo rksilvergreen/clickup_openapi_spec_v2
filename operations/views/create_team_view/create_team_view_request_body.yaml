@@ -1,0 +1,80 @@
+description: ""
+content:
+  application/json:
+    schema:
+      title: CreateTeamViewRequest
+      required:
+        - name
+        - type
+        - grouping
+        - divide
+        - sorting
+        - filters
+        - columns
+        - team_sidebar
+        - settings
+      type: object
+      properties:
+        name:
+          type: string
+        type:
+          type: string
+          description: "The type of view to create. Options include: `list`, `board`, `calendar`, `table`, `timeline`, `workload`, `activity`, `map`, `conversation`, or `gantt`."
+        grouping:
+          $ref: "../../../shared/grouping.yaml"
+        divide:
+          $ref: "../../../shared/divide.yaml"
+        sorting:
+          $ref: "../../../shared/sorting.yaml"
+        filters:
+          $ref: "../../../shared/filters.yaml"
+        columns:
+          $ref: "../../../shared/columns.yaml"
+        team_sidebar:
+          $ref: "../../../shared/team_sidebar.yaml"
+        settings:
+          $ref: "../../../shared/settings.yaml"
+      examples:
+        -
+          name: "New Team View Name"
+          type: list
+          grouping:
+            field: status
+            dir: 1
+            collapsed:
+              []
+            ignore: false
+          divide:
+            field: null
+            dir: null
+            collapsed:
+              []
+          sorting:
+            fields:
+              []
+          filters:
+            op: AND
+            fields:
+              []
+            search: ""
+            show_closed: false
+          columns:
+            fields:
+              []
+          team_sidebar:
+            assignees:
+              []
+            assigned_comments: false
+            unassigned_tasks: false
+          settings:
+            show_task_locations: false
+            show_subtasks: 3
+            show_subtask_parent_names: false
+            show_closed_subtasks: false
+            show_assignees: true
+            show_images: true
+            collapse_empty_columns: null
+            me_comments: true
+            me_subtasks: true
+            me_checklists: true
+required: true

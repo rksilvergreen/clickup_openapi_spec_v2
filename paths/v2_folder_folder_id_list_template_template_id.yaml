@@ -1,0 +1,25 @@
+post:
+  summary: Create List From Template in Folder
+  tags:
+    - Lists
+  description: "Create a new list using a list template in a Folder. Publicly shared templates must be [added to your Workspace](https://help.clickup.com/hc/en-us/articles/6326023965591-Add-a-template-to-your-library) before you can use them with the public API.\nThis request runs synchronously by default with `return_immediately=true`.\nThe request returns the future List ID immediatly, but the List may not be created when the response is sent.\nSmall templates can be applied synchronously, which guarantees that all sub objects are created.\nIn case of a timeout on synchronous requests, the objects from the template will continue to be created past the timeout.\n"
+  operationId: CreateFolderListFromTemplate
+  parameters:
+    - $ref: "../operations/lists/create_folder_list_from_template/create_folder_list_from_template_parameterfolder_id_path.yaml"
+    -
+      $ref: "../operations/lists/create_folder_list_from_template/create_folder_list_from_template_parametertemplate_id_path.yaml"
+  requestBody:
+    $ref: "../operations/lists/create_folder_list_from_template/create_folder_list_from_template_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/lists/create_folder_list_from_template/create_folder_list_from_template_response_200.yaml"
+    400:
+      $ref: "../operations/lists/create_folder_list_from_template/create_folder_list_from_template_response_400.yaml"
+    401:
+      $ref: "../operations/lists/create_folder_list_from_template/create_folder_list_from_template_response_401.yaml"
+    403:
+      $ref: "../operations/lists/create_folder_list_from_template/create_folder_list_from_template_response_403.yaml"
+    404:
+      $ref: "../operations/lists/create_folder_list_from_template/create_folder_list_from_template_response_404.yaml"
+    500:
+      $ref: "../operations/lists/create_folder_list_from_template/create_folder_list_from_template_response_500.yaml"

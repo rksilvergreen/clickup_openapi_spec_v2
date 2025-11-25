@@ -1,0 +1,22 @@
+title: Project
+required:
+  - id
+  - name
+  - hidden
+  - access
+type: object
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  hidden:
+    type: boolean
+  access:
+    type: boolean
+examples:
+  -
+    id: "1"
+    name: Folder
+    hidden: false
+    access: true

@@ -1,0 +1,23 @@
+title: Creator
+required:
+  - id
+  - username
+  - color
+  - profilePicture
+type: object
+properties:
+  id:
+    type: integer
+    contentEncoding: int32
+  username:
+    type: string
+  color:
+    type: string
+  profilePicture:
+    type: string
+examples:
+  -
+    id: 183
+    username: "John Doe"
+    color: "#827718"
+    profilePicture: https://attachments-public.clickup.com/profilePictures/183_abc.jpg

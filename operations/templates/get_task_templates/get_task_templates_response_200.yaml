@@ -1,0 +1,20 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: GetTaskTemplatesResponse
+      required:
+        - templates
+      type: object
+      properties:
+        templates:
+          type: array
+          items:
+            type: string
+          description: ""
+      examples:
+        -
+          templates:
+            []

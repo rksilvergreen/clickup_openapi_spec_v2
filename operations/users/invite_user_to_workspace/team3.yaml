@@ -1,0 +1,144 @@
+title: Team3
+required:
+  - id
+  - name
+  - color
+  - avatar
+  - members
+  - roles
+type: object
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  color:
+    type: string
+  avatar:
+    type:
+      - string
+      - null
+  members:
+    type: array
+    items:
+      title: Members5
+      required:
+        - user
+        - invited_by
+      type: object
+      properties:
+        user:
+          $ref: "../../../shared/user5.yaml"
+        invited_by:
+          $ref: "../../../shared/invited_by.yaml"
+      examples:
+        -
+          user:
+            id: 184
+            username: null
+            email: "user@example.com"
+            color: null
+            profilePicture: null
+            initials: G
+            role: 2
+            custom_role:
+              id: 112233
+              name: "admin custom"
+            last_active: null
+            date_joined: null
+            date_invited: "1583358383412"
+          invited_by:
+            id: 183
+            color: "#827718"
+            username: Jerry
+            email: "jerry@example.com"
+            initials: J
+            profilePicture: https://attachments.clickup.com/profilePictures/profile.jpg
+    description: ""
+  roles:
+    type: array
+    items:
+      title: Role
+      required:
+        - id
+        - name
+        - custom
+      type: object
+      properties:
+        id:
+          type: integer
+          contentEncoding: int32
+        name:
+          type: string
+        custom:
+          type: boolean
+        inherited_role:
+          type: integer
+          contentEncoding: int32
+      examples:
+        -
+          id: 1
+          name: owner
+          custom: false
+    description: ""
+examples:
+  -
+    id: "333"
+    name: "Team Name"
+    color: "#8D00D4"
+    avatar: null
+    members:
+      -
+        user:
+          id: 184
+          username: null
+          email: "user@example.com"
+          color: null
+          profilePicture: null
+          initials: G
+          role: 2
+          custom_role:
+            id: 112233
+            name: "admin custom"
+          last_active: null
+          date_joined: null
+          date_invited: "1583358383412"
+        invited_by:
+          id: 183
+          color: "#827718"
+          username: Jerry
+          email: "jerry@example.com"
+          initials: J
+          profilePicture: https://attachments.clickup.com/profilePictures/profile.jpg
+    roles:
+      -
+        id: 1
+        name: owner
+        custom: false
+      -
+        id: 2
+        name: admin
+        custom: false
+      -
+        id: 3
+        name: member
+        custom: false
+      -
+        id: 4
+        name: guest
+        custom: false
+      -
+        id: 998877
+        name: "member custom"
+        inherited_role: 3
+        custom: true
+      -
+        id: 112233
+        name: "admin custom"
+        inherited_role: 2
+        custom: true
+      -
+        id: 12345
+        name: "guest custom"
+        inherited_role: 4
+        custom: true

@@ -1,0 +1,65 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: AddGuestToFolderResponseC
+      required:
+        - guest
+      type: object
+      properties:
+        guest:
+          $ref: "./guest5.yaml"
+      examples:
+        -
+          guest:
+            user:
+              id: 184
+              username: null
+              email: "guest@example.com"
+              color: null
+              profilePicture: null
+              initials: G
+              role: 4
+              last_active: null
+              date_joined: null
+              date_invited: "1583358383412"
+            invited_by:
+              id: 183
+              color: "#827718"
+              username: Jerry
+              email: "jerry@example.com"
+              initials: J
+              profilePicture: https://attachments.clickup.com/profilePictures/profile.jpg
+            can_see_time_spent: true
+            can_see_time_estimated: true
+            can_edit_tags: true
+            shared:
+              tasks:
+                []
+              lists:
+                []
+              folders:
+                -
+                  id: "1057"
+                  name: "Folder Name"
+                  orderindex: 5
+                  override_statuses: true
+                  hidden: false
+                  task_count: "20"
+                  archived: false
+                  statuses:
+                    -
+                      status: Open
+                      orderindex: 0
+                      color: "#d3d3d3"
+                      type: open
+                    -
+                      status: Closed
+                      orderindex: 5
+                      color: "#6bc950"
+                      type: closed
+                  lists:
+                    []
+                  permission_level: read

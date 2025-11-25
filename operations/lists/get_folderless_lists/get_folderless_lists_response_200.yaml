@@ -1,0 +1,150 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: GetFolderlessListsResponse
+      required:
+        - lists
+      type: object
+      properties:
+        lists:
+          type: array
+          items:
+            title: List4
+            required:
+              - id
+              - name
+              - orderindex
+              - content
+              - status
+              - priority
+              - assignee
+              - task_count
+              - due_date
+              - start_date
+              - folder
+              - space
+              - archived
+              - override_statuses
+              - permission_level
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+              orderindex:
+                type: integer
+                contentEncoding: int32
+              content:
+                type: string
+              status:
+                oneOf:
+                  -
+                    title: Status11
+                    type: object
+                    properties:
+                      status:
+                        type: string
+                      color:
+                        type: string
+                      hide_label:
+                        type: boolean
+                    examples:
+                      -
+                        status: red
+                        color: "#e50000"
+                        hide_label: true
+                  -
+                    type:
+                      - string
+                      - null
+                  -
+                    {}
+                examples:
+                  -
+                    status: red
+                    color: "#e50000"
+                    hide_label: true
+              priority:
+                oneOf:
+                  -
+                    title: Priority4
+                    type: object
+                    properties:
+                      priority:
+                        type: string
+                      color:
+                        type: string
+                    examples:
+                      -
+                        priority: high
+                        color: "#f50000"
+                  -
+                    type:
+                      - string
+                      - null
+                  -
+                    {}
+                examples:
+                  -
+                    priority: high
+                    color: "#f50000"
+              assignee:
+                type:
+                  - string
+                  - null
+              task_count:
+                type:
+                  - string
+                  - null
+              due_date:
+                type:
+                  - string
+                  - null
+              start_date:
+                type:
+                  - string
+                  - null
+              folder:
+                $ref: "../../../shared/folder3.yaml"
+              space:
+                $ref: "../../../shared/space2.yaml"
+              archived:
+                type: boolean
+              override_statuses:
+                type: boolean
+              permission_level:
+                type: string
+            examples:
+              -
+                id: "124"
+                name: "Updated List Name"
+                orderindex: 1
+                content: "Updated List Content"
+                status:
+                  status: red
+                  color: "#e50000"
+                  hide_label: true
+                priority:
+                  priority: high
+                  color: "#f50000"
+                assignee: null
+                task_count: null
+                due_date: "1567780450202"
+                start_date: null
+                folder:
+                  id: "456"
+                  name: "Folder Name"
+                  hidden: false
+                  access: true
+                space:
+                  id: "789"
+                  name: "Space Name"
+                  access: true
+                archived: false
+                override_statuses: false
+                permission_level: create
+          description: ""

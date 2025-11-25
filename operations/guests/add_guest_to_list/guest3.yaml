@@ -1,0 +1,208 @@
+title: Guest3
+required:
+  - user
+  - invited_by
+  - can_see_time_spent
+  - can_see_time_estimated
+  - can_edit_tags
+  - shared
+type: object
+properties:
+  user:
+    $ref: "../../../shared/user7.yaml"
+  invited_by:
+    $ref: "../../../shared/invited_by.yaml"
+  can_see_time_spent:
+    type: boolean
+  can_see_time_estimated:
+    type: boolean
+  can_edit_tags:
+    type: boolean
+  shared:
+    title: Shared3
+    required:
+      - tasks
+      - lists
+      - folders
+    type: object
+    properties:
+      tasks:
+        type: array
+        items:
+          type: string
+        description: ""
+      lists:
+        type: array
+        items:
+          title: List3
+          required:
+            - id
+            - name
+            - orderindex
+            - status
+            - priority
+            - assignee
+            - task_count
+            - due_date
+            - start_date
+            - archived
+            - override_statuses
+            - statuses
+            - permission_level
+          type: object
+          properties:
+            id:
+              type: string
+            name:
+              type: string
+            orderindex:
+              type: integer
+              contentEncoding: int32
+            status:
+              type:
+                - string
+                - null
+            priority:
+              type:
+                - string
+                - null
+            assignee:
+              type:
+                - string
+                - null
+            task_count:
+              type: string
+            due_date:
+              type:
+                - string
+                - null
+            start_date:
+              type:
+                - string
+                - null
+            archived:
+              type: boolean
+            override_statuses:
+              type: boolean
+            statuses:
+              type: array
+              items:
+                $ref: "../../../shared/status.yaml"
+              description: ""
+            permission_level:
+              type: string
+          examples:
+            -
+              id: "1427"
+              name: "List Name"
+              orderindex: 1
+              status: null
+              priority: null
+              assignee: null
+              task_count: "5"
+              due_date: null
+              start_date: null
+              archived: false
+              override_statuses: true
+              statuses:
+                -
+                  status: Open
+                  orderindex: 0
+                  color: "#d3d3d3"
+                  type: open
+                -
+                  status: Closed
+                  orderindex: 5
+                  color: "#6bc950"
+                  type: closed
+              permission_level: read
+        description: ""
+      folders:
+        type: array
+        items:
+          type: string
+        description: ""
+    examples:
+      -
+        tasks:
+          []
+        lists:
+          -
+            id: "1427"
+            name: "List Name"
+            orderindex: 1
+            status: null
+            priority: null
+            assignee: null
+            task_count: "5"
+            due_date: null
+            start_date: null
+            archived: false
+            override_statuses: true
+            statuses:
+              -
+                status: Open
+                orderindex: 0
+                color: "#d3d3d3"
+                type: open
+              -
+                status: Closed
+                orderindex: 5
+                color: "#6bc950"
+                type: closed
+            permission_level: read
+        folders:
+          []
+examples:
+  -
+    user:
+      id: 184
+      username: null
+      email: "guest@example.com"
+      color: null
+      profilePicture: null
+      initials: G
+      role: 4
+      last_active: null
+      date_joined: null
+      date_invited: "1583358383412"
+    invited_by:
+      id: 183
+      color: "#827718"
+      username: Jerry
+      email: "jerry@example.com"
+      initials: J
+      profilePicture: https://attachments.clickup.com/profilePictures/profile.jpg
+    can_see_time_spent: true
+    can_see_time_estimated: true
+    can_edit_tags: true
+    shared:
+      tasks:
+        []
+      lists:
+        -
+          id: "1427"
+          name: "List Name"
+          orderindex: 1
+          status: null
+          priority: null
+          assignee: null
+          task_count: "5"
+          due_date: null
+          start_date: null
+          archived: false
+          override_statuses: true
+          statuses:
+            -
+              status: Open
+              orderindex: 0
+              color: "#d3d3d3"
+              type: open
+            -
+              status: Closed
+              orderindex: 5
+              color: "#6bc950"
+              type: closed
+          permission_level: read
+      folders:
+        []

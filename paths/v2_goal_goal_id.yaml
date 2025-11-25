@@ -1,0 +1,42 @@
+get:
+  summary: Get Goal
+  tags:
+    - Goals
+  description: View the details of a Goal including its Targets.
+  operationId: GetGoal
+  parameters:
+    -
+      $ref: "../operations/goals/get_goal/get_goal_parametergoal_id_path.yaml"
+  responses:
+    200:
+      $ref: "../operations/goals/get_goal/get_goal_response_200.yaml"
+  deprecated: false
+put:
+  summary: Update Goal
+  tags:
+    - Goals
+  description: Rename a Goal, set the due date, replace the description, add or remove owners, and set the Goal color.
+  operationId: UpdateGoal
+  parameters:
+    -
+      $ref: "../operations/goals/update_goal/update_goal_parametergoal_id_path.yaml"
+  requestBody:
+    $ref: "../operations/goals/update_goal/update_goal_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/goals/update_goal/update_goal_response_200.yaml"
+  deprecated: false
+delete:
+  summary: Delete Goal
+  tags:
+    - Goals
+  description: Remove a Goal from your Workspace.
+  operationId: DeleteGoal
+  parameters:
+    - $ref: "../operations/goals/delete_goal/delete_goal_parametergoal_id_path.yaml"
+    -
+      $ref: "../operations/goals/delete_goal/delete_goal_parametercontent_type_header.yaml"
+  responses:
+    200:
+      $ref: "../operations/goals/delete_goal/delete_goal_response_200.yaml"
+  deprecated: false

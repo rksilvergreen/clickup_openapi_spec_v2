@@ -1,0 +1,18 @@
+title: Space2
+required:
+  - id
+  - name
+  - access
+type: object
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  access:
+    type: boolean
+examples:
+  -
+    id: "789"
+    name: "Space Name"
+    access: true

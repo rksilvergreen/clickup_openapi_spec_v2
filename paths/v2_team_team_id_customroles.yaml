@@ -1,0 +1,14 @@
+get:
+  summary: Get Custom Roles
+  tags:
+    - Roles
+  description: View the Custom Roles available in a Workspace.
+  operationId: GetCustomRoles
+  parameters:
+    - $ref: "../operations/roles/get_custom_roles/get_custom_roles_parameterteam_id_path.yaml"
+    -
+      $ref: "../operations/roles/get_custom_roles/get_custom_roles_parameterinclude_members_query.yaml"
+  responses:
+    200:
+      $ref: "../operations/roles/get_custom_roles/get_custom_roles_response_200.yaml"
+  deprecated: false

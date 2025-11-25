@@ -1,0 +1,24 @@
+title: InvitedBy
+type: object
+properties:
+  id:
+    type: integer
+    contentEncoding: int32
+  color:
+    type: string
+  username:
+    type: string
+  email:
+    type: string
+  initials:
+    type: string
+  profilePicture:
+    type: string
+examples:
+  -
+    id: 183
+    color: "#827718"
+    username: Jerry
+    email: "jerry@example.com"
+    initials: J
+    profilePicture: https://attachments.clickup.com/profilePictures/profile.jpg

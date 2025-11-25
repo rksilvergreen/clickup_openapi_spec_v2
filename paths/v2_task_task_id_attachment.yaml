@@ -1,0 +1,17 @@
+post:
+  summary: Create Task Attachment
+  tags:
+    - Attachments
+  description: "Upload a file to a task as an attachment. Files stored in the cloud cannot be used in this API request.\\\n \\\n***Note:** This request uses multipart/form-data as the content type.*"
+  operationId: CreateTaskAttachment
+  parameters:
+    - $ref: "../operations/attachments/create_task_attachment/create_task_attachment_parametertask_id_path.yaml"
+    - $ref: "../operations/attachments/create_task_attachment/create_task_attachment_parametercustom_task_ids_query.yaml"
+    -
+      $ref: "../operations/attachments/create_task_attachment/create_task_attachment_parameterteam_id_query.yaml"
+  requestBody:
+    $ref: "../operations/attachments/create_task_attachment/create_task_attachment_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/attachments/create_task_attachment/create_task_attachment_response_200.yaml"
+  deprecated: false

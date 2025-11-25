@@ -1,0 +1,8 @@
+name: due_date_gt
+in: query
+description: "Filter by due date greater than Unix time in milliseconds."
+style: form
+explode: true
+schema:
+  type: integer
+  contentEncoding: int64

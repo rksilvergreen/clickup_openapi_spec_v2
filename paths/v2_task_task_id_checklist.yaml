@@ -1,0 +1,17 @@
+post:
+  summary: Create Checklist
+  tags:
+    - Task Checklists
+  description: Add a new checklist to a task.
+  operationId: CreateChecklist
+  parameters:
+    - $ref: "../operations/task_checklists/create_checklist/create_checklist_parametertask_id_path.yaml"
+    - $ref: "../operations/task_checklists/create_checklist/create_checklist_parametercustom_task_ids_query.yaml"
+    -
+      $ref: "../operations/task_checklists/create_checklist/create_checklist_parameterteam_id_query.yaml"
+  requestBody:
+    $ref: "../operations/task_checklists/create_checklist/create_checklist_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/task_checklists/create_checklist/create_checklist_response_200.yaml"
+  deprecated: false

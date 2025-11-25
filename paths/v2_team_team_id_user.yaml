@@ -1,0 +1,15 @@
+post:
+  summary: Invite User To Workspace
+  tags:
+    - Users
+  description: "Invite someone to join your Workspace as a member. To invite someone as a guest, use the [Invite Guest](ref:inviteguesttoworkspace) endpoint.\\\n \\\n***Note:** This endpoint is only available to Workspaces on our [Enterprise Plan](https://clickup.com/pricing).*"
+  operationId: InviteUserToWorkspace
+  parameters:
+    -
+      $ref: "../operations/users/invite_user_to_workspace/invite_user_to_workspace_parameterteam_id_path.yaml"
+  requestBody:
+    $ref: "../operations/users/invite_user_to_workspace/invite_user_to_workspace_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/users/invite_user_to_workspace/invite_user_to_workspace_response_200.yaml"
+  deprecated: false

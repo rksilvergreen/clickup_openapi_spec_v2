@@ -1,0 +1,16 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: GetListsResponse
+      required:
+        - lists
+      type: object
+      properties:
+        lists:
+          type: array
+          items:
+            $ref: "../../../shared/list4.yaml"
+          description: ""

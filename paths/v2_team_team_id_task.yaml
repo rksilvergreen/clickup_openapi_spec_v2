@@ -1,0 +1,36 @@
+get:
+  summary: Get Filtered Team Tasks
+  tags:
+    - Tasks
+  description: "View the tasks that meet specific criteria from a Workspace. Responses are limited to 100 tasks per page.  \\\n \\\nYou can only view task information of tasks you can access. \\\n \\\n Our Try It modal currently supports filtering by two or more Lists, Folders, or Spaces. To filter by a single List, Folder, or Space, we recommend using a free app like [Postman](https://www.postman.com/) to test our public API."
+  operationId: GetFilteredTeamTasks
+  parameters:
+    - $ref: "../operations/tasks/get_filtered_team_tasks/get_filtered_team_tasks_parameterteam_id_path.yaml"
+    - $ref: "../operations/tasks/get_filtered_team_tasks/get_filtered_team_tasks_parameterpage_query.yaml"
+    - $ref: "../operations/tasks/get_filtered_team_tasks/get_filtered_team_tasks_parameterorder_by_query.yaml"
+    - $ref: "../operations/tasks/get_filtered_team_tasks/get_filtered_team_tasks_parameterreverse_query.yaml"
+    - $ref: "../operations/tasks/get_filtered_team_tasks/get_filtered_team_tasks_parametersubtasks_query.yaml"
+    - $ref: "../operations/tasks/get_filtered_team_tasks/get_filtered_team_tasks_parameterspace_ids_query.yaml"
+    - $ref: "../operations/tasks/get_filtered_team_tasks/get_filtered_team_tasks_parameterproject_ids_query.yaml"
+    - $ref: "../operations/tasks/get_filtered_team_tasks/get_filtered_team_tasks_parameterlist_ids_query.yaml"
+    - $ref: "../operations/tasks/get_filtered_team_tasks/get_filtered_team_tasks_parameterstatuses_query.yaml"
+    - $ref: "../operations/tasks/get_filtered_team_tasks/get_filtered_team_tasks_parameterinclude_closed_query.yaml"
+    - $ref: "../operations/tasks/get_filtered_team_tasks/get_filtered_team_tasks_parameterassignees_query.yaml"
+    - $ref: "../operations/tasks/get_filtered_team_tasks/get_filtered_team_tasks_parametertags_query.yaml"
+    - $ref: "../operations/tasks/get_filtered_team_tasks/get_filtered_team_tasks_parameterdue_date_gt_query.yaml"
+    - $ref: "../operations/tasks/get_filtered_team_tasks/get_filtered_team_tasks_parameterdue_date_lt_query.yaml"
+    - $ref: "../operations/tasks/get_filtered_team_tasks/get_filtered_team_tasks_parameterdate_created_gt_query.yaml"
+    - $ref: "../operations/tasks/get_filtered_team_tasks/get_filtered_team_tasks_parameterdate_created_lt_query.yaml"
+    - $ref: "../operations/tasks/get_filtered_team_tasks/get_filtered_team_tasks_parameterdate_updated_gt_query.yaml"
+    - $ref: "../operations/tasks/get_filtered_team_tasks/get_filtered_team_tasks_parameterdate_updated_lt_query.yaml"
+    - $ref: "../operations/tasks/get_filtered_team_tasks/get_filtered_team_tasks_parameterdate_done_gt_query.yaml"
+    - $ref: "../operations/tasks/get_filtered_team_tasks/get_filtered_team_tasks_parameterdate_done_lt_query.yaml"
+    - $ref: "../operations/tasks/get_filtered_team_tasks/get_filtered_team_tasks_parametercustom_fields_query.yaml"
+    - $ref: "../operations/tasks/get_filtered_team_tasks/get_filtered_team_tasks_parameterparent_query.yaml"
+    - $ref: "../operations/tasks/get_filtered_team_tasks/get_filtered_team_tasks_parameterinclude_markdown_description_query.yaml"
+    -
+      $ref: "../operations/tasks/get_filtered_team_tasks/get_filtered_team_tasks_parametercustom_items_query.yaml"
+  responses:
+    200:
+      $ref: "../operations/tasks/get_filtered_team_tasks/get_filtered_team_tasks_response_200.yaml"
+  deprecated: false

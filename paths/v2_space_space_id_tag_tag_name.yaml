@@ -1,0 +1,32 @@
+put:
+  summary: Edit Space Tag
+  tags:
+    - Tags
+  description: Update a task Tag.
+  operationId: EditSpaceTag
+  parameters:
+    - $ref: "../operations/tags/edit_space_tag/edit_space_tag_parameterspace_id_path.yaml"
+    -
+      $ref: "../operations/tags/edit_space_tag/edit_space_tag_parametertag_name_path.yaml"
+  requestBody:
+    $ref: "../operations/tags/edit_space_tag/edit_space_tag_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/tags/edit_space_tag/edit_space_tag_response_200.yaml"
+  deprecated: false
+delete:
+  summary: Delete Space Tag
+  tags:
+    - Tags
+  description: Delete a task Tag from a Space.
+  operationId: DeleteSpaceTag
+  parameters:
+    - $ref: "../operations/tags/delete_space_tag/delete_space_tag_parameterspace_id_path.yaml"
+    -
+      $ref: "../operations/tags/delete_space_tag/delete_space_tag_parametertag_name_path.yaml"
+  requestBody:
+    $ref: "../operations/tags/delete_space_tag/delete_space_tag_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/tags/delete_space_tag/delete_space_tag_response_200.yaml"
+  deprecated: false

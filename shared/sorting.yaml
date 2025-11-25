@@ -1,0 +1,17 @@
+title: Sorting
+required:
+  - fields
+type: object
+properties:
+  fields:
+    type: array
+    items:
+      type: string
+    description: "Include an array of fields to sort by.\\\n \\\n You can sort by the same fields available when [filtering a view](doc:filter-views)."
+examples:
+  -
+    fields:
+      -
+        field: cf_624a423a-c1d1-4467-99e2-63e225658cb2
+        dir: -1
+        idx: 0

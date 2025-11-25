@@ -1,0 +1,29 @@
+description: ""
+content:
+  application/json:
+    schema:
+      title: CreateTaskCommentRequest
+      required:
+        - comment_text
+        - notify_all
+      type: object
+      properties:
+        comment_text:
+          type: string
+        assignee:
+          type: integer
+          contentEncoding: int32
+        group_assignee:
+          type: string
+          contentEncoding: int32
+          description: ""
+        notify_all:
+          description: "If `notify_all` is true, notifications will be sent to everyone including the creator of the comment."
+          type: boolean
+      examples:
+        -
+          comment_text: "Task comment content"
+          assignee: 183
+          group_assignee: d01f92f-48ca-446d-88a1-0beb0e8f5f14
+          notify_all: true
+required: true

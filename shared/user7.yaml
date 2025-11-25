@@ -1,0 +1,58 @@
+title: User7
+required:
+  - id
+  - username
+  - email
+  - color
+  - profilePicture
+  - initials
+  - role
+  - last_active
+  - date_joined
+  - date_invited
+type: object
+properties:
+  id:
+    type: integer
+    contentEncoding: int32
+  username:
+    type:
+      - string
+      - null
+  email:
+    type: string
+  color:
+    type:
+      - string
+      - null
+  profilePicture:
+    type:
+      - string
+      - null
+  initials:
+    type: string
+  role:
+    type: integer
+    contentEncoding: int32
+  last_active:
+    type:
+      - string
+      - null
+  date_joined:
+    type:
+      - string
+      - null
+  date_invited:
+    type: string
+examples:
+  -
+    id: 184
+    username: null
+    email: "guest@example.com"
+    color: null
+    profilePicture: null
+    initials: G
+    role: 4
+    last_active: null
+    date_joined: null
+    date_invited: "1583358383412"

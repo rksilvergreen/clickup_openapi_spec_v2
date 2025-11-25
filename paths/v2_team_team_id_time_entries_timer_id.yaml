@@ -1,0 +1,52 @@
+get:
+  summary: Get singular time entry
+  tags:
+    - Time Tracking
+  description: "View a single time entry. \\\n \\\n***Note:** A time entry that has a negative duration means that timer is currently running for that user.*"
+  operationId: GetSingularTimeEntry
+  parameters:
+    - $ref: "../operations/time_tracking/get_singular_time_entry/get_singular_time_entry_parameterteam_id_path.yaml"
+    - $ref: "../operations/time_tracking/get_singular_time_entry/get_singular_time_entry_parametertimer_id_path.yaml"
+    - $ref: "../operations/time_tracking/get_singular_time_entry/get_singular_time_entry_parameterinclude_task_tags_query.yaml"
+    - $ref: "../operations/time_tracking/get_singular_time_entry/get_singular_time_entry_parameterinclude_location_names_query.yaml"
+    - $ref: "../operations/time_tracking/get_singular_time_entry/get_singular_time_entry_parameterinclude_approval_history_query.yaml"
+    - $ref: "../operations/time_tracking/get_singular_time_entry/get_singular_time_entry_parameterinclude_approval_details_query.yaml"
+    -
+      $ref: "../operations/time_tracking/get_singular_time_entry/get_singular_time_entry_parametercontent_type_header.yaml"
+  responses:
+    200:
+      $ref: "../operations/time_tracking/get_singular_time_entry/get_singular_time_entry_response_200.yaml"
+  deprecated: false
+put:
+  summary: Update a time Entry
+  tags:
+    - Time Tracking
+  description: Update the details of a time entry.
+  operationId: UpdateTimeEntry
+  parameters:
+    - $ref: "../operations/time_tracking/update_time_entry/update_time_entry_parameterteam_id_path.yaml"
+    - $ref: "../operations/time_tracking/update_time_entry/update_time_entry_parametertimer_id_path.yaml"
+    - $ref: "../operations/time_tracking/update_time_entry/update_time_entry_parametercustom_task_ids_query.yaml"
+    -
+      $ref: "../operations/time_tracking/update_time_entry/update_time_entry_parameterteam_id_query.yaml"
+  requestBody:
+    $ref: "../operations/time_tracking/update_time_entry/update_time_entry_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/time_tracking/update_time_entry/update_time_entry_response_200.yaml"
+  deprecated: false
+delete:
+  summary: Delete a time Entry
+  tags:
+    - Time Tracking
+  description: Delete a time entry from a Workspace.
+  operationId: DeleteTimeEntry
+  parameters:
+    - $ref: "../operations/time_tracking/delete_time_entry/delete_time_entry_parameterteam_id_path.yaml"
+    - $ref: "../operations/time_tracking/delete_time_entry/delete_time_entry_parametertimer_id_path.yaml"
+    -
+      $ref: "../operations/time_tracking/delete_time_entry/delete_time_entry_parametercontent_type_header.yaml"
+  responses:
+    200:
+      $ref: "../operations/time_tracking/delete_time_entry/delete_time_entry_response_200.yaml"
+  deprecated: false

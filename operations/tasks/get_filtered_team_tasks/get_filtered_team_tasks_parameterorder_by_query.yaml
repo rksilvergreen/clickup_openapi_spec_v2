@@ -1,0 +1,7 @@
+name: order_by
+in: query
+description: "Order by a particular field. By default, tasks are ordered by `created`.\\\n \\\nOptions include: `id`, `created`, `updated`, and `due_date`."
+style: form
+explode: true
+schema:
+  type: string

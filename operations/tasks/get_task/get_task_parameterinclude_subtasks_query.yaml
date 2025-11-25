@@ -1,0 +1,7 @@
+name: include_subtasks
+in: query
+description: "Include subtasks, default false"
+style: form
+explode: true
+schema:
+  type: boolean

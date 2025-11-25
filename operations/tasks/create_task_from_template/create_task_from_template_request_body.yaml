@@ -1,0 +1,15 @@
+description: ""
+content:
+  application/json:
+    schema:
+      title: CreateTaskFromTemplateRequest
+      required:
+        - name
+      type: object
+      properties:
+        name:
+          type: string
+      examples:
+        -
+          name: "New task name"
+required: true

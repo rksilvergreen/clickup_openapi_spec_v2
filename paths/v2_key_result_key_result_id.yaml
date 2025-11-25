@@ -1,0 +1,28 @@
+put:
+  summary: Edit Key Result
+  tags:
+    - Goals
+  description: Update a Target.
+  operationId: EditKeyResult
+  parameters:
+    -
+      $ref: "../operations/goals/edit_key_result/edit_key_result_parameterkey_result_id_path.yaml"
+  requestBody:
+    $ref: "../operations/goals/edit_key_result/edit_key_result_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/goals/edit_key_result/edit_key_result_response_200.yaml"
+  deprecated: false
+delete:
+  summary: Delete Key Result
+  tags:
+    - Goals
+  description: Delete a target from a Goal.
+  operationId: DeleteKeyResult
+  parameters:
+    -
+      $ref: "../operations/goals/delete_key_result/delete_key_result_parameterkey_result_id_path.yaml"
+  responses:
+    200:
+      $ref: "../operations/goals/delete_key_result/delete_key_result_response_200.yaml"
+  deprecated: false

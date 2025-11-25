@@ -1,0 +1,96 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: CreateFolderlessListResponse
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        orderindex:
+          type: integer
+          contentEncoding: int32
+        content:
+          type: string
+        status:
+          $ref: "../../../shared/status5.yaml"
+        priority:
+          $ref: "../../../shared/priority1.yaml"
+        assignee:
+          $ref: "../../../shared/assignee3.yaml"
+        task_count:
+          type:
+            - string
+            - null
+        due_date:
+          type: string
+        due_date_time:
+          type: boolean
+        start_date:
+          type:
+            - string
+            - null
+        start_date_time:
+          type:
+            - string
+            - null
+        folder:
+          $ref: "../../../shared/folder3.yaml"
+        space:
+          $ref: "../../../shared/space2.yaml"
+        statuses:
+          type: array
+          items:
+            $ref: "../../../shared/status.yaml"
+          description: ""
+        inbound_address:
+          type: string
+      examples:
+        -
+          id: "124"
+          name: "New List Name"
+          orderindex: 1
+          content: "New List Content"
+          status:
+            status: red
+            color: "#e50000"
+            hide_label: true
+          priority:
+            priority: urgent
+            color: "#f50000"
+          assignee:
+            id: 183
+            color: "#827718"
+            username: Jerry
+            initials: J
+            profilePicture: https://attachments.clickup.com/profilePictures/profile.jpg
+          task_count: null
+          due_date: "1567780450202"
+          due_date_time: false
+          start_date: null
+          start_date_time: null
+          folder:
+            id: "457"
+            name: hidden
+            hidden: true
+            access: true
+          space:
+            id: "789"
+            name: "Space Name"
+            access: true
+          statuses:
+            -
+              status: "to do"
+              orderindex: 0
+              color: "#d3d3d3"
+              type: open
+            -
+              status: complete
+              orderindex: 1
+              color: "#6bc950"
+              type: closed
+          inbound_address: "add.task.1389.ac725f.31518a6a-05bb-4997-92a6-1dcfe2f527ca@tasks.clickup.com"

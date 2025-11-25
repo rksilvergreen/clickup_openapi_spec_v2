@@ -1,0 +1,32 @@
+post:
+  summary: Add Guest To Folder
+  tags:
+    - Guests
+  description: "Share a Folder with a guest. \\\n \\\n***Note:** This endpoint is only available to Workspaces on our [Enterprise Plan](https://clickup.com/pricing).*"
+  operationId: AddGuestToFolder
+  parameters:
+    - $ref: "../operations/guests/add_guest_to_folder/add_guest_to_folder_parameterfolder_id_path.yaml"
+    - $ref: "../operations/guests/add_guest_to_folder/add_guest_to_folder_parameterguest_id_path.yaml"
+    -
+      $ref: "../operations/guests/add_guest_to_folder/add_guest_to_folder_parameterinclude_shared_query.yaml"
+  requestBody:
+    $ref: "../operations/guests/add_guest_to_folder/add_guest_to_folder_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/guests/add_guest_to_folder/add_guest_to_folder_response_200.yaml"
+  deprecated: false
+delete:
+  summary: Remove Guest From Folder
+  tags:
+    - Guests
+  description: "Revoke a guest's access to a Folder. \\\n \\\n***Note:** This endpoint is only available to Workspaces on our [Enterprise Plan](https://clickup.com/pricing).*"
+  operationId: RemoveGuestFromFolder
+  parameters:
+    - $ref: "../operations/guests/remove_guest_from_folder/remove_guest_from_folder_parameterfolder_id_path.yaml"
+    - $ref: "../operations/guests/remove_guest_from_folder/remove_guest_from_folder_parameterguest_id_path.yaml"
+    -
+      $ref: "../operations/guests/remove_guest_from_folder/remove_guest_from_folder_parameterinclude_shared_query.yaml"
+  responses:
+    200:
+      $ref: "../operations/guests/remove_guest_from_folder/remove_guest_from_folder_response_200.yaml"
+  deprecated: false

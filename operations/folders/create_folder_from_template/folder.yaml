@@ -1,0 +1,64 @@
+type: object
+properties:
+  id:
+    type: string
+    description: "Unique identifier of the Folder"
+  name:
+    type: string
+    description: "Name of the Folder"
+  orderindex:
+    type: integer
+    description: "Order index of the Folder"
+  override_statuses:
+    type: boolean
+    description: "Whether the Folder overrides default statuses"
+  hidden:
+    type: boolean
+    description: "Whether the Folder is hidden"
+  space:
+    type: object
+    properties:
+      id:
+        type: string
+        description: "ID of the Space containing the Folder"
+      name:
+        type: string
+        description: "Name of the Space"
+      access:
+        type: boolean
+        description: "Whether the user has access to the Space"
+  task_count:
+    type: string
+    description: "Number of tasks in the Folder"
+  archived:
+    type: boolean
+    description: "Whether the Folder is archived"
+  statuses:
+    type: array
+    description: "List of statuses available in the Folder"
+    items:
+      type: object
+      properties:
+        id:
+          type: string
+          description: "Unique identifier of the status"
+        status:
+          type: string
+          description: "Name of the status"
+        orderindex:
+          type: integer
+          description: "Order index of the status"
+        color:
+          type: string
+          description: "Color code for the status"
+        type:
+          type: string
+          description: "Type of the status (closed, custom, open)"
+  lists:
+    type: array
+    description: "Lists contained in the Folder"
+    items:
+      type: object
+  permission_level:
+    type: string
+    description: "Permission level for the current user"

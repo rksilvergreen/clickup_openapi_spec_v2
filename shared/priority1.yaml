@@ -1,0 +1,14 @@
+title: Priority1
+required:
+  - priority
+  - color
+type: object
+properties:
+  priority:
+    type: string
+  color:
+    type: string
+examples:
+  -
+    priority: urgent
+    color: "#f50000"

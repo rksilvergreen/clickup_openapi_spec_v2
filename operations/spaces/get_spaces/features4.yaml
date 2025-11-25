@@ -1,0 +1,50 @@
+title: Features4
+required:
+  - due_dates
+  - time_tracking
+  - tags
+  - time_estimates
+  - checklists
+type: object
+properties:
+  due_dates:
+    $ref: "../../../shared/due_dates.yaml"
+  time_tracking:
+    $ref: "../../../shared/time_tracking.yaml"
+  tags:
+    $ref: "../../../shared/tags.yaml"
+  time_estimates:
+    $ref: "../../../shared/time_estimates.yaml"
+  checklists:
+    $ref: "../../../shared/checklists.yaml"
+  custom_fields:
+    $ref: "../../../shared/custom_fields.yaml"
+  remap_dependencies:
+    $ref: "../../../shared/remap_dependencies.yaml"
+  dependency_warning:
+    $ref: "../../../shared/dependency_warning.yaml"
+  portfolios:
+    $ref: "../../../shared/portfolios.yaml"
+examples:
+  -
+    due_dates:
+      enabled: false
+      start_date: false
+      remap_due_dates: false
+      remap_closed_due_date: false
+    time_tracking:
+      enabled: false
+    tags:
+      enabled: false
+    time_estimates:
+      enabled: false
+    checklists:
+      enabled: true
+    custom_fields:
+      enabled: true
+    remap_dependencies:
+      enabled: false
+    dependency_warning:
+      enabled: false
+    portfolios:
+      enabled: false

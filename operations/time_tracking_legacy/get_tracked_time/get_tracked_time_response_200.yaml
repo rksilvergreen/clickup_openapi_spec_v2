@@ -1,0 +1,103 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: GetTrackedTimeResponse
+      required:
+        - data
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            title: Datum
+            required:
+              - user
+              - time
+              - intervals
+            type: object
+            properties:
+              user:
+                $ref: "../../../shared/user13.yaml"
+              time:
+                type: integer
+                contentEncoding: int32
+              intervals:
+                type: array
+                items:
+                  title: Interval
+                  required:
+                    - id
+                    - start
+                    - end
+                    - time
+                    - source
+                    - date_added
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                    start:
+                      type:
+                        - string
+                        - null
+                    end:
+                      type:
+                        - string
+                        - null
+                    time:
+                      type: string
+                    source:
+                      type: string
+                    date_added:
+                      type: string
+                  examples:
+                    -
+                      id: "318"
+                      start: null
+                      end: null
+                      time: "1000000"
+                      source: chrome
+                      date_added: "1569983937761"
+                description: ""
+            examples:
+              -
+                user:
+                  id: 1
+                  username: "John Doe"
+                  email: "johndoe@gmail.com"
+                  color: "#795548"
+                  initials: JD
+                  profilePicture: null
+                time: 1000000
+                intervals:
+                  -
+                    id: "318"
+                    start: null
+                    end: null
+                    time: "1000000"
+                    source: chrome
+                    date_added: "1569983937761"
+          description: ""
+      examples:
+        -
+          data:
+            -
+              user:
+                id: 1
+                username: "John Doe"
+                email: "johndoe@gmail.com"
+                color: "#795548"
+                initials: JD
+                profilePicture: null
+              time: 1000000
+              intervals:
+                -
+                  id: "318"
+                  start: null
+                  end: null
+                  time: "1000000"
+                  source: chrome
+                  date_added: "1569983937761"

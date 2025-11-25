@@ -1,0 +1,9 @@
+name: custom_items
+in: query
+description: "Filter by custom task types. For example: \\\n \\\n`?custom_items[]=0&custom_items[]=1300` \\\n \\\nIncluding `0` returns tasks. Including `1` returns Milestones. Including any other number returns the custom task type as defined in your Workspace."
+style: form
+explode: true
+schema:
+  type: array
+  items:
+    type: number

@@ -1,0 +1,7 @@
+name: reverse
+in: query
+description: "Tasks are displayed in reverse order."
+style: form
+explode: true
+schema:
+  type: boolean

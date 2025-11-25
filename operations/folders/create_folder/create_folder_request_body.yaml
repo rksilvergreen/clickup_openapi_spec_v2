@@ -1,0 +1,15 @@
+description: ""
+content:
+  application/json:
+    schema:
+      title: CreateFolderRequest
+      required:
+        - name
+      type: object
+      properties:
+        name:
+          type: string
+      examples:
+        -
+          name: "New Folder Name"
+required: true

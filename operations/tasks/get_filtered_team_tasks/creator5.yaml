@@ -1,0 +1,27 @@
+title: Creator5
+required:
+  - id
+  - username
+  - color
+  - email
+  - profilePicture
+type: object
+properties:
+  id:
+    type: integer
+    contentEncoding: int32
+  username:
+    type: string
+  color:
+    type: string
+  email:
+    type: string
+  profilePicture:
+    type: string
+examples:
+  -
+    id: 123
+    username: "John Doe"
+    color: "#000000"
+    email: "johndoe@website.com"
+    profilePicture: https://clickup.com/avatar.jpg

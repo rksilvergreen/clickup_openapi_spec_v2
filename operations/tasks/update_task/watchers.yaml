@@ -1,0 +1,26 @@
+title: Watchers
+required:
+  - add
+  - rem
+type: object
+properties:
+  add:
+    type: array
+    items:
+      type: integer
+      contentEncoding: int32
+    description: ""
+  rem:
+    type: array
+    items:
+      type: integer
+      contentEncoding: int32
+    description: ""
+examples:
+  -
+    add:
+      - 182
+      - 121
+    rem:
+      - 183
+      - 122

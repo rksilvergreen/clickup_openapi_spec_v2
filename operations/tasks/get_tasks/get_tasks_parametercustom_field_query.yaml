@@ -1,0 +1,9 @@
+name: custom_field
+in: query
+description: "Include tasks with specific values in only one Custom Field. This Custom Field can be a Custom Relationship."
+style: form
+explode: true
+schema:
+  type: array
+  items:
+    type: string

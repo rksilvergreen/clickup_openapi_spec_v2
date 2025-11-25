@@ -1,0 +1,26 @@
+description: "Edit the start, end, or total time of a time tracked entry."
+content:
+  application/json:
+    schema:
+      title: EditTimeTrackedRequest
+      required:
+        - start
+        - end
+        - time
+      type: object
+      properties:
+        start:
+          type: integer
+          contentEncoding: int64
+        end:
+          type: integer
+          contentEncoding: int64
+        time:
+          type: integer
+          contentEncoding: int32
+      examples:
+        -
+          start: 1567780450202
+          end: 1508369194377
+          time: 8640000
+required: true

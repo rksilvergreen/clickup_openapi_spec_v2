@@ -1,0 +1,15 @@
+get:
+  summary: Get running time entry
+  tags:
+    - Time Tracking
+  description: "View a time entry that's currently tracking time for the authenticated user. \\\n \\\n***Note:** A time entry that has a negative duration means that timer is currently running for that user.*"
+  operationId: GetRunningTimeEntry
+  parameters:
+    - $ref: "../operations/time_tracking/get_running_time_entry/get_running_time_entry_parameterteam_id_path.yaml"
+    - $ref: "../operations/time_tracking/get_running_time_entry/get_running_time_entry_parameterassignee_query.yaml"
+    -
+      $ref: "../operations/time_tracking/get_running_time_entry/get_running_time_entry_parametercontent_type_header.yaml"
+  responses:
+    200:
+      $ref: "../operations/time_tracking/get_running_time_entry/get_running_time_entry_response_200.yaml"
+  deprecated: false

@@ -1,0 +1,7 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      $ref: "../../../shared/get_task_comments_response.yaml"

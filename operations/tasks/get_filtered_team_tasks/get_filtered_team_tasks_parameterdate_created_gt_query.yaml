@@ -1,0 +1,8 @@
+name: date_created_gt
+in: query
+description: "Filter by date created greater than Unix time in milliseconds."
+style: form
+explode: true
+schema:
+  type: integer
+  contentEncoding: int64

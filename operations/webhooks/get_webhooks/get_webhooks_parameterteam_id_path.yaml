@@ -1,0 +1,10 @@
+name: team_id
+in: path
+description: "Workspace ID"
+required: true
+style: simple
+schema:
+  type: number
+  contentEncoding: double
+  examples:
+    - 123

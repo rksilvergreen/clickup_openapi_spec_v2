@@ -1,0 +1,27 @@
+title: Filters
+required:
+  - op
+  - fields
+  - search
+  - show_closed
+type: object
+properties:
+  op:
+    type: string
+    description: "The available operator (`op``) values are `AND`` and `OR``."
+  fields:
+    type: array
+    items:
+      type: string
+    description: "View the list of [fields available](doc:filter-views) to filter by."
+  search:
+    type: string
+  show_closed:
+    type: boolean
+examples:
+  -
+    op: AND
+    fields:
+      []
+    search: ""
+    show_closed: false

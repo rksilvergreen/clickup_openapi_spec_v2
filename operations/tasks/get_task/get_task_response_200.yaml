@@ -1,0 +1,309 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: GetTaskResponse
+      type: object
+      properties:
+        id:
+          type: string
+        custom_id:
+          type:
+            - string
+            - null
+        custom_item_id:
+          type:
+            - number
+            - null
+          description: "The custom task type ID for this task. A value of `null` represents task type \"Task\".\\\n \\\nTo get a list of available custom task type IDs for your Workspace, use the [Get Custom Task Types endpoint](ref:getcustomitems)."
+        name:
+          type: string
+        text_content:
+          type: string
+        description:
+          type: string
+        status:
+          $ref: "../../../shared/status.yaml"
+        orderindex:
+          type: string
+        date_created:
+          type: string
+        date_updated:
+          type: string
+        date_closed:
+          type:
+            - string
+            - null
+        creator:
+          $ref: "../../../shared/creator.yaml"
+        assignees:
+          type: array
+          items:
+            type: string
+          description: ""
+        watchers:
+          type: array
+          items:
+            type: string
+          description: ""
+        checklists:
+          type: array
+          items:
+            type: string
+          description: ""
+        tags:
+          type: array
+          items:
+            type: string
+          description: ""
+        parent:
+          type:
+            - string
+            - null
+        priority:
+          title: Priority
+          type:
+            - object
+            - null
+          properties:
+            color:
+              type: string
+            id:
+              type: string
+            orderindex:
+              type: string
+            priority:
+              type: string
+          examples:
+            -
+              color: "#f8ae00"
+              id: "3"
+              orderindex: "3"
+              priority: normal
+        due_date:
+          type:
+            - string
+            - null
+        start_date:
+          type:
+            - string
+            - null
+        points:
+          type:
+            - number
+        time_estimate:
+          type:
+            - string
+            - null
+        time_spent:
+          type:
+            - string
+            - null
+        custom_fields:
+          type: array
+          items:
+            title: CustomFields8
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+              type:
+                type: string
+              type_config:
+                $ref: "../../../shared/type_config1.yaml"
+              date_created:
+                type: string
+              hide_from_guests:
+                type: boolean
+              value:
+                oneOf:
+                  -
+                    title: Value
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        contentEncoding: int32
+                      username:
+                        type: string
+                      email:
+                        type: string
+                      color:
+                        type: string
+                      initials:
+                        type: string
+                      profilePicture:
+                        type:
+                          - string
+                          - null
+                  -
+                    title: Value1
+                    required:
+                      - id
+                      - username
+                      - email
+                      - color
+                      - initials
+                      - profilePicture
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        contentEncoding: int32
+                      username:
+                        type: string
+                      email:
+                        type: string
+                      color:
+                        type: string
+                      initials:
+                        type: string
+                      profilePicture:
+                        type:
+                          - string
+                          - null
+                    examples:
+                      -
+                        id: 183
+                        username: "John Doe"
+                        email: "john@example.com"
+                        color: "#7b68ee"
+                        initials: JD
+                        profilePicture: null
+                  -
+                    title: Value2
+                    required:
+                      - value
+                    type: object
+                    properties:
+                      value:
+                        type: string
+                    example:
+                      - "This is a text CF"
+                examples:
+                  -
+                    id: 183
+                    username: "John Doe"
+                    email: "john@example.com"
+                    color: "#7b68ee"
+                    initials: JD
+                    profilePicture: null
+                  -
+                    value: null
+              value_richtext:
+                type: string
+              value_markdown:
+                type: string
+              required:
+                type: boolean
+          description: ""
+        list:
+          $ref: "../../../shared/list.yaml"
+        folder:
+          $ref: "../../../shared/folder.yaml"
+        space:
+          $ref: "../../../shared/space.yaml"
+        url:
+          type: string
+        markdown_description:
+          type: string
+        attachments:
+          type: array
+          items:
+            title: Attachment
+            type: object
+            properties:
+              id:
+                type: string
+              date:
+                type: bigint
+              title:
+                type: string
+              type:
+                type: int
+              source:
+                type: int
+              version:
+                type: int
+              extension:
+                type: string
+              thumbnail_small:
+                type: string
+              thumbnail_medium:
+                type: string
+              thumbnail_large:
+                type: string
+              is_folder:
+                type: boolean
+              mimetype:
+                type: string
+              hidden:
+                type: boolean
+              parent_id:
+                type: string
+              size:
+                type: bigint
+              total_comments:
+                type: int
+              resolved_comments:
+                type: int
+              user:
+                type: string
+                $ref: "../../../shared/user2.yaml"
+              deleted:
+                type: boolean
+              orientation:
+                type: string
+              url:
+                type: string
+              email_data:
+                $ref: "./email_data.yaml"
+              url_w_query:
+                type: string
+              url_w_host:
+                type: string
+            examples:
+              -
+                id: 62447c77-2086-4cda-b274-f53eccf0547b.csv
+                date: 1711570108374
+                title: "Canny - Exported posts - 2024-03-09.csv"
+                type: 1
+                source: 1
+                version: 0
+                extension: csv
+                thumbnail_small: null
+                thumbnail_medium: null
+                thumbnail_large: null
+                is_folder: null
+                mimetype: text/csv
+                hidden: false
+                parent_id: 36fjfqy
+                size: 140970
+                total_comments: 0
+                resolved_comments: 0
+                user:
+                  -
+                    id:
+                      -
+                        type: integer
+                        contentEncoding: int32
+                    username:
+                      type: string
+                    initials:
+                      type: string
+                    email:
+                      type: string
+                    color:
+                      type: string
+                    profilePicture:
+                      type: string
+                deleted: false
+                orientation: null
+                url: "https://t6931406.p.clickup-attachments.com/t6931406/62447c77-2086-4cda-b274-f53eccf0547b/Canny%20-%20Exported%20posts%20-%202024-03-09.csv"
+                email_data: null
+                url_w_query: "https://t6931406.p.clickup-attachments.com/t6931406/62447c77-2086-4cda-b274-f53eccf0547b/Canny%20-%20Exported%20posts%20-%202024-03-09.csv?view=open"
+                url_w_host: "https://t6931406.p.clickup-attachments.com/t6931406/62447c77-2086-4cda-b274-f53eccf0547b/Canny%20-%20Exported%20posts%20-%202024-03-09.csv"

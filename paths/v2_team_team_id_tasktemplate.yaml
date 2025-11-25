@@ -1,0 +1,15 @@
+get:
+  summary: Get Task Templates
+  tags:
+    - Templates
+  description: View the task templates available in a Workspace.
+  operationId: GetTaskTemplates
+  parameters:
+    - $ref: "../operations/templates/get_task_templates/get_task_templates_parameterteam_id_path.yaml"
+    - $ref: "../operations/templates/get_task_templates/get_task_templates_parameterpage_query.yaml"
+    -
+      $ref: "../operations/templates/get_task_templates/get_task_templates_parametercontent_type_header.yaml"
+  responses:
+    200:
+      $ref: "../operations/templates/get_task_templates/get_task_templates_response_200.yaml"
+  deprecated: false

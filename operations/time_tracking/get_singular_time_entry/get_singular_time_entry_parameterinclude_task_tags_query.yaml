@@ -1,0 +1,7 @@
+name: include_task_tags
+in: query
+description: "Include task tags in the response for time entries associated with tasks."
+style: form
+explode: true
+schema:
+  type: boolean

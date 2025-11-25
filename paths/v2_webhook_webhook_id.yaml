@@ -1,0 +1,28 @@
+put:
+  summary: Update Webhook
+  tags:
+    - Webhooks
+  description: Update a webhook to change the events to be monitored.
+  operationId: UpdateWebhook
+  parameters:
+    -
+      $ref: "../operations/webhooks/update_webhook/update_webhook_parameterwebhook_id_path.yaml"
+  requestBody:
+    $ref: "../operations/webhooks/update_webhook/update_webhook_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/webhooks/update_webhook/update_webhook_response_200.yaml"
+  deprecated: false
+delete:
+  summary: Delete Webhook
+  tags:
+    - Webhooks
+  description: Delete a webhook to stop monitoring the events and locations of the webhook.
+  operationId: DeleteWebhook
+  parameters:
+    -
+      $ref: "../operations/webhooks/delete_webhook/delete_webhook_parameterwebhook_id_path.yaml"
+  responses:
+    200:
+      $ref: "../operations/webhooks/delete_webhook/delete_webhook_response_200.yaml"
+  deprecated: false

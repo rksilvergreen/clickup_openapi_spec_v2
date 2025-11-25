@@ -1,0 +1,45 @@
+get:
+  summary: Get time entries within a date range
+  tags:
+    - Time Tracking
+  description: "View time entries filtered by start and end date. \\\n \\\nBy default, this endpoint returns time entries from the last 30 days created by the authenticated user. \\\n \\\nTo retrieve time entries for other users, you must include the `assignee` query parameter. \\\n \\\nOnly one of the following location filters can be included at a time: `space_id`, `folder_id`, `list_id`, or `task_id`. \\\n \\\n***Note:** A time entry that has a negative duration means that timer is currently running for that user.*"
+  operationId: GetTimeEntriesWithinADateRange
+  parameters:
+    - $ref: "../operations/time_tracking/get_time_entries_within_a_date_range/get_time_entries_within_a_date_range_parameterteam_id_path.yaml"
+    - $ref: "../operations/time_tracking/get_time_entries_within_a_date_range/get_time_entries_within_a_date_range_parameterstart_date_query.yaml"
+    - $ref: "../operations/time_tracking/get_time_entries_within_a_date_range/get_time_entries_within_a_date_range_parameterend_date_query.yaml"
+    - $ref: "../operations/time_tracking/get_time_entries_within_a_date_range/get_time_entries_within_a_date_range_parameterassignee_query.yaml"
+    - $ref: "../operations/time_tracking/get_time_entries_within_a_date_range/get_time_entries_within_a_date_range_parameterinclude_task_tags_query.yaml"
+    - $ref: "../operations/time_tracking/get_time_entries_within_a_date_range/get_time_entries_within_a_date_range_parameterinclude_location_names_query.yaml"
+    - $ref: "../operations/time_tracking/get_time_entries_within_a_date_range/get_time_entries_within_a_date_range_parameterinclude_approval_history_query.yaml"
+    - $ref: "../operations/time_tracking/get_time_entries_within_a_date_range/get_time_entries_within_a_date_range_parameterinclude_approval_details_query.yaml"
+    - $ref: "../operations/time_tracking/get_time_entries_within_a_date_range/get_time_entries_within_a_date_range_parameterspace_id_query.yaml"
+    - $ref: "../operations/time_tracking/get_time_entries_within_a_date_range/get_time_entries_within_a_date_range_parameterfolder_id_query.yaml"
+    - $ref: "../operations/time_tracking/get_time_entries_within_a_date_range/get_time_entries_within_a_date_range_parameterlist_id_query.yaml"
+    - $ref: "../operations/time_tracking/get_time_entries_within_a_date_range/get_time_entries_within_a_date_range_parametertask_id_query.yaml"
+    - $ref: "../operations/time_tracking/get_time_entries_within_a_date_range/get_time_entries_within_a_date_range_parametercustom_task_ids_query.yaml"
+    - $ref: "../operations/time_tracking/get_time_entries_within_a_date_range/get_time_entries_within_a_date_range_parameterteam_id_query.yaml"
+    - $ref: "../operations/time_tracking/get_time_entries_within_a_date_range/get_time_entries_within_a_date_range_parameteris_billable_query.yaml"
+    -
+      $ref: "../operations/time_tracking/get_time_entries_within_a_date_range/get_time_entries_within_a_date_range_parametercontent_type_header.yaml"
+  responses:
+    200:
+      $ref: "../operations/time_tracking/get_time_entries_within_a_date_range/get_time_entries_within_a_date_range_response_200.yaml"
+  deprecated: false
+post:
+  summary: Create a time entry
+  tags:
+    - Time Tracking
+  description: "Create a time entry. \\\n \\\n***Note:** A time entry that has a negative duration means that timer is currently running for that user.*"
+  operationId: CreateTimeEntry
+  parameters:
+    - $ref: "../operations/time_tracking/create_time_entry/create_time_entry_parameterteam_id_path.yaml"
+    - $ref: "../operations/time_tracking/create_time_entry/create_time_entry_parametercustom_task_ids_query.yaml"
+    -
+      $ref: "../operations/time_tracking/create_time_entry/create_time_entry_parameterteam_id_query.yaml"
+  requestBody:
+    $ref: "../operations/time_tracking/create_time_entry/create_time_entry_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/time_tracking/create_time_entry/create_time_entry_response_200.yaml"
+  deprecated: false

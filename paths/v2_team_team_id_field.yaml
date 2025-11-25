@@ -1,0 +1,14 @@
+get:
+  summary: Get Workspace Custom Fields
+  tags:
+    - Custom Fields
+  description: View the Custom Fields you have access to in a specific Workspace. Get Workspace Custom Fields only returns Custom Fields created at the Workspace level. Custom Fields created at the Space, Folder, and List level are not included.
+  operationId: getTeamAvailableFields
+  parameters:
+    - $ref: "../operations/custom_fields/get_team_available_fields/get_team_available_fields_parameterteam_id_path.yaml"
+    -
+      $ref: "../operations/custom_fields/get_team_available_fields/get_team_available_fields_parametercontent_type_header.yaml"
+  responses:
+    200:
+      $ref: "../operations/custom_fields/get_team_available_fields/get_team_available_fields_response_200.yaml"
+  deprecated: false

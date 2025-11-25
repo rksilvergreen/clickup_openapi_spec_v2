@@ -1,0 +1,32 @@
+post:
+  summary: Add Guest To List
+  tags:
+    - Guests
+  description: "Share a List with a guest. \\\n \\\n***Note:** This endpoint is only available to Workspaces on our [Enterprise Plan](https://clickup.com/pricing).*"
+  operationId: AddGuestToList
+  parameters:
+    - $ref: "../operations/guests/add_guest_to_list/add_guest_to_list_parameterlist_id_path.yaml"
+    - $ref: "../operations/guests/add_guest_to_list/add_guest_to_list_parameterguest_id_path.yaml"
+    -
+      $ref: "../operations/guests/add_guest_to_list/add_guest_to_list_parameterinclude_shared_query.yaml"
+  requestBody:
+    $ref: "../operations/guests/add_guest_to_list/add_guest_to_list_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/guests/add_guest_to_list/add_guest_to_list_response_200.yaml"
+  deprecated: false
+delete:
+  summary: Remove Guest From List
+  tags:
+    - Guests
+  description: "Revoke a guest's access to a List.\\\n \\\n***Note:** This endpoint is only available to Workspaces on our [Enterprise Plan](https://clickup.com/pricing).*"
+  operationId: RemoveGuestFromList
+  parameters:
+    - $ref: "../operations/guests/remove_guest_from_list/remove_guest_from_list_parameterlist_id_path.yaml"
+    - $ref: "../operations/guests/remove_guest_from_list/remove_guest_from_list_parameterguest_id_path.yaml"
+    -
+      $ref: "../operations/guests/remove_guest_from_list/remove_guest_from_list_parameterinclude_shared_query.yaml"
+  responses:
+    200:
+      $ref: "../operations/guests/remove_guest_from_list/remove_guest_from_list_response_200.yaml"
+  deprecated: false

@@ -1,0 +1,28 @@
+put:
+  summary: Edit Checklist
+  tags:
+    - Task Checklists
+  description: 'Rename a task checklist, or reorder a checklist so it appears above or below other checklists on a task. '
+  operationId: EditChecklist
+  parameters:
+    -
+      $ref: "../operations/task_checklists/edit_checklist/edit_checklist_parameterchecklist_id_path.yaml"
+  requestBody:
+    $ref: "../operations/task_checklists/edit_checklist/edit_checklist_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/task_checklists/edit_checklist/edit_checklist_response_200.yaml"
+  deprecated: false
+delete:
+  summary: Delete Checklist
+  tags:
+    - Task Checklists
+  description: Delete a checklist from a task.
+  operationId: DeleteChecklist
+  parameters:
+    -
+      $ref: "../operations/task_checklists/delete_checklist/delete_checklist_parameterchecklist_id_path.yaml"
+  responses:
+    200:
+      $ref: "../operations/task_checklists/delete_checklist/delete_checklist_response_200.yaml"
+  deprecated: false

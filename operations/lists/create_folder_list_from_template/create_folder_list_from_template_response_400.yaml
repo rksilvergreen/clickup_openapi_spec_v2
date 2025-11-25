@@ -1,0 +1,12 @@
+description: "Bad request - Name is required"
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        error:
+          type: string
+          example: "Name is required"
+        ECODE:
+          type: string
+          example: OAUTH_117

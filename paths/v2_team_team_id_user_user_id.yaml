@@ -1,0 +1,45 @@
+get:
+  summary: Get User
+  tags:
+    - Users
+  description: "View information about a user in a Workspace. \\\n \\\n***Note:** This endpoint is only available to Workspaces on our [Enterprise Plan](https://clickup.com/pricing).*"
+  operationId: GetUser
+  parameters:
+    - $ref: "../operations/users/get_user/get_user_parameterteam_id_path.yaml"
+    - $ref: "../operations/users/get_user/get_user_parameteruser_id_path.yaml"
+    -
+      $ref: "../operations/users/get_user/get_user_parameterinclude_shared_query.yaml"
+  responses:
+    200:
+      $ref: "../operations/users/get_user/get_user_response_200.yaml"
+  deprecated: false
+put:
+  summary: Edit User On Workspace
+  tags:
+    - Users
+  description: "Update a user's name and role. \\\n \\\n***Note:** This endpoint is only available to Workspaces on our [Enterprise Plan](https://clickup.com/pricing).*"
+  operationId: EditUserOnWorkspace
+  parameters:
+    - $ref: "../operations/users/edit_user_on_workspace/edit_user_on_workspace_parameterteam_id_path.yaml"
+    -
+      $ref: "../operations/users/edit_user_on_workspace/edit_user_on_workspace_parameteruser_id_path.yaml"
+  requestBody:
+    $ref: "../operations/users/edit_user_on_workspace/edit_user_on_workspace_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/users/edit_user_on_workspace/edit_user_on_workspace_response_200.yaml"
+  deprecated: false
+delete:
+  summary: Remove User From Workspace
+  tags:
+    - Users
+  description: "Deactivate a user from a Workspace. \\\n \\\n***Note:** This endpoint is only available to Workspaces on our [Enterprise Plan](https://clickup.com/pricing).*"
+  operationId: RemoveUserFromWorkspace
+  parameters:
+    - $ref: "../operations/users/remove_user_from_workspace/remove_user_from_workspace_parameterteam_id_path.yaml"
+    -
+      $ref: "../operations/users/remove_user_from_workspace/remove_user_from_workspace_parameteruser_id_path.yaml"
+  responses:
+    200:
+      $ref: "../operations/users/remove_user_from_workspace/remove_user_from_workspace_response_200.yaml"
+  deprecated: false

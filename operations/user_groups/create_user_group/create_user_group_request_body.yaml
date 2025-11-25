@@ -1,0 +1,28 @@
+description: ""
+content:
+  application/json:
+    schema:
+      title: CreateTeamRequest
+      required:
+        - name
+        - members
+      type: object
+      properties:
+        name:
+          type: string
+        handle:
+          type: string
+        members:
+          type: array
+          items:
+            type: integer
+            contentEncoding: int32
+          description: ""
+      examples:
+        -
+          name: "New team name"
+          handle: newteamname
+          members:
+            - 123456
+            - 987654
+required: true

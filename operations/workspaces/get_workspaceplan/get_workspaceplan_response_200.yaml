@@ -1,0 +1,17 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: GetWorkspaceplanResponse
+      type: object
+      properties:
+        plan_name:
+          type: string
+        plan_id:
+          type: integer
+      examples:
+        -
+          plan_name: Enterprise
+          plan_id: 4

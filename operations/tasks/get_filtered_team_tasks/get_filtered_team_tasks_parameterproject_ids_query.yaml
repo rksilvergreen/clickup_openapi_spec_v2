@@ -1,0 +1,9 @@
+name: "project_ids[]"
+in: query
+description: "Filter by Folders. For example: \\\n \\\n`?project_ids[]=1234&project_ids[]=6789`"
+style: form
+explode: true
+schema:
+  type: array
+  items:
+    type: string

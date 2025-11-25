@@ -1,0 +1,23 @@
+description: "To subscribe to specific events, pass an array of `events` that you want to subscribe to, or use the wildcard character `\"*\"` to subscribe to everything.\\\n \\\nIf you don't specify any events, all events will be sent to the webhook."
+content:
+  application/json:
+    schema:
+      title: UpdateWebhookRequest
+      required:
+        - endpoint
+        - events
+        - status
+      type: object
+      properties:
+        endpoint:
+          type: string
+        events:
+          type: string
+        status:
+          type: string
+      examples:
+        -
+          endpoint: https://yourdomain.com/webhook
+          events: "*"
+          status: active
+required: true

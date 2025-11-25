@@ -1,0 +1,34 @@
+post:
+  summary: Add Tag To Task
+  tags:
+    - Tags
+  description: Add a Tag to a task.
+  operationId: AddTagToTask
+  parameters:
+    - $ref: "../operations/tags/add_tag_to_task/add_tag_to_task_parametertask_id_path.yaml"
+    - $ref: "../operations/tags/add_tag_to_task/add_tag_to_task_parametertag_name_path.yaml"
+    - $ref: "../operations/tags/add_tag_to_task/add_tag_to_task_parametercustom_task_ids_query.yaml"
+    - $ref: "../operations/tags/add_tag_to_task/add_tag_to_task_parameterteam_id_query.yaml"
+    -
+      $ref: "../operations/tags/add_tag_to_task/add_tag_to_task_parametercontent_type_header.yaml"
+  responses:
+    200:
+      $ref: "../operations/tags/add_tag_to_task/add_tag_to_task_response_200.yaml"
+  deprecated: false
+delete:
+  summary: Remove Tag From Task
+  tags:
+    - Tags
+  description: Remove a Tag from a task. This does not delete the Tag from the Space.
+  operationId: RemoveTagFromTask
+  parameters:
+    - $ref: "../operations/tags/remove_tag_from_task/remove_tag_from_task_parametertask_id_path.yaml"
+    - $ref: "../operations/tags/remove_tag_from_task/remove_tag_from_task_parametertag_name_path.yaml"
+    - $ref: "../operations/tags/remove_tag_from_task/remove_tag_from_task_parametercustom_task_ids_query.yaml"
+    - $ref: "../operations/tags/remove_tag_from_task/remove_tag_from_task_parameterteam_id_query.yaml"
+    -
+      $ref: "../operations/tags/remove_tag_from_task/remove_tag_from_task_parametercontent_type_header.yaml"
+  responses:
+    200:
+      $ref: "../operations/tags/remove_tag_from_task/remove_tag_from_task_response_200.yaml"
+  deprecated: false

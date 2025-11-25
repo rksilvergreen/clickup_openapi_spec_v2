@@ -1,0 +1,37 @@
+title: Guests
+required:
+  - filled_guest_seats
+  - total_guest_seats
+  - empty_guest_seats
+type: object
+properties:
+  filled_guest_seats:
+    type: integer
+    contentEncoding: int32
+  total_guest_seats:
+    oneOf:
+      -
+        type: integer
+        contentEncoding: int32
+      -
+        type: string
+        enum:
+          - "Infinity"
+  empty_guest_seats:
+    oneOf:
+      -
+        type: integer
+        contentEncoding: int32
+      -
+        type: string
+        enum:
+          - "Infinity"
+examples:
+  -
+    filled_guest_seats: 2
+    total_guest_seats: 50
+    empty_guest_seats: 48
+  -
+    filled_guest_seats: 2
+    total_guest_seats: "Infinity"
+    empty_guest_seats: "Infinity"

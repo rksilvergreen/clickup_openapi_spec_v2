@@ -1,0 +1,9 @@
+name: task_id
+in: path
+description: "This is the task which is waiting on or blocking another task."
+required: true
+style: simple
+schema:
+  type: string
+  examples:
+    - 9hv

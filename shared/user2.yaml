@@ -1,0 +1,31 @@
+title: User2
+required:
+  - id
+  - username
+  - initials
+  - email
+  - color
+  - profilePicture
+type: object
+properties:
+  id:
+    type: integer
+    contentEncoding: int32
+  username:
+    type: string
+  initials:
+    type: string
+  email:
+    type: string
+  color:
+    type: string
+  profilePicture:
+    type: string
+examples:
+  -
+    id: 183
+    username: "John Doe"
+    initials: JD
+    email: "johndoe@gmail.com"
+    color: "#827718"
+    profilePicture: https://attachments-public.clickup.com/profilePictures/183_abc.jpg

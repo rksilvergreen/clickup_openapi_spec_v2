@@ -1,0 +1,18 @@
+title: Tag1
+required:
+  - name
+  - fg_color
+  - bg_color
+type: object
+properties:
+  name:
+    type: string
+  fg_color:
+    type: string
+  bg_color:
+    type: string
+examples:
+  -
+    name: "Updated Tag"
+    fg_color: "#ffffff"
+    bg_color: "#ffffff"

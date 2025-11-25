@@ -1,0 +1,22 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: RemoveUserFromWorkspaceResponse
+      required:
+        - team
+      type: object
+      properties:
+        team:
+          $ref: "../../../shared/team2.yaml"
+      examples:
+        -
+          team:
+            id: "333"
+            name: "Team Name"
+            color: "#8D00D4"
+            avatar: null
+            members:
+              []

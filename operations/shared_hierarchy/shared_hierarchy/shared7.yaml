@@ -1,0 +1,148 @@
+title: Shared7
+required:
+  - tasks
+  - lists
+  - folders
+type: object
+properties:
+  tasks:
+    type: array
+    items:
+      type: string
+    description: ""
+  lists:
+    type: array
+    items:
+      title: List6
+      required:
+        - id
+        - name
+        - orderindex
+        - content
+        - status
+        - priority
+        - assignee
+        - task_count
+        - due_date
+        - start_date
+        - archived
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        orderindex:
+          type: integer
+          contentEncoding: int32
+        content:
+          type:
+            - string
+            - null
+        status:
+          type:
+            - string
+            - null
+        priority:
+          type:
+            - string
+            - null
+        assignee:
+          type:
+            - string
+            - null
+        task_count:
+          type: string
+        due_date:
+          type:
+            - string
+            - null
+        start_date:
+          type:
+            - string
+            - null
+        archived:
+          type: boolean
+      examples:
+        -
+          id: "1421"
+          name: "Shared List"
+          orderindex: 0
+          content: null
+          status: null
+          priority: null
+          assignee: null
+          task_count: "0"
+          due_date: null
+          start_date: null
+          archived: false
+    description: ""
+  folders:
+    type: array
+    items:
+      title: Folder11
+      required:
+        - id
+        - name
+        - orderindex
+        - content
+        - task_count
+        - due_date
+        - archived
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        orderindex:
+          type: integer
+          contentEncoding: int32
+        content:
+          type:
+            - string
+            - null
+        task_count:
+          type: string
+        due_date:
+          type:
+            - string
+            - null
+        archived:
+          type: boolean
+      examples:
+        -
+          id: "1058"
+          name: "Shared Folder"
+          orderindex: 0
+          content: null
+          task_count: "0"
+          due_date: null
+          archived: false
+    description: ""
+examples:
+  -
+    tasks:
+      []
+    lists:
+      -
+        id: "1421"
+        name: "Shared List"
+        orderindex: 0
+        content: null
+        status: null
+        priority: null
+        assignee: null
+        task_count: "0"
+        due_date: null
+        start_date: null
+        archived: false
+    folders:
+      -
+        id: "1058"
+        name: "Shared Folder"
+        orderindex: 0
+        content: null
+        task_count: "0"
+        due_date: null
+        archived: false

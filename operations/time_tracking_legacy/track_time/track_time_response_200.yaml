@@ -1,0 +1,15 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: TrackTimeResponse
+      required:
+        - id
+      type: object
+      properties:
+        id:
+          type: string
+      examples:
+        - id: "123"

@@ -1,0 +1,26 @@
+description: "Include the total time or the start time and end time.\\\n \\\nThe total time is in milliseconds and `\"start\"` and `\"end\"` values are Unix time in milliseconds."
+content:
+  application/json:
+    schema:
+      title: TrackTimeRequest
+      required:
+        - start
+        - end
+        - time
+      type: object
+      properties:
+        start:
+          type: integer
+          contentEncoding: int64
+        end:
+          type: integer
+          contentEncoding: int64
+        time:
+          type: integer
+          contentEncoding: int32
+      examples:
+        -
+          start: 1567780450202
+          end: 1508369194377
+          time: 8640000
+required: true

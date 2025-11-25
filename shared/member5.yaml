@@ -1,0 +1,91 @@
+title: Member5
+required:
+  - id
+  - username
+  - email
+  - color
+  - initials
+  - profilePicture
+  - profileInfo
+type: object
+properties:
+  id:
+    type: integer
+    contentEncoding: int32
+  username:
+    type: string
+  email:
+    type: string
+  color:
+    type:
+      - string
+      - null
+  initials:
+    type: string
+  profilePicture:
+    type: string
+  profileInfo:
+    title: ProfileInfo
+    required:
+      - display_profile
+      - verified_ambassador
+      - verified_consultant
+      - top_tier_user
+      - viewed_verified_ambassador
+      - viewed_verified_consultant
+      - viewed_top_tier_user
+    type: object
+    properties:
+      display_profile:
+        type:
+          - string
+          - null
+      verified_ambassador:
+        type:
+          - string
+          - null
+      verified_consultant:
+        type:
+          - string
+          - null
+      top_tier_user:
+        type:
+          - string
+          - null
+      viewed_verified_ambassador:
+        type:
+          - string
+          - null
+      viewed_verified_consultant:
+        type:
+          - string
+          - null
+      viewed_top_tier_user:
+        type:
+          - string
+          - null
+    examples:
+      -
+        display_profile: null
+        verified_ambassador: null
+        verified_consultant: null
+        top_tier_user: null
+        viewed_verified_ambassador: null
+        viewed_verified_consultant: null
+        viewed_top_tier_user: null
+examples:
+  -
+    id: 812
+    username: "John Doe"
+    email: "john@example.com"
+    color: "#FFFFFF"
+    initials: JD
+    profilePicture: https://attachments-public.clickup.com/profilePictures/812_nx1.jpg
+    profileInfo:
+      display_profile: null
+      verified_ambassador: null
+      verified_consultant: null
+      top_tier_user: null
+      viewed_verified_ambassador: null
+      viewed_verified_consultant: null
+      viewed_top_tier_user: null

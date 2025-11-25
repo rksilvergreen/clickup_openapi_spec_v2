@@ -1,0 +1,95 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: AddGuestToTaskResponse
+      required:
+        - guest
+      type: object
+      properties:
+        guest:
+          $ref: "./guest1.yaml"
+      examples:
+        -
+          guest:
+            user:
+              id: 184
+              username: null
+              email: "guest@example.com"
+              color: null
+              profilePicture: null
+              initials: G
+              role: 4
+              last_active: null
+              date_joined: null
+              date_invited: "1583358383412"
+            invited_by:
+              id: 183
+              color: "#827718"
+              username: Jerry
+              email: "jerry@example.com"
+              initials: J
+              profilePicture: https://attachments.clickup.com/profilePictures/profile.jpg
+            can_see_time_spent: true
+            can_see_time_estimated: true
+            can_edit_tags: true
+            shared:
+              tasks:
+                -
+                  id: c04
+                  name: "Task Name"
+                  status:
+                    status: Open
+                    color: "#d3d3d3"
+                    type: open
+                    orderindex: 0
+                  orderindex: "0"
+                  date_created: "1574718405408"
+                  date_updated: "1574722145869"
+                  date_closed: null
+                  archived: false
+                  creator:
+                    id: 183
+                    username: Jerry
+                    color: "#827718"
+                    profilePicture: https://attachments.clickup.com/profilePictures/profile.jpg
+                  assignees:
+                    []
+                  checklists:
+                    []
+                  tags:
+                    []
+                  parent: null
+                  priority:
+                    id: "1"
+                    priority: urgent
+                    color: "#f50000"
+                    orderindex: "1"
+                  due_date: "1508369194377"
+                  start_date: null
+                  points: null
+                  time_estimate: null
+                  custom_fields:
+                    []
+                  dependencies:
+                    []
+                  team_id: "108"
+                  url: https://app.clickup.com/t/c04
+                  permission_level: read
+                  list:
+                    id: "1752"
+                    name: "Shared with me"
+                    access: false
+                  folder:
+                    id: "1217"
+                    name: "Shared with me"
+                    hidden: false
+                    access: false
+                  space:
+                    id: "380"
+              lists:
+                []
+              folders:
+                []

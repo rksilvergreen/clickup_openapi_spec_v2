@@ -1,0 +1,9 @@
+name: include_markdown_description
+in: query
+description: "To return task descriptions in Markdown format, use `?include_markdown_description=true`."
+style: form
+explode: true
+schema:
+  type: boolean
+  examples:
+    - true

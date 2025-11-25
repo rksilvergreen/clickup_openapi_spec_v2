@@ -1,0 +1,17 @@
+post:
+  summary: Start a time Entry
+  tags:
+    - Time Tracking
+  description: Start a timer for the authenticated user.
+  operationId: StartATimeEntry
+  parameters:
+    - $ref: "../operations/time_tracking/start_a_time_entry/start_a_time_entry_parameterteam_id_path.yaml"
+    - $ref: "../operations/time_tracking/start_a_time_entry/start_a_time_entry_parametercustom_task_ids_query.yaml"
+    -
+      $ref: "../operations/time_tracking/start_a_time_entry/start_a_time_entry_parameterteam_id_query.yaml"
+  requestBody:
+    $ref: "../operations/time_tracking/start_a_time_entry/start_a_time_entry_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/time_tracking/start_a_time_entry/start_a_time_entry_response_200.yaml"
+  deprecated: false

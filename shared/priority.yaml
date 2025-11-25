@@ -1,0 +1,19 @@
+title: Priority
+type:
+  - object
+  - null
+properties:
+  color:
+    type: string
+  id:
+    type: string
+  orderindex:
+    type: string
+  priority:
+    type: string
+examples:
+  -
+    color: "#f8ae00"
+    id: "3"
+    orderindex: "3"
+    priority: normal

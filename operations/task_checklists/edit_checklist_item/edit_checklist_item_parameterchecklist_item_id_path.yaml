@@ -1,0 +1,9 @@
+name: checklist_item_id
+in: path
+description: "e491-47f5-9fd8-d1dc4cedcc6f (uuid)"
+required: true
+style: simple
+schema:
+  type: string
+  examples:
+    - 21e08dc8

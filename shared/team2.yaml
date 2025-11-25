@@ -1,0 +1,32 @@
+title: Team2
+required:
+  - id
+  - name
+  - color
+  - avatar
+  - members
+type: object
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  color:
+    type: string
+  avatar:
+    type:
+      - string
+      - null
+  members:
+    type: array
+    items:
+      type: string
+    description: ""
+examples:
+  -
+    id: "333"
+    name: "Team Name"
+    color: "#8D00D4"
+    avatar: null
+    members:
+      []

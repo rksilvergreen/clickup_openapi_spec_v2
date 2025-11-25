@@ -1,0 +1,9 @@
+name: task_id
+in: path
+description: "Enter the task ID of the task you want to update."
+required: true
+style: simple
+schema:
+  type: string
+  examples:
+    - 9hv

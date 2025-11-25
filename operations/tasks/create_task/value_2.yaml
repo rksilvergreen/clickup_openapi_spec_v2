@@ -1,0 +1,10 @@
+type: object
+properties:
+  add:
+    type: array
+    items:
+      type: number
+  rem:
+    type: array
+    items:
+      type: number

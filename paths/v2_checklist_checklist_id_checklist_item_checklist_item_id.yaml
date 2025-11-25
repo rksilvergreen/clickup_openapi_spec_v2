@@ -1,0 +1,30 @@
+put:
+  summary: Edit Checklist Item
+  tags:
+    - Task Checklists
+  description: "Update an individual line item in a task checklist. \\\n \\\nYou can rename it, set the assignee, mark it as resolved, or nest it under another checklist item."
+  operationId: EditChecklistItem
+  parameters:
+    - $ref: "../operations/task_checklists/edit_checklist_item/edit_checklist_item_parameterchecklist_id_path.yaml"
+    -
+      $ref: "../operations/task_checklists/edit_checklist_item/edit_checklist_item_parameterchecklist_item_id_path.yaml"
+  requestBody:
+    $ref: "../operations/task_checklists/edit_checklist_item/edit_checklist_item_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/task_checklists/edit_checklist_item/edit_checklist_item_response_200.yaml"
+  deprecated: false
+delete:
+  summary: Delete Checklist Item
+  tags:
+    - Task Checklists
+  description: Delete a line item from a task checklist.
+  operationId: DeleteChecklistItem
+  parameters:
+    - $ref: "../operations/task_checklists/delete_checklist_item/delete_checklist_item_parameterchecklist_id_path.yaml"
+    -
+      $ref: "../operations/task_checklists/delete_checklist_item/delete_checklist_item_parameterchecklist_item_id_path.yaml"
+  responses:
+    200:
+      $ref: "../operations/task_checklists/delete_checklist_item/delete_checklist_item_response_200.yaml"
+  deprecated: false

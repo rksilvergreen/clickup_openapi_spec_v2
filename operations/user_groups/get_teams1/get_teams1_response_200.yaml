@@ -1,0 +1,131 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: GetTeamsResponse
+      required:
+        - groups
+      type: object
+      properties:
+        groups:
+          type: array
+          items:
+            title: Group
+            required:
+              - id
+              - team_id
+              - userid
+              - name
+              - handle
+              - date_created
+              - initials
+              - members
+              - avatar
+            type: object
+            properties:
+              id:
+                type: string
+              team_id:
+                type: string
+              userid:
+                type: integer
+                contentEncoding: int32
+              name:
+                type: string
+              handle:
+                type: string
+              date_created:
+                type: string
+              initials:
+                type: string
+              members:
+                type: array
+                items:
+                  $ref: "../../../shared/members3.yaml"
+                description: ""
+              avatar:
+                $ref: "../../../shared/avatar.yaml"
+            examples:
+              -
+                id: 4bfdfcec-6f4f-40a7-b0d6-22660d51870d
+                team_id: "123456"
+                userid: 301123
+                name: "product team"
+                handle: product
+                date_created: "1640122639829"
+                initials: PT
+                members:
+                  -
+                    id: 183
+                    username: Jerry
+                    email: "jerry@example.com"
+                    color: "#40BC86"
+                    initials: J
+                    profilePicture: null
+                  -
+                    id: 184
+                    username: Sam
+                    email: "sam@example.com"
+                    color: "#FF8600"
+                    initials: S
+                    profilePicture: null
+                avatar:
+                  attachment_id: null
+                  color: null
+                  source: null
+                  icon: null
+          description: ""
+      examples:
+        -
+          groups:
+            -
+              id: 4bfdfcec-6f4f-40a7-b0d6-22660d51870d
+              team_id: "123456"
+              userid: 301123
+              name: "product team"
+              handle: product
+              date_created: "1640122639829"
+              initials: PT
+              members:
+                -
+                  id: 183
+                  username: Jerry
+                  email: "jerry@example.com"
+                  color: "#40BC86"
+                  initials: J
+                  profilePicture: null
+                -
+                  id: 184
+                  username: Sam
+                  email: "sam@example.com"
+                  color: "#FF8600"
+                  initials: S
+                  profilePicture: null
+              avatar:
+                attachment_id: null
+                color: null
+                source: null
+                icon: null
+            -
+              id: fd31be63-41f2-4320-9043-9786fdf643d6
+              team_id: "301540"
+              userid: 301828
+              name: "HR department"
+              handle: hr-dept
+              date_created: "1627087990293"
+              initials: HD
+              members:
+                -
+                  id: 183
+                  username: Jerry
+                  email: "jerry@example.com"
+                  color: "#40BC86"
+                  initials: J
+                  profilePicture: https://attachments.clickup.com/profilePictures/profile.jpg
+              avatar:
+                attachment_id: null
+                color: null
+                source: null
+                icon: null

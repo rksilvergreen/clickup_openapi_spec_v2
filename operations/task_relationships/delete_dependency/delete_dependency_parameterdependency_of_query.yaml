@@ -1,0 +1,10 @@
+name: dependency_of
+in: query
+description: ""
+required: true
+style: form
+explode: true
+schema:
+  type: string
+  examples:
+    - 9hz

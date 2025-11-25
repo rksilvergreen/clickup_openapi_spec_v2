@@ -1,0 +1,30 @@
+get:
+  summary: Get Chat View Comments
+  description: "View comments from a Chat view. \\\n \\\nIf you do not include the `start` and `start_id` parameters, this endpoint will return the most recent 25 comments.\\\n \\\nUse the `start` and `start id` parameters of the oldest comment to retrieve the next 25 comments."
+  tags:
+    - Comments
+  operationId: GetChatViewComments
+  parameters:
+    - $ref: "../operations/comments/get_chat_view_comments/get_chat_view_comments_parameterview_id_path.yaml"
+    - $ref: "../operations/comments/get_chat_view_comments/get_chat_view_comments_parameterstart_query.yaml"
+    -
+      $ref: "../operations/comments/get_chat_view_comments/get_chat_view_comments_parameterstart_id_query.yaml"
+  responses:
+    200:
+      $ref: "../operations/comments/get_chat_view_comments/get_chat_view_comments_response_200.yaml"
+  deprecated: false
+post:
+  summary: Create Chat View Comment
+  tags:
+    - Comments
+  description: Add a new comment to a Chat view.
+  operationId: CreateChatViewComment
+  parameters:
+    -
+      $ref: "../operations/comments/create_chat_view_comment/create_chat_view_comment_parameterview_id_path.yaml"
+  requestBody:
+    $ref: "../operations/comments/create_chat_view_comment/create_chat_view_comment_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/comments/create_chat_view_comment/create_chat_view_comment_response_200.yaml"
+  deprecated: false

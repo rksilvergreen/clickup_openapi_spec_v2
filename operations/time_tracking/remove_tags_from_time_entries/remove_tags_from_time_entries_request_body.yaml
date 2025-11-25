@@ -1,0 +1,28 @@
+description: ""
+content:
+  application/json:
+    schema:
+      title: RemoveTagsFromTimeEntriesRequest
+      required:
+        - time_entry_ids
+        - tags
+      type: object
+      properties:
+        time_entry_ids:
+          type: array
+          items:
+            type: string
+          description: ""
+        tags:
+          type: array
+          items:
+            $ref: "../../../shared/tags10.yaml"
+          description: ""
+      examples:
+        -
+          time_entry_ids:
+            - timer_id
+          tags:
+            -
+              name: "name of tag"
+required: true

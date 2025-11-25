@@ -1,0 +1,40 @@
+get:
+  summary: Get View
+  tags:
+    - Views
+  description: View information about a specific task or page view.
+  operationId: GetView
+  parameters:
+    -
+      $ref: "../operations/views/get_view/get_view_parameterview_id_path.yaml"
+  responses:
+    200:
+      $ref: "../operations/views/get_view/get_view_response_200.yaml"
+  deprecated: false
+put:
+  summary: Update View
+  tags:
+    - Views
+  description: Rename a view, update the grouping, sorting, filters, columns, and settings of a view.
+  operationId: UpdateView
+  parameters:
+    -
+      $ref: "../operations/views/update_view/update_view_parameterview_id_path.yaml"
+  requestBody:
+    $ref: "../operations/views/update_view/update_view_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/views/update_view/update_view_response_200.yaml"
+  deprecated: false
+delete:
+  summary: Delete View
+  tags:
+    - Views
+  operationId: DeleteView
+  parameters:
+    -
+      $ref: "../operations/views/delete_view/delete_view_parameterview_id_path.yaml"
+  responses:
+    200:
+      $ref: "../operations/views/delete_view/delete_view_response_200.yaml"
+  deprecated: false

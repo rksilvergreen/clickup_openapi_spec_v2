@@ -1,0 +1,44 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: UpdateFolderResponse
+      required:
+        - id
+        - name
+        - orderindex
+        - override_statuses
+        - hidden
+        - space
+        - task_count
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        orderindex:
+          type: integer
+          contentEncoding: int32
+        override_statuses:
+          type: boolean
+        hidden:
+          type: boolean
+        space:
+          $ref: "../../../shared/space2.yaml"
+        task_count:
+          type: string
+      examples:
+        -
+          id: "457"
+          name: "Updated Folder Name"
+          orderindex: 0
+          override_statuses: false
+          hidden: false
+          space:
+            id: "789"
+            name: "Space Name"
+            access: true
+          task_count: "0"

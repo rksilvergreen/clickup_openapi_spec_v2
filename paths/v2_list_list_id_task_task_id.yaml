@@ -1,0 +1,28 @@
+post:
+  summary: Add Task To List
+  tags:
+    - Lists
+  description: "Add a task to an additional List. \\\n \\\n***Note:** This endpoint requires the [Tasks in Multiple List ClickApp](https://help.clickup.com/hc/en-us/articles/6309958824727-Tasks-in-Multiple-Lists) to be enabled.*"
+  operationId: AddTaskToList
+  parameters:
+    - $ref: "../operations/lists/add_task_to_list/add_task_to_list_parameterlist_id_path.yaml"
+    -
+      $ref: "../operations/lists/add_task_to_list/add_task_to_list_parametertask_id_path.yaml"
+  responses:
+    200:
+      $ref: "../operations/lists/add_task_to_list/add_task_to_list_response_200.yaml"
+  deprecated: false
+delete:
+  summary: Remove Task From List
+  tags:
+    - Lists
+  description: "Remove a task from an additional List. You can't remove a task from its home List. \\\n \\\n***Note:** This endpoint requires the [Tasks in Multiple List ClickApp](https://help.clickup.com/hc/en-us/articles/6309958824727-Tasks-in-Multiple-Lists) to be enabled.*"
+  operationId: RemoveTaskFromList
+  parameters:
+    - $ref: "../operations/lists/remove_task_from_list/remove_task_from_list_parameterlist_id_path.yaml"
+    -
+      $ref: "../operations/lists/remove_task_from_list/remove_task_from_list_parametertask_id_path.yaml"
+  responses:
+    200:
+      $ref: "../operations/lists/remove_task_from_list/remove_task_from_list_response_200.yaml"
+  deprecated: false

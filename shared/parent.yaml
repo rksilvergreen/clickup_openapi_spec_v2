@@ -1,0 +1,18 @@
+title: Parent
+description: "The parent parameter specifies where the view is located in the ClickUp Hierarchy. Both `id` and `type` are required. \\\n \\\nThe `id` is the id of the Workspace, Space, Folder, or List where the view is located. \\\n \\\nThe `type` value indciates the level of the Hierarchy where the view is located."
+required:
+  - id
+  - type
+type: object
+properties:
+  id:
+    type: string
+    description: "The id of the Workspace, Space, Folder, or List where the view is located."
+  type:
+    type: integer
+    description: "The level of the Hierarchy where the view is created. \\\n \\\nOptions include: \\\n \\\nWorkspace (Everything Level): `7` \\\n \\\nSpace: `4` \\\n \\\nFolder: `5` \\\n \\\nList: `6`"
+    contentEncoding: int32
+examples:
+  -
+    id: "512"
+    type: 7

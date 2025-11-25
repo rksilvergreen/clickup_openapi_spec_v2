@@ -1,0 +1,43 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: GetCustomItemsResponse
+      type: object
+      properties:
+        custom_items:
+          type: array
+          items:
+            title: "Custom Item"
+            type: object
+            properties:
+              id:
+                type: integer
+                contentEncoding: int32
+                description: "Custom task type ID."
+              name:
+                type: string
+                description: "Custom task type name."
+              name_plural:
+                type: string
+                description: "Custom task type plural name."
+              description:
+                type: string
+                description: "Custom task type description."
+            examples:
+              -
+                id: 1300
+                name: Bug
+                name_plural: Bugs
+                description: "Custom task type for bugs."
+          description: "Array of custom task types."
+      examples:
+        -
+          custom_items:
+            -
+              id: 1300-900e-462d-a849-4a216b06d930
+              name: Bug
+              name_plural: Bugs
+              description: "Custom item type for bugs."

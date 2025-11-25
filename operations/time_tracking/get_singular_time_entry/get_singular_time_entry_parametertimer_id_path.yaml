@@ -1,0 +1,9 @@
+name: timer_id
+in: path
+description: "The ID of a time entry. \\\n \\\nThis can be found using the [Get Time Entries Within a Date Range](ref:gettimeentrieswithinadaterange) endpoint."
+required: true
+style: simple
+schema:
+  type: string
+  examples:
+    - "1963465985517105840"

@@ -1,0 +1,7 @@
+name: include_closed
+in: query
+description: "Include or excluse closed tasks. By default, they are excluded.\\\n \\\nTo include closed tasks, use `include_closed: true`."
+style: form
+explode: true
+schema:
+  type: boolean

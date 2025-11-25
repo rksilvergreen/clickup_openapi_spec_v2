@@ -1,0 +1,44 @@
+description: ""
+content:
+  application/json:
+    schema:
+      title: UpdateListRequest
+      required:
+        - name
+      type: object
+      properties:
+        name:
+          type: string
+        content:
+          type: string
+        markdown_content:
+          type: string
+          description: "Use `markdown_content` instead of `content` to format your List description."
+        due_date:
+          type: integer
+          contentEncoding: int64
+        due_date_time:
+          type: boolean
+        priority:
+          type: integer
+          contentEncoding: int32
+        assignee:
+          type: string
+        status:
+          description: "**Status** refers to the List color rather than the task Statuses available in the List."
+          type: string
+        unset_status:
+          description: "By default, this is `false.` To remove the List color use `unset_status: true`."
+          type: boolean
+      examples:
+        -
+          name: "Updated List Name"
+          content: "Updated List Content"
+          markdown_content: "# This is markdown\n ***bold and italicized text***"
+          due_date: 1567780450202
+          due_date_time: true
+          priority: 2
+          assignee: none
+          status: red
+          unset_status: true
+required: true

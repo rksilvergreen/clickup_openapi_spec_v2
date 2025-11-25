@@ -1,0 +1,9 @@
+title: CustomFields
+required:
+  - enabled
+type: object
+properties:
+  enabled:
+    type: boolean
+examples:
+  - enabled: true

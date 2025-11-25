@@ -1,0 +1,101 @@
+title: Approval
+type: object
+properties:
+  id:
+    type: string
+    description: "Unique identifier for the approval"
+  workspace_id:
+    type: integer
+    description: "ID of the workspace this approval belongs to"
+  status:
+    type: string
+    description: "Current status of the approval (e.g., 'approved', 'pending')"
+  data:
+    type: object
+    properties:
+      end_of_week:
+        type: integer
+        description: "Timestamp for the end of the week"
+      start_of_week:
+        type: integer
+        description: "Timestamp for the start of the week"
+  user:
+    $ref: "./user13.yaml"
+  approvers:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: "ID of the user who can approve the request"
+  approver_id:
+    type: integer
+    description: "ID of the user who approved the request"
+  approved_at:
+    type: integer
+    description: "Timestamp when the approval was granted"
+  history:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: string
+          description: "Unique identifier for the history entry"
+        field:
+          type: string
+          description: "Field that was changed"
+        before:
+          type: string
+          description: "Previous value"
+        after:
+          type: string
+          description: "New value"
+        created_at:
+          type: integer
+          description: "Timestamp when the change was made"
+        user:
+          $ref: "./user13.yaml"
+examples:
+  -
+    id: 123e4567-e89b-12d3-a456-426614174000
+    workspace_id: 12345
+    status: approved
+    data:
+      end_of_week: 1672531199000
+      start_of_week: 1671926400000
+    user:
+      id: 101
+      username: john.smith
+      initials: JS
+      avatar:
+        color: "#4287f5"
+        picture_url: null
+    approvers:
+      - id: 101
+      -
+        id: 102
+    approver_id: 101
+    approved_at: 1672012800000
+    history:
+      -
+        id: 987fcdeb-51a2-3456-789a-bcdef0123456
+        field: submission
+        before: null
+        after: null
+        created_at: 1671987600000
+        user:
+          id: 101
+          username: john.smith
+          role: submitter
+      -
+        id: 456abcde-f123-4567-89ab-cdef01234567
+        field: status
+        before: pending
+        after: approved
+        created_at: 1672012800000
+        user:
+          id: 102
+          username: jane.doe
+          role: approver

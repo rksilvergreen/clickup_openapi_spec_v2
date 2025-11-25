@@ -1,0 +1,7 @@
+name: include_approval_history
+in: query
+description: "Include the history of the approval for each time entry. Adds status changes, notes, and approvers."
+style: form
+explode: true
+schema:
+  type: boolean

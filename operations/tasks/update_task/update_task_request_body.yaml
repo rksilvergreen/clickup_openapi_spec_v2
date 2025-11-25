@@ -1,0 +1,82 @@
+description: "***Note:** To update Custom Fields on a task, you must use the Set Custom Field endpoint.*"
+content:
+  application/json:
+    schema:
+      title: UpdateTaskRequest
+      type: object
+      properties:
+        custom_item_id:
+          type:
+            - number
+            - null
+          description: "The custom task type ID for this task. A value of `null` (default) sets the task type to type \"Task\".\\\n \\\nTo get a list of available custom task type IDs for your Workspace, use the [Get Custom Task Types endpoint](ref:getcustomitems)."
+        name:
+          type: string
+        description:
+          description: "To clear the task description, include `Description` with `\" \"`."
+          type: string
+        markdown_content:
+          type: string
+          description: "Markdown formatted description for the task. If both `markdown_content` and `description` are provided, `markdown_content` will be used instead of `description`."
+        status:
+          type: string
+        priority:
+          type: integer
+          contentEncoding: int32
+        due_date:
+          type: integer
+          contentEncoding: int64
+        due_date_time:
+          type: boolean
+        parent:
+          description: "You can move a subtask to another parent task by including `\"parent\"` with a valid `task id`.\\\n \\\nYou cannot convert a subtask to a task by setting `\"parent\"` to `null`."
+          type: string
+        time_estimate:
+          type: integer
+          contentEncoding: int32
+        start_date:
+          type: integer
+          contentEncoding: int64
+        start_date_time:
+          type: boolean
+        points:
+          type: number
+          description: "Update the task's Sprint Points."
+        assignees:
+          $ref: "./assignees.yaml"
+        group_assignees:
+          $ref: "./group_assignees.yaml"
+        watchers:
+          $ref: "./watchers.yaml"
+        archived:
+          type: boolean
+      examples:
+        -
+          name: "Updated Task Name"
+          description: "Updated Task Content"
+          status: "in progress"
+          priority: 1
+          due_date: 1508369194377
+          due_date_time: false
+          parent: abc1234
+          time_estimate: 8640000
+          start_date: 1567780450202
+          start_date_time: false
+          points: 3
+          assignees:
+            add:
+              - 182
+            rem:
+              - 183
+          group_assignees:
+            add:
+              - dd01f92f-48ca-446d-88a1-0beb0e8f5f14
+            rem:
+              - dd01f92f-48ca-446d-88a1-0beb0e8f5f13
+          watchers:
+            add:
+              - 182
+            rem:
+              - 183
+          archived: false
+required: true

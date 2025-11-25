@@ -1,0 +1,274 @@
+description: "If your time entry is associated with a task that uses custom task ids you can expect a `custom_id`` field in the body of the response. The task field will only be included if there is a task associated with a time entry."
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: GetTimeEntriesWithinADateRangeResponse
+      required:
+        - data
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            title: Datum1
+            required:
+              - id
+              - task
+              - wid
+              - user
+              - billable
+              - start
+              - end
+              - duration
+              - description
+              - tags
+              - source
+              - at
+              - task_location
+              - task_tags
+              - task_url
+            type: object
+            properties:
+              id:
+                type: string
+              task:
+                $ref: "./task4.yaml"
+              wid:
+                type: string
+              user:
+                $ref: "../../../shared/user2.yaml"
+              billable:
+                type: boolean
+              start:
+                type: string
+              end:
+                type: string
+              duration:
+                type: string
+              description:
+                type: string
+              tags:
+                type: array
+                items:
+                  type: string
+                description: ""
+              source:
+                type: string
+              at:
+                type: string
+              approval_id:
+                type: string
+                description: "ID of the associated approval"
+              approval:
+                $ref: "../../../shared/approval.yaml"
+              task_location:
+                $ref: "../../../shared/task_location.yaml"
+              task_tags:
+                type: array
+                items:
+                  $ref: "../../../shared/task_tag.yaml"
+                description: ""
+              task_url:
+                type: string
+            examples:
+              -
+                id: "1963465985517105840"
+                task:
+                  id: 1vwwavv
+                  custom_id: JOSH-917
+                  name: woof
+                  status:
+                    status: "open yes"
+                    color: "#d3d3d3"
+                    type: open
+                    orderindex: 0
+                  custom_type: null
+                wid: "300702"
+                user:
+                  id: 1
+                  username: "first_name last_name"
+                  email: "test@gmail.com"
+                  color: "#08c7e0"
+                  initials: JK
+                  profilePicture: https://attachments.clickup.com/profilePictures/1_HHk.jpg
+                billable: false
+                start: "1592841559129"
+                end: "1592845899021"
+                duration: "4339892"
+                description: ""
+                tags:
+                  []
+                source: clickup
+                at: "1592845899021"
+                approval_id: 2d539936-119a-4927-9770-179f0a72e2e5
+                approval:
+                  $ref: "../../../shared/approval.yaml"
+                task_location:
+                  list_id: 1560300071
+                  folder_id: 468300080
+                  space_id: 22800253
+                  list_name: List
+                  folder_name: Folder
+                  space_name: Space
+                task_tags:
+                  -
+                    name: content-request
+                    tag_fg: "#800000"
+                    tag_bg: "#2ecd6f"
+                    creator: 301828
+                  -
+                    name: marketing-okr
+                    tag_fg: "#800000"
+                    tag_bg: "#7C4DFF"
+                    creator: 301828
+                task_url: https://staging.clickup.com/t/1vwwavv
+          description: ""
+      examples:
+        -
+          data:
+            -
+              id: "1963465985517105840"
+              task:
+                id: 1vwwavv
+                custom_id: JOSH-917
+                name: woof
+                status:
+                  status: "open yes"
+                  color: "#d3d3d3"
+                  type: open
+                  orderindex: 0
+                custom_type: null
+              wid: "300702"
+              user:
+                id: 1
+                username: "first_name last_name"
+                email: "test@gmail.com"
+                color: "#08c7e0"
+                initials: JK
+                profilePicture: https://attachments.clickup.com/profilePictures/1_HHk.jpg
+              billable: false
+              start: 1592841559129
+              end: 1592845899021
+              duration: "4339892"
+              description: ""
+              tags:
+                []
+              source: clickup
+              at: "1592845899021"
+              approval_id: 2d539936-119a-4927-9770-179f0a72e2e5
+              approval:
+                title: Approval
+                type: object
+                properties:
+                  id:
+                    type: string
+                    description: "Unique identifier for the approval"
+                  workspace_id:
+                    type: integer
+                    description: "ID of the workspace this approval belongs to"
+                  status:
+                    type: string
+                    description: "Current status of the approval (e.g., 'approved', 'pending')"
+                  data:
+                    $ref: "./data.yaml"
+                  user:
+                    $ref: "../../../shared/user13.yaml"
+                  approvers:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          description: "ID of the user who can approve the request"
+                  approver_id:
+                    type: integer
+                    description: "ID of the user who approved the request"
+                  approved_at:
+                    type: integer
+                    description: "Timestamp when the approval was granted"
+                  history:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          description: "Unique identifier for the history entry"
+                        field:
+                          type: string
+                          description: "Field that was changed"
+                        before:
+                          type: string
+                          description: "Previous value"
+                        after:
+                          type: string
+                          description: "New value"
+                        created_at:
+                          type: integer
+                          description: "Timestamp when the change was made"
+                        user:
+                          $ref: "../../../shared/user13.yaml"
+                examples:
+                  -
+                    id: 123e4567-e89b-12d3-a456-426614174000
+                    workspace_id: 12345
+                    status: approved
+                    data:
+                      end_of_week: 1672531199000
+                      start_of_week: 1671926400000
+                    user:
+                      id: 101
+                      username: john.smith
+                      initials: JS
+                      avatar:
+                        color: "#4287f5"
+                        picture_url: null
+                    approvers:
+                      - id: 101
+                      -
+                        id: 102
+                    approver_id: 101
+                    approved_at: 1672012800000
+                    history:
+                      -
+                        id: 987fcdeb-51a2-3456-789a-bcdef0123456
+                        field: submission
+                        before: null
+                        after: null
+                        created_at: 1671987600000
+                        user:
+                          id: 101
+                          username: john.smith
+                          role: submitter
+                      -
+                        id: 456abcde-f123-4567-89ab-cdef01234567
+                        field: status
+                        before: pending
+                        after: approved
+                        created_at: 1672012800000
+                        user:
+                          id: 102
+                          username: jane.doe
+                          role: approver
+              task_location:
+                list_id: 1560300071
+                folder_id: 468300080
+                space_id: 22800253
+                list_name: List
+                folder_name: Folder
+                space_name: Space
+              task_tags:
+                -
+                  name: content-request
+                  tag_fg: "#800000"
+                  tag_bg: "#2ecd6f"
+                  creator: 301828
+                -
+                  name: marketing-okr
+                  tag_fg: "#800000"
+                  tag_bg: "#7C4DFF"
+                  creator: 301828
+              task_url: https://staging.clickup.com/t/1vwwavv

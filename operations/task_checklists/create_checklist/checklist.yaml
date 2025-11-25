@@ -1,0 +1,41 @@
+title: Checklist
+required:
+  - id
+  - task_id
+  - name
+  - orderindex
+  - resolved
+  - unresolved
+  - items
+type: object
+properties:
+  id:
+    type: string
+  task_id:
+    type: string
+  name:
+    type: string
+  orderindex:
+    type: integer
+    contentEncoding: int32
+  resolved:
+    type: integer
+    contentEncoding: int32
+  unresolved:
+    type: integer
+    contentEncoding: int32
+  items:
+    type: array
+    items:
+      type: string
+    description: ""
+examples:
+  -
+    id: b955c4dc-b8a8-48d8-a0c6-b4200788a683
+    task_id: 9hz
+    name: Checklist
+    orderindex: 0
+    resolved: 0
+    unresolved: 0
+    items:
+      []

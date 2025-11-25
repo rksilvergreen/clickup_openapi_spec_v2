@@ -1,0 +1,9 @@
+name: links_to
+in: path
+description: "The task to link to."
+required: true
+style: simple
+schema:
+  type: string
+  examples:
+    - 9hz

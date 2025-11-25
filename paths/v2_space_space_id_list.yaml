@@ -1,0 +1,29 @@
+get:
+  summary: Get Folderless Lists
+  tags:
+    - Lists
+  description: 'View the Lists in a Space that aren''t located in a Folder.'
+  operationId: GetFolderlessLists
+  parameters:
+    - $ref: "../operations/lists/get_folderless_lists/get_folderless_lists_parameterspace_id_path.yaml"
+    -
+      $ref: "../operations/lists/get_folderless_lists/get_folderless_lists_parameterarchived_query.yaml"
+  responses:
+    200:
+      $ref: "../operations/lists/get_folderless_lists/get_folderless_lists_response_200.yaml"
+  deprecated: false
+post:
+  summary: Create Folderless List
+  tags:
+    - Lists
+  description: Add a new List in a Space.
+  operationId: CreateFolderlessList
+  parameters:
+    -
+      $ref: "../operations/lists/create_folderless_list/create_folderless_list_parameterspace_id_path.yaml"
+  requestBody:
+    $ref: "../operations/lists/create_folderless_list/create_folderless_list_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/lists/create_folderless_list/create_folderless_list_response_200.yaml"
+  deprecated: false

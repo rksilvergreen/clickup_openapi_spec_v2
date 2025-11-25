@@ -1,0 +1,132 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: GetTaskCommentsResponse
+      required:
+        - comments
+      type: object
+      properties:
+        comments:
+          type: array
+          items:
+            title: Comment
+            required:
+              - id
+              - comment
+              - comment_text
+              - user
+              - resolved
+              - assignee
+              - assigned_by
+              - reactions
+              - date
+            type: object
+            properties:
+              id:
+                type: string
+              comment:
+                type: array
+                items:
+                  title: Comment1
+                  required:
+                    - text
+                  type: object
+                  properties:
+                    text:
+                      type: string
+                  examples:
+                    -
+                      text: "Task comment content"
+                description: ""
+              comment_text:
+                type: string
+              user:
+                $ref: "../../../shared/user2.yaml"
+              resolved:
+                type: boolean
+              assignee:
+                $ref: "../../../shared/assignee.yaml"
+              assigned_by:
+                $ref: "./assigned_by.yaml"
+              reactions:
+                type: array
+                items:
+                  type: string
+                description: ""
+              date:
+                type: string
+              reply_count:
+                type: string
+                description: "For threaded comments, `reply_count` is always 0."
+            examples:
+              -
+                id: "458"
+                comment:
+                  -
+                    text: "Task comment content"
+                comment_text: "Task comment content"
+                user:
+                  id: 183
+                  username: "John Doe"
+                  initials: JD
+                  email: "johndoe@gmail.com"
+                  color: "#827718"
+                  profilePicture: https://attachments-public.clickup.com/profilePictures/183_abc.jpg
+                resolved: false
+                assignee:
+                  id: 183
+                  username: "John Doe"
+                  initials: JD
+                  email: "johndoe@gmail.com"
+                  color: "#827718"
+                  profilePicture: https://attachments-public.clickup.com/profilePictures/183_abc.jpg
+                assigned_by:
+                  id: 183
+                  username: "John Doe"
+                  initials: JD
+                  email: "johndoe@gmail.com"
+                  color: "#827718"
+                  profilePicture: https://attachments-public.clickup.com/profilePictures/183_abc.jpg
+                reactions:
+                  []
+                date: "1568036964079"
+                reply_count: "1"
+          description: ""
+      examples:
+        -
+          comments:
+            -
+              id: "458"
+              comment:
+                -
+                  text: "Task comment content"
+              comment_text: "Task comment content"
+              user:
+                id: 183
+                username: "John Doe"
+                initials: JD
+                email: "johndoe@gmail.com"
+                color: "#827718"
+                profilePicture: https://attachments-public.clickup.com/profilePictures/183_abc.jpg
+              resolved: false
+              assignee:
+                id: 183
+                username: "John Doe"
+                initials: JD
+                email: "johndoe@gmail.com"
+                color: "#827718"
+                profilePicture: https://attachments-public.clickup.com/profilePictures/183_abc.jpg
+              assigned_by:
+                id: 183
+                username: "John Doe"
+                initials: JD
+                email: "johndoe@gmail.com"
+                color: "#827718"
+                profilePicture: https://attachments-public.clickup.com/profilePictures/183_abc.jpg
+              reactions:
+                []
+              date: "1568036964079"
+              reply_count: "1"

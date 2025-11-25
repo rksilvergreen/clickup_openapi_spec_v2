@@ -1,0 +1,7 @@
+name: include_approval_details
+in: query
+description: "Include the details of the approval for the time entry."
+style: form
+explode: true
+schema:
+  type: boolean

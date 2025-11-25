@@ -1,0 +1,32 @@
+post:
+  summary: Add Task Link
+  tags:
+    - Task Relationships
+  description: This is the equivalent of the feature _Task Links_ in the right-hand sidebar of a Task.  It allows you to link two tasks together. General links or links to other objects than tasks are not supported.
+  operationId: AddTaskLink
+  parameters:
+    - $ref: "../operations/task_relationships/add_task_link/add_task_link_parametertask_id_path.yaml"
+    - $ref: "../operations/task_relationships/add_task_link/add_task_link_parameterlinks_to_path.yaml"
+    - $ref: "../operations/task_relationships/add_task_link/add_task_link_parametercustom_task_ids_query.yaml"
+    -
+      $ref: "../operations/task_relationships/add_task_link/add_task_link_parameterteam_id_query.yaml"
+  responses:
+    200:
+      $ref: "../operations/task_relationships/add_task_link/add_task_link_response_200.yaml"
+  deprecated: false
+delete:
+  summary: Delete Task Link
+  tags:
+    - Task Relationships
+  description: Remove the link between two tasks.
+  operationId: DeleteTaskLink
+  parameters:
+    - $ref: "../operations/task_relationships/delete_task_link/delete_task_link_parametertask_id_path.yaml"
+    - $ref: "../operations/task_relationships/delete_task_link/delete_task_link_parameterlinks_to_path.yaml"
+    - $ref: "../operations/task_relationships/delete_task_link/delete_task_link_parametercustom_task_ids_query.yaml"
+    -
+      $ref: "../operations/task_relationships/delete_task_link/delete_task_link_parameterteam_id_query.yaml"
+  responses:
+    200:
+      $ref: "../operations/task_relationships/delete_task_link/delete_task_link_response_200.yaml"
+  deprecated: false

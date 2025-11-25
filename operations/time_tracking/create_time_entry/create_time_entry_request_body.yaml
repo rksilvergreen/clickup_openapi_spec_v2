@@ -1,0 +1,71 @@
+description: "Associate a time entry with a task using the `tid` parameter."
+content:
+  application/json:
+    schema:
+      title: CreateTimeEntryRequest
+      required:
+        - start
+        - duration
+      type: object
+      properties:
+        description:
+          type: string
+        tags:
+          description: "Users on the Business Plan and above can include a time tracking label."
+          type: array
+          items:
+            title: Tags6
+            required:
+              - name
+              - tag_fg
+              - tag_bg
+            type: object
+            properties:
+              name:
+                type: string
+              tag_fg:
+                type: string
+              tag_bg:
+                type: string
+            examples:
+              -
+                name: "Tag name"
+                tag_fg: "#000000"
+                tag_bg: "#000000"
+        start:
+          type: integer
+          contentEncoding: int64
+        stop:
+          type: integer
+          contentEncoding: int64
+          description: "The `duration` parameter can be used instead of the `stop` parameter. "
+        end:
+          type: integer
+          contentEncoding: int64
+        billable:
+          type: boolean
+        duration:
+          description: "When there are values for both `start` and `end`, `duration` is ignored. The `stop` parameter can be used instead of the `duration` parameter."
+          type: integer
+          contentEncoding: int32
+        assignee:
+          description: "Workspace owners and admins can include any user id. Workspace members can only include their own user id."
+          type: integer
+          contentEncoding: int32
+        tid:
+          type: string
+      examples:
+        -
+          description: "from api"
+          tags:
+            -
+              name: "name of tag"
+              tag_bg: "#BF55EC"
+              tag_fg: "#FFFFFF"
+          start: 1595282645000
+          end: 1595282660000
+          billable: true
+          duration: 50000
+          assignee: 1
+          tid: task_id
+required: true

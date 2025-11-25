@@ -1,0 +1,23 @@
+title: Status
+required:
+  - status
+  - color
+  - orderindex
+  - type
+type: object
+properties:
+  status:
+    type: string
+  color:
+    type: string
+  orderindex:
+    type: integer
+    contentEncoding: int32
+  type:
+    type: string
+examples:
+  -
+    status: "in progress"
+    color: "#d3d3d3"
+    orderindex: 1
+    type: custom

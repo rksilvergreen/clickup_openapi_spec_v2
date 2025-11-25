@@ -1,0 +1,41 @@
+get:
+  summary: Get Space
+  tags:
+    - Spaces
+  description: View the Spaces available in a Workspace.
+  operationId: GetSpace
+  parameters:
+    -
+      $ref: "../operations/spaces/get_space/get_space_parameterspace_id_path.yaml"
+  responses:
+    200:
+      $ref: "../operations/spaces/get_space/get_space_response_200.yaml"
+  deprecated: false
+put:
+  summary: Update Space
+  tags:
+    - Spaces
+  description: Rename, set the Space color, and enable ClickApps for a Space.
+  operationId: UpdateSpace
+  parameters:
+    -
+      $ref: "../operations/spaces/update_space/update_space_parameterspace_id_path.yaml"
+  requestBody:
+    $ref: "../operations/spaces/update_space/update_space_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/spaces/update_space/update_space_response_200.yaml"
+  deprecated: false
+delete:
+  summary: Delete Space
+  tags:
+    - Spaces
+  description: Delete a Space from your Workspace.
+  operationId: DeleteSpace
+  parameters:
+    -
+      $ref: "../operations/spaces/delete_space/delete_space_parameterspace_id_path.yaml"
+  responses:
+    200:
+      $ref: "../operations/spaces/delete_space/delete_space_response_200.yaml"
+  deprecated: false

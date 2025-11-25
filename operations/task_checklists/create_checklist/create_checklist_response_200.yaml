@@ -1,0 +1,24 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: CreateChecklistResponse
+      required:
+        - checklist
+      type: object
+      properties:
+        checklist:
+          $ref: "./checklist.yaml"
+      examples:
+        -
+          checklist:
+            id: b955c4dc-b8a8-48d8-a0c6-b4200788a683
+            task_id: 9hz
+            name: Checklist
+            orderindex: 0
+            resolved: 0
+            unresolved: 0
+            items:
+              []

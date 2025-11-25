@@ -1,0 +1,59 @@
+description: ""
+content:
+  application/json:
+    schema:
+      title: CreateKeyResultRequest
+      required:
+        - name
+        - owners
+        - type
+        - steps_start
+        - steps_end
+        - unit
+        - task_ids
+        - list_ids
+      type: object
+      properties:
+        name:
+          type: string
+        owners:
+          type: array
+          items:
+            type: integer
+            contentEncoding: int32
+          description: ""
+        type:
+          description: "Target (key result) types include: `number`, `currency`, `boolean`, `percentage`, or `automatic`."
+          type: string
+        steps_start:
+          type: integer
+          contentEncoding: int32
+        steps_end:
+          type: integer
+          contentEncoding: int32
+        unit:
+          type: string
+        task_ids:
+          description: "Enter an array of task IDs to link this target with one or more tasks."
+          type: array
+          items:
+            type: string
+        list_ids:
+          type: array
+          items:
+            type: string
+          description: "Enter an array of List IDs to link this target with one or more Lists."
+      examples:
+        -
+          name: "New Target Name"
+          owners:
+            - 183
+          type: number
+          steps_start: 0
+          steps_end: 10
+          unit: km
+          task_ids:
+            []
+          list_ids:
+            []
+required: true

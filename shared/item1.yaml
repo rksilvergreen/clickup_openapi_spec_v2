@@ -1,0 +1,47 @@
+title: Item1
+required:
+  - id
+  - name
+  - orderindex
+  - assignee
+  - resolved
+  - parent
+  - date_created
+  - children
+type: object
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  orderindex:
+    type: integer
+    contentEncoding: int32
+  assignee:
+    type:
+      - string
+      - null
+  resolved:
+    type: boolean
+  parent:
+    type:
+      - string
+      - null
+  date_created:
+    type: string
+  children:
+    type: array
+    items:
+      type: string
+    description: ""
+examples:
+  -
+    id: 21e08dc8-e491-47f5-9fd8-d1dc4cedcc6f
+    name: "Updated Checklist Item"
+    orderindex: 0
+    assignee: null
+    resolved: true
+    parent: null
+    date_created: "1567711566859"
+    children:
+      []

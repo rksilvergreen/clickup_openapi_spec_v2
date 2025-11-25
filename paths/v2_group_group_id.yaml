@@ -1,0 +1,28 @@
+put:
+  summary: Update Group
+  tags:
+    - User Groups
+  description: "This endpoint is used to manage [User Groups](https://docs.clickup.com/en/articles/4010016-teams-how-to-create-user-groups), which are groups of users within your Workspace.\\\n \\\nIn our API, `team_id` in the path refers to the Workspace ID, and `group_id` refers to the ID of a User Group.\\\n \\\n**Note:** Adding a guest with view-only permissions to a User Group automatically converts them to a paid guest.\\\n \\\nIf you don't have any paid guest seats available, a new member seat is automatically added to increase the number of paid guest seats.\\\n \\\nThis incurs a prorated charge based on your billing cycle."
+  operationId: UpdateTeam
+  parameters:
+    -
+      $ref: "../operations/user_groups/update_team/update_team_parametergroup_id_path.yaml"
+  requestBody:
+    $ref: "../operations/user_groups/update_team/update_team_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/user_groups/update_team/update_team_response_200.yaml"
+  deprecated: false
+delete:
+  summary: Delete Group
+  tags:
+    - User Groups
+  description: "This endpoint is used to remove a [User Group](https://docs.clickup.com/en/articles/4010016-teams-how-to-create-user-groups) from your Workspace.\\\n \\\nIn our API documentation, `team_id` refers to the id of a Workspace, and `group_id` refers to the id of a user group."
+  operationId: DeleteTeam
+  parameters:
+    -
+      $ref: "../operations/user_groups/delete_team/delete_team_parametergroup_id_path.yaml"
+  responses:
+    200:
+      $ref: "../operations/user_groups/delete_team/delete_team_response_200.yaml"
+  deprecated: false

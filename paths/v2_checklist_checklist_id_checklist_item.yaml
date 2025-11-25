@@ -1,0 +1,15 @@
+post:
+  summary: Create Checklist Item
+  tags:
+    - Task Checklists
+  description: Add a line item to a task checklist.
+  operationId: CreateChecklistItem
+  parameters:
+    -
+      $ref: "../operations/task_checklists/create_checklist_item/create_checklist_item_parameterchecklist_id_path.yaml"
+  requestBody:
+    $ref: "../operations/task_checklists/create_checklist_item/create_checklist_item_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/task_checklists/create_checklist_item/create_checklist_item_response_200.yaml"
+  deprecated: false

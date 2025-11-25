@@ -1,0 +1,9 @@
+name: custom_task_ids
+in: query
+description: "If you want to reference a task by its Custom Task ID, this value must be `true`."
+style: form
+explode: true
+schema:
+  type: boolean
+  examples:
+    - true

@@ -1,0 +1,41 @@
+get:
+  summary: Get Folder
+  tags:
+    - Folders
+  description: View the Lists within a Folder.
+  operationId: GetFolder
+  parameters:
+    -
+      $ref: "../operations/folders/get_folder/get_folder_parameterfolder_id_path.yaml"
+  responses:
+    200:
+      $ref: "../operations/folders/get_folder/get_folder_response_200.yaml"
+  deprecated: false
+put:
+  summary: Update Folder
+  tags:
+    - Folders
+  description: Rename a Folder.
+  operationId: UpdateFolder
+  parameters:
+    -
+      $ref: "../operations/folders/update_folder/update_folder_parameterfolder_id_path.yaml"
+  requestBody:
+    $ref: "../operations/folders/update_folder/update_folder_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/folders/update_folder/update_folder_response_200.yaml"
+  deprecated: false
+delete:
+  summary: Delete Folder
+  tags:
+    - Folders
+  description: Delete a Folder from your Workspace.
+  operationId: DeleteFolder
+  parameters:
+    -
+      $ref: "../operations/folders/delete_folder/delete_folder_parameterfolder_id_path.yaml"
+  responses:
+    200:
+      $ref: "../operations/folders/delete_folder/delete_folder_response_200.yaml"
+  deprecated: false

@@ -1,0 +1,36 @@
+post:
+  summary: Add Guest To Task
+  tags:
+    - Guests
+  description: "Share a task with a guest. \\\n \\\n***Note:** This endpoint is only available to Workspaces on our [Enterprise Plan](https://clickup.com/pricing).*"
+  operationId: AddGuestToTask
+  parameters:
+    - $ref: "../operations/guests/add_guest_to_task/add_guest_to_task_parametertask_id_path.yaml"
+    - $ref: "../operations/guests/add_guest_to_task/add_guest_to_task_parameterguest_id_path.yaml"
+    - $ref: "../operations/guests/add_guest_to_task/add_guest_to_task_parameterinclude_shared_query.yaml"
+    - $ref: "../operations/guests/add_guest_to_task/add_guest_to_task_parametercustom_task_ids_query.yaml"
+    -
+      $ref: "../operations/guests/add_guest_to_task/add_guest_to_task_parameterteam_id_query.yaml"
+  requestBody:
+    $ref: "../operations/guests/add_guest_to_task/add_guest_to_task_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/guests/add_guest_to_task/add_guest_to_task_response_200.yaml"
+  deprecated: false
+delete:
+  summary: Remove Guest From Task
+  tags:
+    - Guests
+  description: "Revoke a guest's access to a task. \\\n \\\n***Note:** This endpoint is only available to Workspaces on our [Enterprise Plan](https://clickup.com/pricing).*"
+  operationId: RemoveGuestFromTask
+  parameters:
+    - $ref: "../operations/guests/remove_guest_from_task/remove_guest_from_task_parametertask_id_path.yaml"
+    - $ref: "../operations/guests/remove_guest_from_task/remove_guest_from_task_parameterguest_id_path.yaml"
+    - $ref: "../operations/guests/remove_guest_from_task/remove_guest_from_task_parameterinclude_shared_query.yaml"
+    - $ref: "../operations/guests/remove_guest_from_task/remove_guest_from_task_parametercustom_task_ids_query.yaml"
+    -
+      $ref: "../operations/guests/remove_guest_from_task/remove_guest_from_task_parameterteam_id_query.yaml"
+  responses:
+    200:
+      $ref: "../operations/guests/remove_guest_from_task/remove_guest_from_task_response_200.yaml"
+  deprecated: false

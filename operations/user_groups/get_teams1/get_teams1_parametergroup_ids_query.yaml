@@ -1,0 +1,9 @@
+name: group_ids
+in: query
+description: "Enter one or more User Group IDs to retrieve information about specific User Group."
+style: form
+explode: true
+schema:
+  type: string
+  examples:
+    - C9C58BE9-7C73-4002-A6A9-310014852858

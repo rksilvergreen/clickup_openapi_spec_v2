@@ -1,0 +1,51 @@
+get:
+  summary: Get Task
+  tags:
+    - Tasks
+  description: "View information about a task. You can only view task information of tasks you can access. \\\n \\\nTasks with attachments will return an \"attachments\" response. \\\n \\\nDocs attached to a task are not returned."
+  operationId: GetTask
+  parameters:
+    - $ref: "../operations/tasks/get_task/get_task_parametertask_id_path.yaml"
+    - $ref: "../operations/tasks/get_task/get_task_parametercustom_task_ids_query.yaml"
+    - $ref: "../operations/tasks/get_task/get_task_parameterteam_id_query.yaml"
+    - $ref: "../operations/tasks/get_task/get_task_parameterinclude_subtasks_query.yaml"
+    - $ref: "../operations/tasks/get_task/get_task_parameterinclude_markdown_description_query.yaml"
+    -
+      $ref: "../operations/tasks/get_task/get_task_parametercustom_fields_query.yaml"
+  responses:
+    200:
+      $ref: "../operations/tasks/get_task/get_task_response_200.yaml"
+  deprecated: false
+put:
+  summary: Update Task
+  tags:
+    - Tasks
+  description: Update a task by including one or more fields in the request body.
+  operationId: UpdateTask
+  parameters:
+    - $ref: "../operations/tasks/update_task/update_task_parametertask_id_path.yaml"
+    - $ref: "../operations/tasks/update_task/update_task_parametercustom_task_ids_query.yaml"
+    -
+      $ref: "../operations/tasks/update_task/update_task_parameterteam_id_query.yaml"
+  requestBody:
+    $ref: "../operations/tasks/update_task/update_task_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/tasks/update_task/update_task_response_200.yaml"
+  deprecated: false
+delete:
+  summary: Delete Task
+  tags:
+    - Tasks
+  description: Delete a task from your Workspace.
+  operationId: DeleteTask
+  parameters:
+    - $ref: "../operations/tasks/delete_task/delete_task_parametertask_id_path.yaml"
+    - $ref: "../operations/tasks/delete_task/delete_task_parametercustom_task_ids_query.yaml"
+    - $ref: "../operations/tasks/delete_task/delete_task_parameterteam_id_query.yaml"
+    -
+      $ref: "../operations/tasks/delete_task/delete_task_parametercontent_type_header.yaml"
+  responses:
+    204:
+      $ref: "../operations/tasks/delete_task/delete_task_response_204.yaml"
+  deprecated: false

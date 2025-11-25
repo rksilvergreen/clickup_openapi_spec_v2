@@ -1,0 +1,83 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: GetCustomRolesResponse
+      required:
+        - custom_roles
+      type: object
+      properties:
+        custom_roles:
+          type: array
+          items:
+            title: CustomRole2
+            required:
+              - id
+              - team_id
+              - name
+              - inherited_role
+              - date_created
+              - members
+            type: object
+            properties:
+              id:
+                type: integer
+                contentEncoding: int32
+              team_id:
+                type: string
+              name:
+                type: string
+              inherited_role:
+                type: integer
+                contentEncoding: int32
+              date_created:
+                type: string
+              members:
+                type: array
+                items:
+                  type: integer
+                  contentEncoding: int32
+                description: ""
+            examples:
+              -
+                id: 4547089
+                team_id: "301539"
+                name: "guest custom"
+                inherited_role: 4
+                date_created: "1651189835671"
+                members:
+                  - 12345
+                  - 67899
+          description: ""
+      examples:
+        -
+          custom_roles:
+            -
+              id: 4547089
+              team_id: "301539"
+              name: "guest custom"
+              inherited_role: 4
+              date_created: "1651189835671"
+              members:
+                - 12345
+                - 67899
+            -
+              id: 6715664
+              team_id: "301539"
+              name: "member custom"
+              inherited_role: 3
+              date_created: "1651189901020"
+              members:
+                - 5553
+                - 98989
+            -
+              id: 2957195
+              team_id: "301539"
+              name: "admin custom"
+              inherited_role: 2
+              date_created: "1651189904868"
+              members:
+                - 47474
+                - 818181

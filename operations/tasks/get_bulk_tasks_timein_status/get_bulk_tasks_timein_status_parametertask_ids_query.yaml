@@ -1,0 +1,8 @@
+name: task_ids
+in: query
+description: "Include this paramater once per `task_id`.\nYou can include up to 100 task ids per request.\nFor example: `task_ids=3cuh&task_ids=g4fs`"
+required: true
+style: form
+explode: true
+schema:
+  type: string

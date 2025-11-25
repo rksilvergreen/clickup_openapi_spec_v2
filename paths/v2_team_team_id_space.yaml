@@ -1,0 +1,29 @@
+get:
+  summary: Get Spaces
+  tags:
+    - Spaces
+  description: View the Spaces avialable in a Workspace. You can only get member info in private Spaces.
+  operationId: GetSpaces
+  parameters:
+    - $ref: "../operations/spaces/get_spaces/get_spaces_parameterteam_id_path.yaml"
+    -
+      $ref: "../operations/spaces/get_spaces/get_spaces_parameterarchived_query.yaml"
+  responses:
+    200:
+      $ref: "../operations/spaces/get_spaces/get_spaces_response_200.yaml"
+  deprecated: false
+post:
+  summary: Create Space
+  tags:
+    - Spaces
+  description: Add a new Space to a Workspace.
+  operationId: CreateSpace
+  parameters:
+    -
+      $ref: "../operations/spaces/create_space/create_space_parameterteam_id_path.yaml"
+  requestBody:
+    $ref: "../operations/spaces/create_space/create_space_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/spaces/create_space/create_space_response_200.yaml"
+  deprecated: false

@@ -1,0 +1,25 @@
+title: Members2
+required:
+  - add
+  - rem
+type: object
+properties:
+  add:
+    type: array
+    items:
+      type: integer
+      contentEncoding: int32
+    description: ""
+  rem:
+    type: array
+    items:
+      type: integer
+      contentEncoding: int32
+    description: ""
+examples:
+  -
+    add:
+      - 123456
+      - 987654
+    rem:
+      - 159753

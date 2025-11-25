@@ -1,0 +1,6 @@
+description: ""
+content:
+  application/json:
+    schema:
+      $ref: "../../../shared/create_task_comment_request.yaml"
+required: true

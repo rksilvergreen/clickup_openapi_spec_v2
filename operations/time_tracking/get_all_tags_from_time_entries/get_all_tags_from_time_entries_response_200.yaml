@@ -1,0 +1,46 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: GetAllTagsFromTimeEntriesResponse
+      required:
+        - data
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            title: Data1
+            required:
+              - name
+              - creator
+              - tag_bg
+              - tag_fg
+            type: object
+            properties:
+              name:
+                type: string
+              creator:
+                type: integer
+                contentEncoding: int32
+              tag_bg:
+                type: string
+              tag_fg:
+                type: string
+            examples:
+              -
+                name: "name of tag"
+                creator: 1
+                tag_bg: "#BF55EC"
+                tag_fg: "#FFFFFF"
+          description: ""
+      examples:
+        -
+          data:
+            -
+              name: "name of tag"
+              creator: 1
+              tag_bg: "#BF55EC"
+              tag_fg: "#FFFFFF"

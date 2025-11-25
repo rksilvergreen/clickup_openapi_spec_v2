@@ -1,0 +1,26 @@
+title: Shared
+type: object
+properties:
+  tasks:
+    type: array
+    items:
+      type: string
+    description: ""
+  lists:
+    type: array
+    items:
+      type: string
+    description: ""
+  folders:
+    type: array
+    items:
+      type: string
+    description: ""
+examples:
+  -
+    tasks:
+      []
+    lists:
+      []
+    folders:
+      []

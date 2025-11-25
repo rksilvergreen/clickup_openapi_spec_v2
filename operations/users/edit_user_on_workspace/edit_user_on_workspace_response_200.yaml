@@ -1,0 +1,44 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      title: EditUserOnWorkspaceResponse
+      required:
+        - member
+      type: object
+      properties:
+        member:
+          $ref: "../../../shared/member7.yaml"
+      examples:
+        -
+          member:
+            user:
+              id: 184
+              username: "User Name"
+              email: "user@example.com"
+              color: null
+              profilePicture: null
+              initials: UN
+              role: 3
+              custom_role:
+                id: 998877
+                name: "member custom"
+              last_active: null
+              date_joined: null
+              date_invited: "1583358383412"
+            invited_by:
+              id: 183
+              color: "#827718"
+              username: Jerry
+              email: "jerry@example.com"
+              initials: J
+              profilePicture: https://attachments.clickup.com/profilePictures/profile.jpg
+            shared:
+              tasks:
+                []
+              lists:
+                []
+              folders:
+                []

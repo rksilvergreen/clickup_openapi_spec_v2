@@ -1,0 +1,11 @@
+description: ""
+headers:
+  {}
+content:
+  application/json:
+    schema:
+      type: object
+      examples:
+        -
+          {}
+      contentMediaType: application/json

@@ -1,0 +1,18 @@
+description: ""
+content:
+  application/json:
+    schema:
+      title: EditSpaceTagRequest
+      required:
+        - tag
+      type: object
+      properties:
+        tag:
+          $ref: "../../../shared/tag1.yaml"
+      examples:
+        -
+          tag:
+            name: "Updated Tag"
+            fg_color: "#ffffff"
+            bg_color: "#ffffff"
+required: true

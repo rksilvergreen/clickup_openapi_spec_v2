@@ -1,0 +1,25 @@
+post:
+  summary: Create List From Template in Space.
+  tags:
+    - Lists
+  description: "Create a new List using a List template within a Space. Publicly shared templates must be [added to your Workspace](https://help.clickup.com/hc/en-us/articles/6326023965591-Add-a-template-to-your-library) before you can use them with the public API.\nThis request can be run asynchronously or synchronously via the `return_immediately` parameter.\n"
+  operationId: CreateSpaceListFromTemplate
+  parameters:
+    - $ref: "../operations/lists/create_space_list_from_template/create_space_list_from_template_parameterspace_id_path.yaml"
+    -
+      $ref: "../operations/lists/create_space_list_from_template/create_space_list_from_template_parametertemplate_id_path.yaml"
+  requestBody:
+    $ref: "../operations/lists/create_space_list_from_template/create_space_list_from_template_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/lists/create_space_list_from_template/create_space_list_from_template_response_200.yaml"
+    400:
+      $ref: "../operations/lists/create_space_list_from_template/create_space_list_from_template_response_400.yaml"
+    401:
+      $ref: "../operations/lists/create_space_list_from_template/create_space_list_from_template_response_401.yaml"
+    403:
+      $ref: "../operations/lists/create_space_list_from_template/create_space_list_from_template_response_403.yaml"
+    404:
+      $ref: "../operations/lists/create_space_list_from_template/create_space_list_from_template_response_404.yaml"
+    500:
+      $ref: "../operations/lists/create_space_list_from_template/create_space_list_from_template_response_500.yaml"

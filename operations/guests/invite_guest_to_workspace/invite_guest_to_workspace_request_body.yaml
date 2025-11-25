@@ -1,0 +1,34 @@
+description: ""
+content:
+  application/json:
+    schema:
+      title: InviteGuestToWorkspaceRequest
+      required:
+        - email
+      type: object
+      properties:
+        email:
+          type: string
+        can_edit_tags:
+          type: boolean
+        can_see_time_spent:
+          type: boolean
+        can_see_time_estimated:
+          type: boolean
+        can_create_views:
+          type: boolean
+        can_see_points_estimated:
+          type: boolean
+        custom_role_id:
+          type: integer
+          contentEncoding: int32
+      examples:
+        -
+          email: "guest@example.com"
+          can_edit_tags: true
+          can_see_time_spent: true
+          can_see_time_estimated: true
+          can_create_views: true
+          can_see_points_estimated: true
+          custom_role_id: 12345
+required: true

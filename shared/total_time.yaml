@@ -1,0 +1,15 @@
+title: TotalTime
+required:
+  - by_minute
+  - since
+type: object
+properties:
+  by_minute:
+    type: integer
+    contentEncoding: int32
+  since:
+    type: string
+examples:
+  -
+    by_minute: 21708
+    since: "1604004423494"

@@ -1,0 +1,27 @@
+title: Assignee3
+required:
+  - id
+  - color
+  - username
+  - initials
+  - profilePicture
+type: object
+properties:
+  id:
+    type: integer
+    contentEncoding: int32
+  color:
+    type: string
+  username:
+    type: string
+  initials:
+    type: string
+  profilePicture:
+    type: string
+examples:
+  -
+    id: 183
+    color: "#827718"
+    username: "John Doe"
+    initials: J
+    profilePicture: https://attachments.clickup.com/profilePictures/profile.jpg

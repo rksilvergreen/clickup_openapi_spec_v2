@@ -1,0 +1,59 @@
+get:
+  summary: Get all tags from time entries
+  tags:
+    - Time Tracking
+  description: View all the labels that have been applied to time entries in a Workspace.
+  operationId: GetAllTagsFromTimeEntries
+  parameters:
+    - $ref: "../operations/time_tracking/get_all_tags_from_time_entries/get_all_tags_from_time_entries_parameterteam_id_path.yaml"
+    -
+      $ref: "../operations/time_tracking/get_all_tags_from_time_entries/get_all_tags_from_time_entries_parametercontent_type_header.yaml"
+  responses:
+    200:
+      $ref: "../operations/time_tracking/get_all_tags_from_time_entries/get_all_tags_from_time_entries_response_200.yaml"
+  deprecated: false
+put:
+  summary: Change tag names from time entries
+  tags:
+    - Time Tracking
+  description: Rename an time entry label.
+  operationId: ChangeTagNamesFromTimeEntries
+  parameters:
+    -
+      $ref: "../operations/time_tracking/change_tag_names_from_time_entries/change_tag_names_from_time_entries_parameterteam_id_path.yaml"
+  requestBody:
+    $ref: "../operations/time_tracking/change_tag_names_from_time_entries/change_tag_names_from_time_entries_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/time_tracking/change_tag_names_from_time_entries/change_tag_names_from_time_entries_response_200.yaml"
+  deprecated: false
+post:
+  summary: Add tags from time entries
+  tags:
+    - Time Tracking
+  description: Add a label to a time entry.
+  operationId: AddTagsFromTimeEntries
+  parameters:
+    -
+      $ref: "../operations/time_tracking/add_tags_from_time_entries/add_tags_from_time_entries_parameterteam_id_path.yaml"
+  requestBody:
+    $ref: "../operations/time_tracking/add_tags_from_time_entries/add_tags_from_time_entries_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/time_tracking/add_tags_from_time_entries/add_tags_from_time_entries_response_200.yaml"
+  deprecated: false
+delete:
+  summary: Remove tags from time entries
+  tags:
+    - Time Tracking
+  description: Remove labels from time entries. This does not remove the label from a Workspace.
+  operationId: RemoveTagsFromTimeEntries
+  parameters:
+    -
+      $ref: "../operations/time_tracking/remove_tags_from_time_entries/remove_tags_from_time_entries_parameterteam_id_path.yaml"
+  requestBody:
+    $ref: "../operations/time_tracking/remove_tags_from_time_entries/remove_tags_from_time_entries_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/time_tracking/remove_tags_from_time_entries/remove_tags_from_time_entries_response_200.yaml"
+  deprecated: false

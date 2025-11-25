@@ -1,0 +1,28 @@
+get:
+  summary: Get Folder Views
+  tags:
+    - Views
+  description: View the task and page views available for a Folder.
+  operationId: GetFolderViews
+  parameters:
+    -
+      $ref: "../operations/views/get_folder_views/get_folder_views_parameterfolder_id_path.yaml"
+  responses:
+    200:
+      $ref: "../operations/views/get_folder_views/get_folder_views_response_200.yaml"
+  deprecated: false
+post:
+  summary: Create Folder View
+  tags:
+    - Views
+  description: Add a List, Board, Calendar, Table, Timeline, Workload, Activity, Map, Chat, or Gantt view to a Folder.
+  operationId: CreateFolderView
+  parameters:
+    -
+      $ref: "../operations/views/create_folder_view/create_folder_view_parameterfolder_id_path.yaml"
+  requestBody:
+    $ref: "../operations/views/create_folder_view/create_folder_view_request_body.yaml"
+  responses:
+    200:
+      $ref: "../operations/views/create_folder_view/create_folder_view_response_200.yaml"
+  deprecated: false

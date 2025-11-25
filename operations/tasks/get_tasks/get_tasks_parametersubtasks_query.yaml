@@ -1,0 +1,7 @@
+name: subtasks
+in: query
+description: "Include or exclude subtasks. By default, subtasks are excluded."
+style: form
+explode: true
+schema:
+  type: boolean

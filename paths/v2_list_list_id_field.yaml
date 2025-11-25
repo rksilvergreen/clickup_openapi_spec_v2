@@ -1,0 +1,14 @@
+get:
+  summary: Get List Custom Fields
+  tags:
+    - Custom Fields
+  description: View the Custom Fields you have access to in a specific List.
+  operationId: GetAccessibleCustomFields
+  parameters:
+    - $ref: "../operations/custom_fields/get_accessible_custom_fields/get_accessible_custom_fields_parameterlist_id_path.yaml"
+    -
+      $ref: "../operations/custom_fields/get_accessible_custom_fields/get_accessible_custom_fields_parametercontent_type_header.yaml"
+  responses:
+    200:
+      $ref: "../operations/custom_fields/get_accessible_custom_fields/get_accessible_custom_fields_response_200.yaml"
+  deprecated: false

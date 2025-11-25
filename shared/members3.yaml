@@ -1,0 +1,33 @@
+title: Members3
+required:
+  - id
+  - username
+  - email
+  - color
+  - initials
+  - profilePicture
+type: object
+properties:
+  id:
+    type: integer
+    contentEncoding: int32
+  username:
+    type: string
+  email:
+    type: string
+  color:
+    type: string
+  initials:
+    type: string
+  profilePicture:
+    type:
+      - string
+      - null
+examples:
+  -
+    id: 201
+    username: "Jim Halpert"
+    email: "jim@example.com"
+    color: "#40BC86"
+    initials: JH
+    profilePicture: null
